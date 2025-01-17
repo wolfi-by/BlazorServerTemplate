@@ -5,6 +5,7 @@ using MudBlazor.Services;
 using BlazorServerTemplate.Components;
 using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
+using MudExtensions.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
 builder.Services.AddScoped<AuthenticationStateProvider, IdentityRevalidatingAuthenticationStateProvider>();
+builder.Services.AddMudExtensions();
 
 builder.Services.AddAuthentication(options =>
     {

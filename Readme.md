@@ -11,5 +11,3 @@
   - [Playground](https://codebeam-mudextensions.pages.dev/)
 - Using File system access
   - [Source](https://github.com/KristofferStrube/Blazor.FileSystemAccess/tree/main)
-- Using Charts
-  - [Source](https://github.com/mariusmuntean/ChartJs.Blazor?tab=readme-ov-file)
