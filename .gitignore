@@ -1,0 +1,53 @@
+# Ignore build output directories
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore logs
+*.log
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore Rider settings
+.idea/
+
+# Ignore local history
+.localhistory/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore publish output
+wwwroot/
+
+# Ignore environment variables
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependency directories
+node_modules/
+
+# Ignore design-time build output
+*.Designer.cs
+
+#Ignor db file
+*.db
+
+# Ignore VS File
+.vs/
