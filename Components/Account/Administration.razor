@@ -12,6 +12,7 @@
     }
 </style>
 
+
 <h3>Administration</h3>
 <AuthorizeView>
     <Authorized>
@@ -62,60 +63,6 @@
                     <MudButton OnClick="@ClosePopup" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudButton>
                 </div>
             </MudPopover>
-            <!--
-            @if (ShowPopup)
-            {
-
-                                                <div class="modal" tabindex="-1" style="display:block" role="dialog">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h3 class="modal-title">Edit User</h3>
-                                        <button type="button" class="close" @onclick="ClosePopup">
-                                            <span aria-hidden="true">X</span>
-                                        </button>
-                                        </div>
-                                        <div class="modal-body">
-                            @if (objUser.Id != "")
-                            {
-                                                <p>@objUser.Id</p>
-                            }
-                            @if (objUser.Id != "")
-                            {
-                                                <p>@objUser.UserName</p>
-                            }
-                            else
-                            {
-                                                <input class="form-control" type="text" placeholder="UserName" @bind="objUser.UserName" />
-                            }
-                                            <input class="form-control" type="text" placeholder="Email" @bind="objUser.Email" />
-                                            <input class="form-control" type="password" placeholder="Password" @bind="objUser.PasswordHash" />
-                                            <select class="form-control" @bind="@CurrentUserRole">
-                                @foreach (var option in Options)
-                                {
-                                                    <option value="@option">
-                                    @option
-                                                    </option>
-                                }
-                                            </select>
-                                            <br /><br />
-                                            <button class="btn btn-primary" @onclick="SaveUser">
-                                                Save
-                                            </button>
-                            @if (objUser.Id != "")
-                            {
-                                                <button class="btn btn-danger" @onclick="DeleteUser">
-                                                    Delete
-                                                </button>
-                            }
-                                            <br />
-                                            <span style="color:red">@strError</span>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        </div>
-            }
-                                    -->
         }
         else
         {
@@ -128,9 +75,9 @@
 </AuthorizeView>
 @code {
     [CascadingParameter]
-    private Task<AuthenticationState> authenticationStateTask { get; set; }
+    private Task<AuthenticationState> authenticationStateTask { get; set; } = default!;
     string ADMINISTRATION_ROLE = "Administrators";
-    System.Security.Claims.ClaimsPrincipal CurrentUser;
+    System.Security.Claims.ClaimsPrincipal CurrentUser = default!;
     // Property used to add or edit the currently selected user
     IdentityUser objUser = new IdentityUser();
     // Tracks the selected role for the currently selected user
@@ -210,6 +157,11 @@
             {
                 // Get the user
                 var user = await _UserManager.FindByIdAsync(objUser.Id);
+                if (user == null)
+                {
+                    strError = "User not found";
+                    return;
+                }
                 // Update Email
                 user.Email = objUser.Email;
                 // Update the user
@@ -220,20 +172,27 @@
                 {
                     var resetToken =
                     await _UserManager.GeneratePasswordResetTokenAsync(user);
-                    var passworduser =
-                    await _UserManager.ResetPasswordAsync(
-                    user,
-                    resetToken,
-                    objUser.PasswordHash);
+                    if (objUser.PasswordHash is null)
+                    {
+                        strError = "Password is required";
+                        return;
+                    }
+                    var passworduser = await _UserManager.ResetPasswordAsync(user, resetToken, objUser.PasswordHash);
+                    if (passworduser == null)
+                    {
+                        strError = "Password reset error";
+                        return;
+                    }
+                    if (objUser.PasswordHash is null)
+                    {
+                        strError = "Password is required";
+                        return;
+                    }
                     if (!passworduser.Succeeded)
                     {
                         if (passworduser.Errors.FirstOrDefault() != null)
                         {
-                            strError =
-                            passworduser
-                            .Errors
-                            .FirstOrDefault()
-                            .Description;
+                            strError = passworduser.Errors.FirstOrDefault()?.Description ?? "Error reading password";
                         }
                         else
                         {
@@ -282,20 +241,20 @@
                         UserName = objUser.UserName,
                         Email = objUser.Email
                     };
-                var CreateResult =
-                await _UserManager
-                .CreateAsync(NewUser, objUser.PasswordHash);
+                if (objUser.PasswordHash is null)
+                {
+                    strError = "Password is required";
+                    return;
+                }
+                var CreateResult = await _UserManager.CreateAsync(NewUser, objUser.PasswordHash);
+
                 if (!CreateResult.Succeeded)
                 {
                     if (CreateResult
                     .Errors
                     .FirstOrDefault() != null)
                     {
-                        strError =
-                        CreateResult
-                        .Errors
-                        .FirstOrDefault()
-                        .Description;
+                        strError = CreateResult.Errors.FirstOrDefault()?.Description ?? "Error reading password";
                     }
                     else
                     {
