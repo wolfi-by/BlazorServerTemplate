@@ -10,31 +10,22 @@
     <Authorized>
         @if (@context.User.IsInRole(ADMINISTRATION_ROLE))
         {
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>User Name</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var user in ColUsers)
-                    {
-                        <tr>
-                            <td>@user.Id.Substring(0, 5) ...</td>
-                            <td>@user.UserName</td>
-                            <td>@user.Email</td>
-                            <td>
-                                <!-- Edit the current forecast -->
-                                <button class="btn btn-primary" @onclick="(() => EditUser(user))">
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+            <MudTable Items="ColUsers" Hover="true" Breakpoint="Breakpoint.Sm" Context="user">
+                <HeaderContent>
+                    <MudTh>Id</MudTh>
+                    <MudTh>User Name</MudTh>
+                    <MudTh>Email</MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Id">@user.Id.Substring(0, 5) ...</MudTd>
+                    <MudTd DataLabel="Name">@user.UserName</MudTd>
+                    <MudTd DataLabel="Email">@user.Email</MudTd>
+                    <MudButton OnClick="@(()=> EditUser(@user))">Edit</MudButton>
+                </RowTemplate>
+            </MudTable>
+
+
             @if (ShowPopup)
             {
                 <!-- This is the popup to create or edit a user -->
