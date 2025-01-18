@@ -6,7 +6,6 @@
 @inject RoleManager<IdentityRole> _RoleManager
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
-
 <style>
     .my-custom-class {
         backdrop-filter: blur(10px);
@@ -46,10 +45,10 @@
                             Placeholder="Username" />
                     }
                     <MudTextField ReadOnly=false Text="@objUser.Email" T="string" title="Email" Placeholder="Email" />
-                    <MudTextField ReadOnly=false InputType="InputType.Password" Text="@objUser.PasswordHash" T="string"
+                    <MudTextField ReadOnly=false InputType="@PasswordInput" Text="@objUser.PasswordHash" T="string"
                         Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick"
                         AdornmentAriaLabel="Show Password" title="Email" Placeholder="Password" />
-                    <MudSelect Label="Role" T="string">
+                    <MudSelect Label="Role" T="string" @bind-Value="@CurrentUserRole">
                         @foreach (var option in Options)
                         {
                             <MudSelectItem value="@option">
@@ -67,56 +66,56 @@
             @if (ShowPopup)
             {
 
-                            <div class="modal" tabindex="-1" style="display:block" role="dialog">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h3 class="modal-title">Edit User</h3>
-                    <button type="button" class="close" @onclick="ClosePopup">
-                        <span aria-hidden="true">X</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
+                                                <div class="modal" tabindex="-1" style="display:block" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h3 class="modal-title">Edit User</h3>
+                                        <button type="button" class="close" @onclick="ClosePopup">
+                                            <span aria-hidden="true">X</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
                             @if (objUser.Id != "")
                             {
-                            <p>@objUser.Id</p>
+                                                <p>@objUser.Id</p>
                             }
                             @if (objUser.Id != "")
                             {
-                            <p>@objUser.UserName</p>
+                                                <p>@objUser.UserName</p>
                             }
                             else
                             {
-                            <input class="form-control" type="text" placeholder="UserName" @bind="objUser.UserName" />
+                                                <input class="form-control" type="text" placeholder="UserName" @bind="objUser.UserName" />
                             }
-                        <input class="form-control" type="text" placeholder="Email" @bind="objUser.Email" />
-                        <input class="form-control" type="password" placeholder="Password" @bind="objUser.PasswordHash" />
-                        <select class="form-control" @bind="@CurrentUserRole">
+                                            <input class="form-control" type="text" placeholder="Email" @bind="objUser.Email" />
+                                            <input class="form-control" type="password" placeholder="Password" @bind="objUser.PasswordHash" />
+                                            <select class="form-control" @bind="@CurrentUserRole">
                                 @foreach (var option in Options)
                                 {
-                                <option value="@option">
+                                                    <option value="@option">
                                     @option
-                                </option>
+                                                    </option>
                                 }
-                        </select>
-                        <br /><br />
-                        <button class="btn btn-primary" @onclick="SaveUser">
-                            Save
-                        </button>
+                                            </select>
+                                            <br /><br />
+                                            <button class="btn btn-primary" @onclick="SaveUser">
+                                                Save
+                                            </button>
                             @if (objUser.Id != "")
                             {
-                            <button class="btn btn-danger" @onclick="DeleteUser">
-                                Delete
-                            </button>
+                                                <button class="btn btn-danger" @onclick="DeleteUser">
+                                                    Delete
+                                                </button>
                             }
-                        <br />
-                        <span style="color:red">@strError</span>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+                                            <br />
+                                            <span style="color:red">@strError</span>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
             }
-                -->
+                                    -->
         }
         else
         {

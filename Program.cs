@@ -6,8 +6,22 @@ using BlazorServerTemplate.Components;
 using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
 using MudExtensions.Services;
+using Serilog;
+using Serilog.Formatting.Compact;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+//var appname = Assembly.GetExecutingAssembly().GetName().Name ?? nameof(builder);
+
+
+//Log.Logger = new LoggerConfiguration()
+//   .MinimumLevel.Error()
+//  .WriteTo.Debug(new RenderedCompactJsonFormatter())
+
+//.WriteTo.File(Path.Combine(appdata, appname, "log.txt"), rollingInterval: RollingInterval.Day)
+// .CreateLogger();
 
 // Add MudBlazor services
 builder.Services.AddMudServices();
@@ -42,7 +56,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
-
+builder.Host.UseSerilog();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
