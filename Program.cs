@@ -7,7 +7,19 @@ using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
 using MudExtensions.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+//var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+//var appname = Assembly.GetExecutingAssembly().GetName().Name ?? nameof(builder);
+
+
+//Log.Logger = new LoggerConfiguration()
+//   .MinimumLevel.Error()
+//  .WriteTo.Debug(new RenderedCompactJsonFormatter())
+
+//.WriteTo.File(Path.Combine(appdata, appname, "log.txt"), rollingInterval: RollingInterval.Day)
+// .CreateLogger();
 
 // Add MudBlazor services
 builder.Services.AddMudServices();
@@ -35,6 +47,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
+    .AddUserManager<UserManager<ApplicationUser>>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddSignInManager()
     .AddDefaultTokenProviders();
