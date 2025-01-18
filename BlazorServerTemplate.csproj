@@ -13,7 +13,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Bromix.MudBlazor.MaterialDesignIcons" Version="7.0.96.43" />
+    <PackageReference Include="Bromix.MudBlazor.MaterialDesignIcons" Version="7.4.47.56" />
     <PackageReference Include="CodeBeam.MudBlazor.Extensions" Version="7.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.*" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.*" />
