@@ -1,5 +1,5 @@
 @page "/mudextensiondemo"
-
+@inject ILogger<MudExtensionsDemo> Logger
 <MudGrid>
     <MudItem xs="12" sm="8" Class="d-flex flex-column gap-8 align-center justify-center" Style="height: 500px">
         <MudCodeInput T="string" @bind-Value="@_value" Count="@_count" Spacing="_spacing" Variant="@_variant"
@@ -39,4 +39,9 @@
     Margin _margin;
     bool _disabled;
     bool _readonly;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Logger.LogWarning("This is a warning message");
+    }
 }

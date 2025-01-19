@@ -1,0 +1,1189 @@
+2025-01-19 16:30:35.429 +01:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-01-19 16:30:36.003 +01:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2025-01-19 16:30:36.004 +01:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2025-01-19 16:30:36.195 +01:00 [DBG] Entity Framework Core 8.0.12 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.12' with options: None
+2025-01-19 16:30:36.211 +01:00 [DBG] Creating DbConnection.
+2025-01-19 16:30:36.218 +01:00 [DBG] Created DbConnection. (6ms).
+2025-01-19 16:30:36.223 +01:00 [DBG] Opening connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.243 +01:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.246 +01:00 [DBG] Disposing connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.250 +01:00 [DBG] Disposed connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db' (0ms).
+2025-01-19 16:30:36.256 +01:00 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2025-01-19 16:30:36.256 +01:00 [DBG] Creating DbConnection.
+2025-01-19 16:30:36.256 +01:00 [DBG] Created DbConnection. (0ms).
+2025-01-19 16:30:36.263 +01:00 [DBG] Created DbCommand for 'ExecuteScalar' (7ms).
+2025-01-19 16:30:36.264 +01:00 [DBG] Initialized DbCommand for 'ExecuteScalar' (10ms).
+2025-01-19 16:30:36.265 +01:00 [DBG] Opening connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.267 +01:00 [DBG] Opened connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.274 +01:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-01-19 16:30:36.306 +01:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-01-19 16:30:36.307 +01:00 [DBG] Closing connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.309 +01:00 [DBG] Closed connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db' (2ms).
+2025-01-19 16:30:36.311 +01:00 [DBG] 'ApplicationDbContext' disposed.
+2025-01-19 16:30:36.311 +01:00 [DBG] Disposing connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db'.
+2025-01-19 16:30:36.311 +01:00 [DBG] Disposed connection to database 'main' on server 'C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db' (0ms).
+2025-01-19 16:30:36.360 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-19 16:30:41.340 +01:00 [DBG] Hosting starting
+2025-01-19 16:30:41.360 +01:00 [DBG] Reading data from file 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys\key-339f013a-e8e6-4884-ad2c-3549f4022c70.xml'.
+2025-01-19 16:30:41.371 +01:00 [DBG] Reading data from file 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys\key-4200782b-02f3-4eec-839e-2d1cf2b6d084.xml'.
+2025-01-19 16:30:41.373 +01:00 [DBG] Reading data from file 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys\key-7cee275e-db14-41c9-b653-630153af8bb1.xml'.
+2025-01-19 16:30:41.375 +01:00 [DBG] Reading data from file 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys\key-b09dc4cc-a49d-441c-9f1d-978963ae1d54.xml'.
+2025-01-19 16:30:41.376 +01:00 [DBG] Reading data from file 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys\key-bb7a6f95-2d33-4cb8-b2b7-a016220fc2d9.xml'.
+2025-01-19 16:30:41.377 +01:00 [DBG] Reading data from file 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys\key-c6ab04fb-1f67-4e26-949c-c1877006bc49.xml'.
+2025-01-19 16:30:41.383 +01:00 [DBG] Found key {339f013a-e8e6-4884-ad2c-3549f4022c70}.
+2025-01-19 16:30:41.394 +01:00 [DBG] Found key {4200782b-02f3-4eec-839e-2d1cf2b6d084}.
+2025-01-19 16:30:41.394 +01:00 [DBG] Found key {7cee275e-db14-41c9-b653-630153af8bb1}.
+2025-01-19 16:30:41.395 +01:00 [DBG] Found key {b09dc4cc-a49d-441c-9f1d-978963ae1d54}.
+2025-01-19 16:30:41.395 +01:00 [DBG] Found key {bb7a6f95-2d33-4cb8-b2b7-a016220fc2d9}.
+2025-01-19 16:30:41.395 +01:00 [DBG] Found key {c6ab04fb-1f67-4e26-949c-c1877006bc49}.
+2025-01-19 16:30:41.402 +01:00 [DBG] Considering key {7cee275e-db14-41c9-b653-630153af8bb1} with expiration date 2025-02-16 18:43:04Z as default key.
+2025-01-19 16:30:41.405 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-01-19 16:30:41.405 +01:00 [DBG] Decrypting secret element using Windows DPAPI.
+2025-01-19 16:30:41.407 +01:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-01-19 16:30:41.408 +01:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2025-01-19 16:30:41.410 +01:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2025-01-19 16:30:41.413 +01:00 [DBG] Using key {7cee275e-db14-41c9-b653-630153af8bb1} as the default key.
+2025-01-19 16:30:41.414 +01:00 [DBG] Key ring with default key {7cee275e-db14-41c9-b653-630153af8bb1} was loaded during application startup.
+2025-01-19 16:30:41.496 +01:00 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2025-01-19 16:30:41.497 +01:00 [DBG] Registered SignalR Protocol: blazorpack, implemented by Microsoft.AspNetCore.Components.Server.BlazorPack.BlazorPackHubProtocol.
+2025-01-19 16:30:41.692 +01:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-01-19 16:30:41.693 +01:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-01-19 16:30:41.748 +01:00 [INF] Now listening on: http://localhost:5273
+2025-01-19 16:30:41.748 +01:00 [DBG] Loaded hosting startup assembly BlazorServerTemplate
+2025-01-19 16:30:41.750 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-19 16:30:41.751 +01:00 [INF] Hosting environment: Development
+2025-01-19 16:30:41.751 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-01-19 16:30:41.751 +01:00 [DBG] Hosting started
+2025-01-19 16:30:41.975 +01:00 [DBG] Connection id "0HN9OJOU0JORB" accepted.
+2025-01-19 16:30:42.016 +01:00 [DBG] Connection id "0HN9OJOU0JORC" accepted.
+2025-01-19 16:30:42.016 +01:00 [DBG] Connection id "0HN9OJOU0JORB" started.
+2025-01-19 16:30:42.016 +01:00 [DBG] Connection id "0HN9OJOU0JORC" started.
+2025-01-19 16:30:42.083 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/ - null null
+2025-01-19 16:30:42.126 +01:00 [DBG] 1 candidate(s) found for the request path '/'
+2025-01-19 16:30:42.126 +01:00 [DBG] Request matched endpoint '/ (/)'
+2025-01-19 16:30:42.145 +01:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-01-19 16:30:42.149 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-19 16:30:42.151 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-01-19 16:30:42.152 +01:00 [INF] Executing endpoint '/ (/)'
+2025-01-19 16:30:42.196 +01:00 [DBG] Begin render root component 'App' with page 'Home'.
+2025-01-19 16:30:42.221 +01:00 [DBG] Initializing root component 0 (BlazorServerTemplate.Components.App)
+2025-01-19 16:30:42.228 +01:00 [DBG] Rendering component 0 of type BlazorServerTemplate.Components.App
+2025-01-19 16:30:42.238 +01:00 [DBG] Initializing component 1 (Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary) as child of 0 (BlazorServerTemplate.Components.App)
+2025-01-19 16:30:42.239 +01:00 [DBG] Initializing component 2 (Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary) as child of 0 (BlazorServerTemplate.Components.App)
+2025-01-19 16:30:42.240 +01:00 [DBG] Rendering component 1 of type Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary
+2025-01-19 16:30:42.251 +01:00 [DBG] Initializing component 3 (Microsoft.AspNetCore.Components.Web.HeadOutlet) as child of 1 (Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary)
+2025-01-19 16:30:42.252 +01:00 [DBG] Rendering component 2 of type Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary
+2025-01-19 16:30:42.252 +01:00 [DBG] Initializing component 4 (BlazorServerTemplate.Components.Routes) as child of 2 (Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary)
+2025-01-19 16:30:42.253 +01:00 [DBG] Rendering component 3 of type Microsoft.AspNetCore.Components.Web.HeadOutlet
+2025-01-19 16:30:42.254 +01:00 [DBG] Initializing component 5 (Microsoft.AspNetCore.Components.Sections.SectionOutlet) as child of 3 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+2025-01-19 16:30:42.254 +01:00 [DBG] Initializing component 6 (Microsoft.AspNetCore.Components.Sections.SectionOutlet) as child of 3 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+2025-01-19 16:30:42.255 +01:00 [DBG] Rendering component 4 of type BlazorServerTemplate.Components.Routes
+2025-01-19 16:30:42.260 +01:00 [DBG] Initializing component 7 (Microsoft.AspNetCore.Components.Routing.Router) as child of 4 (BlazorServerTemplate.Components.Routes)
+2025-01-19 16:30:42.265 +01:00 [DBG] Navigating to component BlazorServerTemplate.Components.Pages.Home in response to path '/' with base URI 'http://localhost:5273/'
+2025-01-19 16:30:42.269 +01:00 [DBG] Rendering component 5 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.273 +01:00 [DBG] Initializing component 8 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 5 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:42.276 +01:00 [DBG] Rendering component 5 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.278 +01:00 [DBG] Rendering component 6 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.278 +01:00 [DBG] Initializing component 9 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 6 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:42.278 +01:00 [DBG] Rendering component 6 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.278 +01:00 [DBG] Rendering component 7 of type Microsoft.AspNetCore.Components.Routing.Router
+2025-01-19 16:30:42.281 +01:00 [DBG] Initializing component 10 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView) as child of 7 (Microsoft.AspNetCore.Components.Routing.Router)
+2025-01-19 16:30:42.283 +01:00 [DBG] Initializing component 11 (Microsoft.AspNetCore.Components.Routing.FocusOnNavigate) as child of 7 (Microsoft.AspNetCore.Components.Routing.Router)
+2025-01-19 16:30:42.284 +01:00 [DBG] Rendering component 8 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.284 +01:00 [DBG] Rendering component 8 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.285 +01:00 [DBG] Rendering component 9 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.285 +01:00 [DBG] Rendering component 9 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.285 +01:00 [DBG] Rendering component 10 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView
+2025-01-19 16:30:42.289 +01:00 [DBG] Initializing component 12 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore) as child of 10 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView)
+2025-01-19 16:30:42.291 +01:00 [DBG] Rendering component 11 of type Microsoft.AspNetCore.Components.Routing.FocusOnNavigate
+2025-01-19 16:30:42.291 +01:00 [DBG] Rendering component 12 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore
+2025-01-19 16:30:42.293 +01:00 [DBG] Initializing component 13 (Microsoft.AspNetCore.Components.LayoutView) as child of 12 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore)
+2025-01-19 16:30:42.294 +01:00 [DBG] Rendering component 13 of type Microsoft.AspNetCore.Components.LayoutView
+2025-01-19 16:30:42.296 +01:00 [DBG] Initializing component 14 (BlazorServerTemplate.Components.Layout.MainLayout) as child of 13 (Microsoft.AspNetCore.Components.LayoutView)
+2025-01-19 16:30:42.296 +01:00 [DBG] Rendering component 14 of type BlazorServerTemplate.Components.Layout.MainLayout
+2025-01-19 16:30:42.309 +01:00 [DBG] Initializing component 15 (MudBlazor.MudThemeProvider) as child of 14 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:42.341 +01:00 [DBG] Initializing component 16 (MudBlazor.MudPopoverProvider) as child of 14 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:42.342 +01:00 [DBG] Adding entry for "eb632138-c583-49df-a291-16e1f3fdcfa3"/MudBlazor.MudPopoverProvider. 1 total observers after add.
+2025-01-19 16:30:42.342 +01:00 [DBG] Updating entry for "eb632138-c583-49df-a291-16e1f3fdcfa3"/MudBlazor.MudPopoverProvider. 1 total observers.
+2025-01-19 16:30:42.345 +01:00 [DBG] Initializing component 17 (MudBlazor.MudDialogProvider) as child of 14 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:42.349 +01:00 [DBG] Initializing component 18 (MudBlazor.MudSnackbarProvider) as child of 14 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:42.351 +01:00 [DBG] Initializing component 19 (MudBlazor.MudLayout) as child of 14 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:42.352 +01:00 [DBG] Rendering component 15 of type MudBlazor.MudThemeProvider
+2025-01-19 16:30:42.365 +01:00 [DBG] Rendering component 16 of type MudBlazor.MudPopoverProvider
+2025-01-19 16:30:42.366 +01:00 [DBG] Rendering component 17 of type MudBlazor.MudDialogProvider
+2025-01-19 16:30:42.368 +01:00 [DBG] Initializing component 20 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider]) as child of 17 (MudBlazor.MudDialogProvider)
+2025-01-19 16:30:42.369 +01:00 [DBG] Rendering component 18 of type MudBlazor.MudSnackbarProvider
+2025-01-19 16:30:42.372 +01:00 [DBG] Rendering component 19 of type MudBlazor.MudLayout
+2025-01-19 16:30:42.376 +01:00 [DBG] Initializing component 21 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]) as child of 19 (MudBlazor.MudLayout)
+2025-01-19 16:30:42.376 +01:00 [DBG] Rendering component 20 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider]
+2025-01-19 16:30:42.377 +01:00 [DBG] Initializing component 22 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.DialogOptions]) as child of 20 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider])
+2025-01-19 16:30:42.378 +01:00 [DBG] Rendering component 21 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]
+2025-01-19 16:30:42.380 +01:00 [DBG] Initializing component 23 (MudBlazor.MudAppBar) as child of 21 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout])
+2025-01-19 16:30:42.386 +01:00 [DBG] Initializing component 24 (MudBlazor.MudDrawer) as child of 21 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout])
+2025-01-19 16:30:42.393 +01:00 [DBG] Initializing component 25 (MudBlazor.MudMainContent) as child of 21 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout])
+2025-01-19 16:30:42.393 +01:00 [DBG] Rendering component 22 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.DialogOptions]
+2025-01-19 16:30:42.394 +01:00 [DBG] Rendering component 23 of type MudBlazor.MudAppBar
+2025-01-19 16:30:42.396 +01:00 [DBG] Initializing component 26 (MudBlazor.MudToolBar) as child of 23 (MudBlazor.MudAppBar)
+2025-01-19 16:30:42.396 +01:00 [DBG] Rendering component 19 of type MudBlazor.MudLayout
+2025-01-19 16:30:42.398 +01:00 [DBG] Rendering component 24 of type MudBlazor.MudDrawer
+2025-01-19 16:30:42.401 +01:00 [DBG] Initializing component 27 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]) as child of 24 (MudBlazor.MudDrawer)
+2025-01-19 16:30:42.403 +01:00 [DBG] Initializing component 28 (MudBlazor.MudOverlay) as child of 24 (MudBlazor.MudDrawer)
+2025-01-19 16:30:42.403 +01:00 [DBG] Rendering component 25 of type MudBlazor.MudMainContent
+2025-01-19 16:30:42.404 +01:00 [DBG] Initializing component 29 (BlazorServerTemplate.Components.Pages.Home) as child of 25 (MudBlazor.MudMainContent)
+2025-01-19 16:30:42.405 +01:00 [DBG] Rendering component 26 of type MudBlazor.MudToolBar
+2025-01-19 16:30:42.407 +01:00 [DBG] Initializing component 30 (MudBlazor.MudIconButton) as child of 26 (MudBlazor.MudToolBar)
+2025-01-19 16:30:42.409 +01:00 [DBG] Initializing component 31 (MudBlazor.MudText) as child of 26 (MudBlazor.MudToolBar)
+2025-01-19 16:30:42.410 +01:00 [DBG] Initializing component 32 (MudBlazor.MudSpacer) as child of 26 (MudBlazor.MudToolBar)
+2025-01-19 16:30:42.411 +01:00 [DBG] Initializing component 33 (MudBlazor.MudIconButton) as child of 26 (MudBlazor.MudToolBar)
+2025-01-19 16:30:42.411 +01:00 [DBG] Rendering component 21 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]
+2025-01-19 16:30:42.412 +01:00 [DBG] Rendering component 27 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]
+2025-01-19 16:30:42.413 +01:00 [DBG] Initializing component 34 (BlazorServerTemplate.Components.Layout.NavMenu) as child of 27 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer])
+2025-01-19 16:30:42.414 +01:00 [DBG] Rendering component 28 of type MudBlazor.MudOverlay
+2025-01-19 16:30:42.415 +01:00 [DBG] Rendering component 29 of type BlazorServerTemplate.Components.Pages.Home
+2025-01-19 16:30:42.419 +01:00 [DBG] Initializing component 35 (Microsoft.AspNetCore.Components.Web.PageTitle) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.419 +01:00 [DBG] Initializing component 36 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.420 +01:00 [DBG] Initializing component 37 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.439 +01:00 [DBG] Initializing component 38 (MudBlazor.MudAlert) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.440 +01:00 [DBG] Initializing component 39 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.440 +01:00 [DBG] Initializing component 40 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.441 +01:00 [DBG] Initializing component 41 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.441 +01:00 [DBG] Initializing component 42 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.441 +01:00 [DBG] Initializing component 43 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.442 +01:00 [DBG] Initializing component 44 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.442 +01:00 [DBG] Initializing component 45 (MudBlazor.MudText) as child of 29 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:42.442 +01:00 [DBG] Rendering component 30 of type MudBlazor.MudIconButton
+2025-01-19 16:30:42.447 +01:00 [DBG] Initializing component 46 (MudBlazor.MudElement) as child of 30 (MudBlazor.MudIconButton)
+2025-01-19 16:30:42.449 +01:00 [DBG] Rendering component 31 of type MudBlazor.MudText
+2025-01-19 16:30:42.450 +01:00 [DBG] Initializing component 47 (MudBlazor.MudElement) as child of 31 (MudBlazor.MudText)
+2025-01-19 16:30:42.451 +01:00 [DBG] Rendering component 32 of type MudBlazor.MudSpacer
+2025-01-19 16:30:42.451 +01:00 [DBG] Rendering component 33 of type MudBlazor.MudIconButton
+2025-01-19 16:30:42.451 +01:00 [DBG] Initializing component 48 (MudBlazor.MudElement) as child of 33 (MudBlazor.MudIconButton)
+2025-01-19 16:30:42.451 +01:00 [DBG] Rendering component 23 of type MudBlazor.MudAppBar
+2025-01-19 16:30:42.451 +01:00 [DBG] Rendering component 24 of type MudBlazor.MudDrawer
+2025-01-19 16:30:42.453 +01:00 [DBG] Rendering component 25 of type MudBlazor.MudMainContent
+2025-01-19 16:30:42.453 +01:00 [DBG] Rendering component 34 of type BlazorServerTemplate.Components.Layout.NavMenu
+2025-01-19 16:30:42.455 +01:00 [DBG] Initializing component 49 (MudBlazor.MudNavMenu) as child of 34 (BlazorServerTemplate.Components.Layout.NavMenu)
+2025-01-19 16:30:42.455 +01:00 [DBG] Rendering component 35 of type Microsoft.AspNetCore.Components.Web.PageTitle
+2025-01-19 16:30:42.456 +01:00 [DBG] Initializing component 50 (Microsoft.AspNetCore.Components.Sections.SectionContent) as child of 35 (Microsoft.AspNetCore.Components.Web.PageTitle)
+2025-01-19 16:30:42.457 +01:00 [DBG] Rendering component 36 of type MudBlazor.MudText
+2025-01-19 16:30:42.457 +01:00 [DBG] Initializing component 51 (MudBlazor.MudElement) as child of 36 (MudBlazor.MudText)
+2025-01-19 16:30:42.457 +01:00 [DBG] Rendering component 37 of type MudBlazor.MudText
+2025-01-19 16:30:42.457 +01:00 [DBG] Initializing component 52 (MudBlazor.MudElement) as child of 37 (MudBlazor.MudText)
+2025-01-19 16:30:42.457 +01:00 [DBG] Rendering component 38 of type MudBlazor.MudAlert
+2025-01-19 16:30:42.463 +01:00 [DBG] Initializing component 53 (MudBlazor.MudIcon) as child of 38 (MudBlazor.MudAlert)
+2025-01-19 16:30:42.465 +01:00 [DBG] Initializing component 54 (MudBlazor.MudLink) as child of 38 (MudBlazor.MudAlert)
+2025-01-19 16:30:42.466 +01:00 [DBG] Rendering component 39 of type MudBlazor.MudText
+2025-01-19 16:30:42.466 +01:00 [DBG] Initializing component 55 (MudBlazor.MudElement) as child of 39 (MudBlazor.MudText)
+2025-01-19 16:30:42.466 +01:00 [DBG] Rendering component 40 of type MudBlazor.MudText
+2025-01-19 16:30:42.466 +01:00 [DBG] Initializing component 56 (MudBlazor.MudElement) as child of 40 (MudBlazor.MudText)
+2025-01-19 16:30:42.466 +01:00 [DBG] Rendering component 41 of type MudBlazor.MudText
+2025-01-19 16:30:42.467 +01:00 [DBG] Initializing component 57 (MudBlazor.MudElement) as child of 41 (MudBlazor.MudText)
+2025-01-19 16:30:42.467 +01:00 [DBG] Rendering component 42 of type MudBlazor.MudText
+2025-01-19 16:30:42.467 +01:00 [DBG] Initializing component 58 (MudBlazor.MudElement) as child of 42 (MudBlazor.MudText)
+2025-01-19 16:30:42.467 +01:00 [DBG] Rendering component 43 of type MudBlazor.MudText
+2025-01-19 16:30:42.467 +01:00 [DBG] Initializing component 59 (MudBlazor.MudElement) as child of 43 (MudBlazor.MudText)
+2025-01-19 16:30:42.467 +01:00 [DBG] Rendering component 44 of type MudBlazor.MudText
+2025-01-19 16:30:42.467 +01:00 [DBG] Initializing component 60 (MudBlazor.MudElement) as child of 44 (MudBlazor.MudText)
+2025-01-19 16:30:42.467 +01:00 [DBG] Rendering component 45 of type MudBlazor.MudText
+2025-01-19 16:30:42.467 +01:00 [DBG] Initializing component 61 (MudBlazor.MudElement) as child of 45 (MudBlazor.MudText)
+2025-01-19 16:30:42.467 +01:00 [DBG] Rendering component 46 of type MudBlazor.MudElement
+2025-01-19 16:30:42.472 +01:00 [DBG] Initializing component 62 (MudBlazor.MudIcon) as child of 46 (MudBlazor.MudElement)
+2025-01-19 16:30:42.472 +01:00 [DBG] Rendering component 47 of type MudBlazor.MudElement
+2025-01-19 16:30:42.472 +01:00 [DBG] Rendering component 48 of type MudBlazor.MudElement
+2025-01-19 16:30:42.473 +01:00 [DBG] Initializing component 63 (MudBlazor.MudIcon) as child of 48 (MudBlazor.MudElement)
+2025-01-19 16:30:42.473 +01:00 [DBG] Rendering component 26 of type MudBlazor.MudToolBar
+2025-01-19 16:30:42.473 +01:00 [DBG] Rendering component 27 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]
+2025-01-19 16:30:42.473 +01:00 [DBG] Rendering component 28 of type MudBlazor.MudOverlay
+2025-01-19 16:30:42.473 +01:00 [DBG] Rendering component 49 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:42.475 +01:00 [DBG] Initializing component 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]) as child of 49 (MudBlazor.MudNavMenu)
+2025-01-19 16:30:42.475 +01:00 [DBG] Rendering component 5 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.475 +01:00 [DBG] Initializing component 65 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 5 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:42.475 +01:00 [DBG] Disposing component 8 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.476 +01:00 [DBG] Rendering component 51 of type MudBlazor.MudElement
+2025-01-19 16:30:42.476 +01:00 [DBG] Rendering component 52 of type MudBlazor.MudElement
+2025-01-19 16:30:42.476 +01:00 [DBG] Rendering component 53 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.477 +01:00 [DBG] Rendering component 54 of type MudBlazor.MudLink
+2025-01-19 16:30:42.478 +01:00 [DBG] Rendering component 55 of type MudBlazor.MudElement
+2025-01-19 16:30:42.478 +01:00 [DBG] Rendering component 56 of type MudBlazor.MudElement
+2025-01-19 16:30:42.479 +01:00 [DBG] Rendering component 57 of type MudBlazor.MudElement
+2025-01-19 16:30:42.479 +01:00 [DBG] Rendering component 58 of type MudBlazor.MudElement
+2025-01-19 16:30:42.479 +01:00 [DBG] Rendering component 59 of type MudBlazor.MudElement
+2025-01-19 16:30:42.479 +01:00 [DBG] Initializing component 66 (MudBlazor.MudLink) as child of 59 (MudBlazor.MudElement)
+2025-01-19 16:30:42.479 +01:00 [DBG] Rendering component 60 of type MudBlazor.MudElement
+2025-01-19 16:30:42.480 +01:00 [DBG] Rendering component 61 of type MudBlazor.MudElement
+2025-01-19 16:30:42.480 +01:00 [DBG] Initializing component 67 (MudBlazor.MudLink) as child of 61 (MudBlazor.MudElement)
+2025-01-19 16:30:42.480 +01:00 [DBG] Rendering component 62 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.480 +01:00 [DBG] Rendering component 63 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.480 +01:00 [DBG] Rendering component 30 of type MudBlazor.MudIconButton
+2025-01-19 16:30:42.480 +01:00 [DBG] Rendering component 31 of type MudBlazor.MudText
+2025-01-19 16:30:42.480 +01:00 [DBG] Rendering component 64 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:42.483 +01:00 [DBG] Initializing component 68 (MudBlazor.MudNavLink) as child of 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.484 +01:00 [DBG] Initializing component 69 (MudBlazor.MudNavLink) as child of 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.484 +01:00 [DBG] Initializing component 70 (MudBlazor.MudNavLink) as child of 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.489 +01:00 [DBG] Initializing component 71 (MudBlazor.MudNavGroup) as child of 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.492 +01:00 [DBG] Initializing component 72 (MudBlazor.MudNavLink) as child of 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.495 +01:00 [DBG] Initializing component 73 (Microsoft.AspNetCore.Components.Authorization.AuthorizeView) as child of 64 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.498 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:30:42.498 +01:00 [DBG] Rendering component 65 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.499 +01:00 [DBG] Rendering component 66 of type MudBlazor.MudLink
+2025-01-19 16:30:42.499 +01:00 [DBG] Rendering component 67 of type MudBlazor.MudLink
+2025-01-19 16:30:42.499 +01:00 [DBG] Rendering component 46 of type MudBlazor.MudElement
+2025-01-19 16:30:42.499 +01:00 [DBG] Rendering component 47 of type MudBlazor.MudElement
+2025-01-19 16:30:42.499 +01:00 [DBG] Rendering component 68 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.502 +01:00 [DBG] Initializing component 74 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 68 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.504 +01:00 [DBG] Rendering component 69 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.504 +01:00 [DBG] Initializing component 75 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 69 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.504 +01:00 [DBG] Rendering component 70 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.505 +01:00 [DBG] Initializing component 76 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 70 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.505 +01:00 [DBG] Rendering component 71 of type MudBlazor.MudNavGroup
+2025-01-19 16:30:42.507 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudNavGroup_ToggleExpand' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:42.509 +01:00 [DBG] Initializing component 77 (MudBlazor.MudIcon) as child of 71 (MudBlazor.MudNavGroup)
+2025-01-19 16:30:42.512 +01:00 [DBG] Initializing component 78 (MudBlazor.MudCollapse) as child of 71 (MudBlazor.MudNavGroup)
+2025-01-19 16:30:42.514 +01:00 [DBG] Rendering component 72 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.514 +01:00 [DBG] Initializing component 79 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 72 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.515 +01:00 [DBG] Rendering component 73 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeView
+2025-01-19 16:30:42.515 +01:00 [DBG] Initializing component 80 (MudBlazor.MudNavLink) as child of 73 (Microsoft.AspNetCore.Components.Authorization.AuthorizeView)
+2025-01-19 16:30:42.516 +01:00 [DBG] Initializing component 81 (MudBlazor.MudNavLink) as child of 73 (Microsoft.AspNetCore.Components.Authorization.AuthorizeView)
+2025-01-19 16:30:42.516 +01:00 [DBG] Rendering component 74 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.516 +01:00 [DBG] Initializing component 82 (MudBlazor.MudIcon) as child of 74 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.517 +01:00 [DBG] Rendering component 75 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.517 +01:00 [DBG] Initializing component 83 (MudBlazor.MudIcon) as child of 75 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.517 +01:00 [DBG] Rendering component 76 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.517 +01:00 [DBG] Initializing component 84 (MudBlazor.MudIcon) as child of 76 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.517 +01:00 [DBG] Rendering component 77 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.517 +01:00 [DBG] Rendering component 78 of type MudBlazor.MudCollapse
+2025-01-19 16:30:42.519 +01:00 [DBG] Initializing component 85 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]) as child of 78 (MudBlazor.MudCollapse)
+2025-01-19 16:30:42.519 +01:00 [DBG] Rendering component 79 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.519 +01:00 [DBG] Initializing component 86 (MudBlazor.MudIcon) as child of 79 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.519 +01:00 [DBG] Rendering component 80 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.520 +01:00 [DBG] Initializing component 87 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 80 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.520 +01:00 [DBG] Rendering component 81 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.520 +01:00 [DBG] Initializing component 88 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 81 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.520 +01:00 [DBG] Rendering component 82 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.520 +01:00 [DBG] Rendering component 83 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.521 +01:00 [DBG] Rendering component 84 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.521 +01:00 [DBG] Rendering component 85 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:42.521 +01:00 [DBG] Initializing component 89 (MudBlazor.MudNavMenu) as child of 85 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.521 +01:00 [DBG] Rendering component 86 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.522 +01:00 [DBG] Rendering component 87 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.522 +01:00 [DBG] Initializing component 90 (MudBlazor.MudIcon) as child of 87 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.522 +01:00 [DBG] Rendering component 88 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.522 +01:00 [DBG] Initializing component 91 (MudBlazor.MudIcon) as child of 88 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.522 +01:00 [DBG] Rendering component 89 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:42.522 +01:00 [DBG] Initializing component 92 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]) as child of 89 (MudBlazor.MudNavMenu)
+2025-01-19 16:30:42.523 +01:00 [DBG] Rendering component 90 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.523 +01:00 [DBG] Rendering component 91 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.523 +01:00 [DBG] Rendering component 92 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:42.524 +01:00 [DBG] Initializing component 93 (MudBlazor.MudNavLink) as child of 92 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:42.524 +01:00 [DBG] Rendering component 93 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.524 +01:00 [DBG] Initializing component 94 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 93 (MudBlazor.MudNavLink)
+2025-01-19 16:30:42.524 +01:00 [DBG] Rendering component 94 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.524 +01:00 [DBG] Initializing component 95 (MudBlazor.MudIcon) as child of 94 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:42.524 +01:00 [DBG] Rendering component 95 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.601 +01:00 [DBG] An antiforgery cookie token was reused.
+2025-01-19 16:30:42.611 +01:00 [DBG] An antiforgery cookie token was reused.
+2025-01-19 16:30:42.616 +01:00 [INF] Executed endpoint '/ (/)'
+2025-01-19 16:30:42.616 +01:00 [DBG] Connection id "0HN9OJOU0JORB" completed keep alive response.
+2025-01-19 16:30:42.646 +01:00 [DBG] Rendering component 16 of type MudBlazor.MudPopoverProvider
+2025-01-19 16:30:42.652 +01:00 [DBG] Disposing component 0 of type BlazorServerTemplate.Components.App
+2025-01-19 16:30:42.652 +01:00 [DBG] Disposing component 1 of type Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary
+2025-01-19 16:30:42.653 +01:00 [DBG] Disposing component 2 of type Microsoft.AspNetCore.Components.Endpoints.SSRRenderModeBoundary
+2025-01-19 16:30:42.653 +01:00 [DBG] Disposing component 3 of type Microsoft.AspNetCore.Components.Web.HeadOutlet
+2025-01-19 16:30:42.653 +01:00 [DBG] Disposing component 4 of type BlazorServerTemplate.Components.Routes
+2025-01-19 16:30:42.654 +01:00 [DBG] Disposing component 5 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.654 +01:00 [DBG] Disposing component 6 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:42.654 +01:00 [DBG] Disposing component 7 of type Microsoft.AspNetCore.Components.Routing.Router
+2025-01-19 16:30:42.654 +01:00 [DBG] Disposing component 66 of type MudBlazor.MudLink
+2025-01-19 16:30:42.654 +01:00 [DBG] Disposing component 9 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 10 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 11 of type Microsoft.AspNetCore.Components.Routing.FocusOnNavigate
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 12 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 13 of type Microsoft.AspNetCore.Components.LayoutView
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 14 of type BlazorServerTemplate.Components.Layout.MainLayout
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 15 of type MudBlazor.MudThemeProvider
+2025-01-19 16:30:42.655 +01:00 [DBG] Disposing component 16 of type MudBlazor.MudPopoverProvider
+2025-01-19 16:30:42.657 +01:00 [DBG] Removed entry for "eb632138-c583-49df-a291-16e1f3fdcfa3". 0 total observers after remove.
+2025-01-19 16:30:42.657 +01:00 [DBG] Disposing component 17 of type MudBlazor.MudDialogProvider
+2025-01-19 16:30:42.658 +01:00 [DBG] Disposing component 18 of type MudBlazor.MudSnackbarProvider
+2025-01-19 16:30:42.659 +01:00 [DBG] Disposing component 19 of type MudBlazor.MudLayout
+2025-01-19 16:30:42.660 +01:00 [DBG] Disposing component 20 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider]
+2025-01-19 16:30:42.660 +01:00 [DBG] Disposing component 21 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]
+2025-01-19 16:30:42.660 +01:00 [DBG] Disposing component 22 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.DialogOptions]
+2025-01-19 16:30:42.660 +01:00 [DBG] Disposing component 23 of type MudBlazor.MudAppBar
+2025-01-19 16:30:42.660 +01:00 [DBG] Disposing component 24 of type MudBlazor.MudDrawer
+2025-01-19 16:30:42.664 +01:00 [DBG] Disposing component 25 of type MudBlazor.MudMainContent
+2025-01-19 16:30:42.664 +01:00 [DBG] Disposing component 26 of type MudBlazor.MudToolBar
+2025-01-19 16:30:42.664 +01:00 [DBG] Disposing component 27 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]
+2025-01-19 16:30:42.665 +01:00 [DBG] Disposing component 28 of type MudBlazor.MudOverlay
+2025-01-19 16:30:42.666 +01:00 [DBG] Disposing component 29 of type BlazorServerTemplate.Components.Pages.Home
+2025-01-19 16:30:42.666 +01:00 [DBG] Disposing component 30 of type MudBlazor.MudIconButton
+2025-01-19 16:30:42.666 +01:00 [DBG] Disposing component 31 of type MudBlazor.MudText
+2025-01-19 16:30:42.666 +01:00 [DBG] Disposing component 32 of type MudBlazor.MudSpacer
+2025-01-19 16:30:42.666 +01:00 [DBG] Disposing component 33 of type MudBlazor.MudIconButton
+2025-01-19 16:30:42.666 +01:00 [DBG] Disposing component 34 of type BlazorServerTemplate.Components.Layout.NavMenu
+2025-01-19 16:30:42.667 +01:00 [DBG] Disposing component 35 of type Microsoft.AspNetCore.Components.Web.PageTitle
+2025-01-19 16:30:42.667 +01:00 [DBG] Disposing component 36 of type MudBlazor.MudText
+2025-01-19 16:30:42.667 +01:00 [DBG] Disposing component 37 of type MudBlazor.MudText
+2025-01-19 16:30:42.667 +01:00 [DBG] Disposing component 38 of type MudBlazor.MudAlert
+2025-01-19 16:30:42.668 +01:00 [DBG] Disposing component 39 of type MudBlazor.MudText
+2025-01-19 16:30:42.668 +01:00 [DBG] Disposing component 40 of type MudBlazor.MudText
+2025-01-19 16:30:42.668 +01:00 [DBG] Disposing component 41 of type MudBlazor.MudText
+2025-01-19 16:30:42.668 +01:00 [DBG] Disposing component 42 of type MudBlazor.MudText
+2025-01-19 16:30:42.668 +01:00 [DBG] Disposing component 43 of type MudBlazor.MudText
+2025-01-19 16:30:42.668 +01:00 [DBG] Disposing component 44 of type MudBlazor.MudText
+2025-01-19 16:30:42.669 +01:00 [DBG] Disposing component 45 of type MudBlazor.MudText
+2025-01-19 16:30:42.669 +01:00 [DBG] Disposing component 46 of type MudBlazor.MudElement
+2025-01-19 16:30:42.669 +01:00 [DBG] Disposing component 47 of type MudBlazor.MudElement
+2025-01-19 16:30:42.669 +01:00 [DBG] Disposing component 48 of type MudBlazor.MudElement
+2025-01-19 16:30:42.670 +01:00 [DBG] Disposing component 49 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:42.670 +01:00 [DBG] Disposing component 50 of type Microsoft.AspNetCore.Components.Sections.SectionContent
+2025-01-19 16:30:42.671 +01:00 [DBG] Disposing component 51 of type MudBlazor.MudElement
+2025-01-19 16:30:42.671 +01:00 [DBG] Disposing component 52 of type MudBlazor.MudElement
+2025-01-19 16:30:42.671 +01:00 [DBG] Disposing component 53 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 54 of type MudBlazor.MudLink
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 55 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 56 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 57 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 58 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 59 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 60 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 61 of type MudBlazor.MudElement
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 62 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 63 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 64 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 65 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 67 of type MudBlazor.MudLink
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 68 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 69 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.672 +01:00 [DBG] Disposing component 70 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 71 of type MudBlazor.MudNavGroup
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 72 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 73 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeView
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 74 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 75 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 76 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 77 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 78 of type MudBlazor.MudCollapse
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 79 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.673 +01:00 [DBG] Disposing component 80 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 81 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 82 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 83 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 84 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 85 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 86 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 87 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 88 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 89 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:42.674 +01:00 [DBG] Disposing component 90 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.675 +01:00 [DBG] Disposing component 91 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.675 +01:00 [DBG] Disposing component 92 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:42.675 +01:00 [DBG] Disposing component 93 of type MudBlazor.MudNavLink
+2025-01-19 16:30:42.675 +01:00 [DBG] Disposing component 94 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:42.675 +01:00 [DBG] Disposing component 95 of type MudBlazor.MudIcon
+2025-01-19 16:30:42.676 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/ - 200 null text/html; charset=utf-8 596.0238ms
+2025-01-19 16:30:42.682 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:30:42.684 +01:00 [DBG] 1 candidate(s) found for the request path '/_framework/blazor.web.js'
+2025-01-19 16:30:42.685 +01:00 [DBG] Request matched endpoint 'Blazor web static files'
+2025-01-19 16:30:42.750 +01:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-01-19 16:30:42.750 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-01-19 16:30:42.775 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:30:42.809 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:30:42.810 +01:00 [DBG] Handled. Status code: 304 File: /_framework/blazor.web.js
+2025-01-19 16:30:42.813 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:30:42.814 +01:00 [DBG] Connection id "0HN9OJOU0JORB" completed keep alive response.
+2025-01-19 16:30:42.814 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 131.9866ms
+2025-01-19 16:30:42.839 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-01-19 16:30:42.841 +01:00 [DBG] 1 candidate(s) found for the request path '/_blazor/initializers'
+2025-01-19 16:30:42.842 +01:00 [DBG] Request matched endpoint 'null'
+2025-01-19 16:30:42.848 +01:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-01-19 16:30:42.848 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-01-19 16:30:42.848 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:30:42.854 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:30:42.854 +01:00 [DBG] Connection id "0HN9OJOU0JORB" completed keep alive response.
+2025-01-19 16:30:42.855 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 15.337ms
+2025-01-19 16:30:42.880 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:30:42.882 +01:00 [DBG] 1 candidate(s) found for the request path '/_blazor/negotiate'
+2025-01-19 16:30:42.883 +01:00 [DBG] Request matched endpoint 'null'
+2025-01-19 16:30:42.884 +01:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-01-19 16:30:42.884 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-01-19 16:30:42.884 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:30:42.891 +01:00 [DBG] New connection 6Nx8vQxDe8mMyai17kC0-w created.
+2025-01-19 16:30:42.896 +01:00 [DBG] Sending negotiation response.
+2025-01-19 16:30:42.898 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:30:42.898 +01:00 [DBG] Connection id "0HN9OJOU0JORB" completed keep alive response.
+2025-01-19 16:30:42.898 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 17.606ms
+2025-01-19 16:30:42.903 +01:00 [DBG] Connection id "0HN9OJOU0JORD" accepted.
+2025-01-19 16:30:42.903 +01:00 [DBG] Connection id "0HN9OJOU0JORD" started.
+2025-01-19 16:30:42.904 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=uGsIGvIhfKwb81fzA_oDaQ - null null
+2025-01-19 16:30:42.904 +01:00 [DBG] 1 candidate(s) found for the request path '/_blazor'
+2025-01-19 16:30:42.904 +01:00 [DBG] Request matched endpoint 'null'
+2025-01-19 16:30:42.905 +01:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2025-01-19 16:30:42.905 +01:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-01-19 16:30:42.905 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:30:42.915 +01:00 [DBG] Establishing new connection.
+2025-01-19 16:30:42.921 +01:00 [DBG] OnConnectedAsync started.
+2025-01-19 16:30:42.924 +01:00 [DBG] WebSocket compression negotiation accepted with values 'permessage-deflate; client_max_window_bits=15'.
+2025-01-19 16:30:42.931 +01:00 [DBG] Socket opened using Sub-Protocol: 'null'.
+2025-01-19 16:30:42.947 +01:00 [DBG] Found protocol implementation for requested protocol: blazorpack.
+2025-01-19 16:30:42.951 +01:00 [DBG] Completed connection handshake. Using HubProtocol 'blazorpack'.
+2025-01-19 16:30:42.969 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "0", Target: "StartCircuit", Arguments: [ http://localhost:5273/, http://localhost:5273/, [], CfDJ8F4n7nwU28lBtlNjAVOvi7GtTOTAAVZpGvGH6ehOUGZW62TDr1UeHp3k4zAA83mBkP39sbmONSn3PNlQS94i69uDcht5VvS3ivsepAtjIXLFPnTdM61h0R4a9s0L2z2T1rRTayAce23LHXbAsY00NiGU6YatmnOczvKZQ9rEBuIZjHYmn+yqsdilRcBgXos/557r1hS32l7bW97r6TVYiPmTTQ31sAU+BQBkjYvIJ4O1vwvFH3ESr7WOuvYGhByiEl9Og0JnFRUl+wII5FCv7fD3qT/srDS64G4WYrGpgzXZfhJlVnR3WH3wDn/H3/A+zhQG44ruK6C3G/lvJR5fwK3jxuueA6Js7eWkLhfRfe0H/w5Jg9DVHKBHox9QlfrWT6Uo7q6soI8sQMCSyc/Bb9hEXks71/gVajsbD8KT0wf4j63HsIGRDmXdHNI1aABqqx6AQs3JGd1KpagbiQkRf3h4xl2vVLyX6Av/0EY+4QcZlQ0QNsudBtSsE31ZZMR3iFSpN1evnbHk02gGK/iWRI4XtspfEPo8+yhrvntkSvWw ], StreamIds: [  ] }.
+2025-01-19 16:30:43.019 +01:00 [DBG] Begin invoke JS interop '2': 'Blazor._internal.attachWebRendererInterop'
+2025-01-19 16:30:43.023 +01:00 [DBG] Created circuit SVx2F-IBVd3ADUzIuDQJirjyyXkZw6j93LagdeSWwsk for connection 6Nx8vQxDe8mMyai17kC0-w
+2025-01-19 16:30:43.026 +01:00 [DBG] Circuit initialization started.
+2025-01-19 16:30:43.026 +01:00 [DBG] Circuit initialization succeeded.
+2025-01-19 16:30:43.032 +01:00 [DBG] Created circuit 'SVx2F-IBVd3ADUzIuDQJirjyyXkZw6j93LagdeSWwsk' with secret '(redacted)' for '6Nx8vQxDe8mMyai17kC0-w'
+2025-01-19 16:30:43.033 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 2, True, [2,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.037 +01:00 [DBG] The JS interop call with callback id '2' succeeded.
+2025-01-19 16:30:43.039 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "UpdateRootComponents", Arguments: [ {"batchId":1,"operations":[{"type":"add","ssrComponentId":1,"marker":{"type":"server","prerenderId":"0564e1962fda45eb877aa3d25063b4fe","key":{"locationHash":"77D12F14A8105320B1AAED6AE7E689DA0EC4483270A645E84079EAA0FFDF550D:5","formattedComponentKey":""},"sequence":0,"descriptor":"CfDJ8F4n7nwU28lBtlNjAVOvi7GUigyhmYVDrtOfvJP2qk5V7eKZx6fm5uE5iUXgao0iPtVqaW8b4rFV9J6q30TsK9rtS2Oc2FWdwlB/dFyRs+yYWZjDFSTxLuonYn5kj18VvlF8BA4YdD0S2HdV0wwC6p1h/9Jo+qizwjWgLecSIkxURPlMeRP60pTcP9keyVaWyBNr0yhGkGmHoAIuge+bgBQARWUD2iuJliJqLFb9gx9HQy9bzIGQbp8RpQ6h9eEXkn7XNQOLgUgbxHJi1B7AhypuLD/rXTKeQ62oQelGp6Bv8MBVe4vzMtBq4WI8WzbGe5ptXm0GJxBPNkeBrY2+fAEim2bqkx0QsZBh0TfYkpS7cyUOjoXbiYvo6gtSAdf+OdSt3pq2aFOwgPiIL488j6LF3WM3WJeq62YbrncRF/zaOlyKktCsPdwCUcWschOL/h603JvWCm5qrdR77kMLRm7yLOM6EvXl2AHTRqIFxl/86p9jqlRFfYE00Kl4vtSAkR02n8ybW11ADO+ORafGx08foH5NgpXPYfVVmnBcyJp9u+IWRDN4SJeP9aBUtR88ecsTnLqK5IfIDWQJ4Leg26g=","uniqueId":0}},{"type":"add","ssrComponentId":2,"marker":{"type":"server","prerenderId":"9a677537eab542a58361eb69b33168b3","key":{"locationHash":"84F0CA4762EE621A76966D81E072E4197598686EDA7E77F1F99E2F711D87C85E:8","formattedComponentKey":""},"sequence":1,"descriptor":"CfDJ8F4n7nwU28lBtlNjAVOvi7Ettpgeb5rXABYeuAzb7/sUfFd3L7iW1qzx6XmiAf+OzSq8szRYXbUNTj1chv38FiFAOcQ49E+uOu7raY6/y+4ZR+CtCItkL7SOW9SZaR5H4BJo4HmEpeRw6wvdkLEsKnz3Z0Mel+ZMkqVRQilZcAqWSSIrGKtBfXdRNsNemahNfkT0zoyiNsia/fSFDM8WNZjK0BBQ2gT+uocB9Uw/D+0smUIL5yzI+HB+yWTRveKOEwv1QTJP4tdIMo49Eg8+EP8Bx/Cxn0JcY++1+Euhk5lU/F5C0+hHXIFrG2AQTiIukenwTKYijU6T9BISPElmMGECNLlomVErtadAni/JjBGDPAqTFS1oEt3dBUmyf4RvA4rIlsKBPf+3dkGHbf+SXBhoyhzVREgYlWh4OZrXH/VKock6QvzJsfH5Rcbo/9BCLZqvYiCZZbt7THGRCGpOg7ESIP9rt/Oj1ciKALN/xoASUA06tW9/ub+8ro3VCVCqHAKZfQ5BjgxleuxTukeGcDtpdQ0VcvaK56vemZo9O10q","uniqueId":1}}]}, CfDJ8F4n7nwU28lBtlNjAVOvi7GtTOTAAVZpGvGH6ehOUGZW62TDr1UeHp3k4zAA83mBkP39sbmONSn3PNlQS94i69uDcht5VvS3ivsepAtjIXLFPnTdM61h0R4a9s0L2z2T1rRTayAce23LHXbAsY00NiGU6YatmnOczvKZQ9rEBuIZjHYmn+yqsdilRcBgXos/557r1hS32l7bW97r6TVYiPmTTQ31sAU+BQBkjYvIJ4O1vwvFH3ESr7WOuvYGhByiEl9Og0JnFRUl+wII5FCv7fD3qT/srDS64G4WYrGpgzXZfhJlVnR3WH3wDn/H3/A+zhQG44ruK6C3G/lvJR5fwK3jxuueA6Js7eWkLhfRfe0H/w5Jg9DVHKBHox9QlfrWT6Uo7q6soI8sQMCSyc/Bb9hEXks71/gVajsbD8KT0wf4j63HsIGRDmXdHNI1aABqqx6AQs3JGd1KpagbiQkRf3h4xl2vVLyX6Av/0EY+4QcZlQ0QNsudBtSsE31ZZMR3iFSpN1evnbHk02gGK/iWRI4XtspfEPo8+yhrvntkSvWw ], StreamIds: [  ] }.
+2025-01-19 16:30:43.089 +01:00 [DBG] Update root components started.
+2025-01-19 16:30:43.095 +01:00 [DBG] Opening circuit with id 'SVx2F-IBVd3ADUzIuDQJirjyyXkZw6j93LagdeSWwsk'.
+2025-01-19 16:30:43.099 +01:00 [DBG] Circuit id 'SVx2F-IBVd3ADUzIuDQJirjyyXkZw6j93LagdeSWwsk' connected using connection '6Nx8vQxDe8mMyai17kC0-w'.
+2025-01-19 16:30:43.100 +01:00 [DBG] Initializing root component 0 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+2025-01-19 16:30:43.101 +01:00 [DBG] Rendering component 0 of type Microsoft.AspNetCore.Components.Web.HeadOutlet
+2025-01-19 16:30:43.101 +01:00 [DBG] Initializing component 1 (Microsoft.AspNetCore.Components.Sections.SectionOutlet) as child of 0 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+2025-01-19 16:30:43.102 +01:00 [DBG] Initializing component 2 (Microsoft.AspNetCore.Components.Sections.SectionOutlet) as child of 0 (Microsoft.AspNetCore.Components.Web.HeadOutlet)
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 1 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.102 +01:00 [DBG] Initializing component 3 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 1 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 1 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 2 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.102 +01:00 [DBG] Initializing component 4 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 2 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 2 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 3 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 3 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 4 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.102 +01:00 [DBG] Rendering component 4 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.107 +01:00 [DBG] Sending render batch 2 of size 394 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:43.109 +01:00 [DBG] Initializing root component 5 (BlazorServerTemplate.Components.Routes)
+2025-01-19 16:30:43.110 +01:00 [DBG] Rendering component 5 of type BlazorServerTemplate.Components.Routes
+2025-01-19 16:30:43.112 +01:00 [DBG] Initializing component 6 (Microsoft.AspNetCore.Components.Routing.Router) as child of 5 (BlazorServerTemplate.Components.Routes)
+2025-01-19 16:30:43.121 +01:00 [DBG] Request successfully matched the route with name 'null' and template '/'
+2025-01-19 16:30:43.121 +01:00 [DBG] Navigating to component BlazorServerTemplate.Components.Pages.Home in response to path '/' with base URI 'http://localhost:5273/'
+2025-01-19 16:30:43.121 +01:00 [DBG] Rendering component 6 of type Microsoft.AspNetCore.Components.Routing.Router
+2025-01-19 16:30:43.121 +01:00 [DBG] Initializing component 7 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView) as child of 6 (Microsoft.AspNetCore.Components.Routing.Router)
+2025-01-19 16:30:43.121 +01:00 [DBG] Initializing component 8 (Microsoft.AspNetCore.Components.Routing.FocusOnNavigate) as child of 6 (Microsoft.AspNetCore.Components.Routing.Router)
+2025-01-19 16:30:43.121 +01:00 [DBG] Rendering component 7 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView
+2025-01-19 16:30:43.123 +01:00 [DBG] Initializing component 9 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore) as child of 7 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView)
+2025-01-19 16:30:43.123 +01:00 [DBG] Rendering component 8 of type Microsoft.AspNetCore.Components.Routing.FocusOnNavigate
+2025-01-19 16:30:43.124 +01:00 [DBG] Rendering component 9 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore
+2025-01-19 16:30:43.124 +01:00 [DBG] Initializing component 10 (Microsoft.AspNetCore.Components.LayoutView) as child of 9 (Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore)
+2025-01-19 16:30:43.125 +01:00 [DBG] Rendering component 10 of type Microsoft.AspNetCore.Components.LayoutView
+2025-01-19 16:30:43.125 +01:00 [DBG] Initializing component 11 (BlazorServerTemplate.Components.Layout.MainLayout) as child of 10 (Microsoft.AspNetCore.Components.LayoutView)
+2025-01-19 16:30:43.125 +01:00 [DBG] Rendering component 11 of type BlazorServerTemplate.Components.Layout.MainLayout
+2025-01-19 16:30:43.126 +01:00 [DBG] Initializing component 12 (MudBlazor.MudThemeProvider) as child of 11 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:43.128 +01:00 [DBG] Initializing component 13 (MudBlazor.MudPopoverProvider) as child of 11 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:43.128 +01:00 [DBG] Adding entry for "023b5d40-c49a-4994-b382-91be46607186"/MudBlazor.MudPopoverProvider. 1 total observers after add.
+2025-01-19 16:30:43.128 +01:00 [DBG] Updating entry for "023b5d40-c49a-4994-b382-91be46607186"/MudBlazor.MudPopoverProvider. 1 total observers.
+2025-01-19 16:30:43.129 +01:00 [DBG] Initializing component 14 (MudBlazor.MudDialogProvider) as child of 11 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:43.129 +01:00 [DBG] Initializing component 15 (MudBlazor.MudSnackbarProvider) as child of 11 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:43.129 +01:00 [DBG] Initializing component 16 (MudBlazor.MudLayout) as child of 11 (BlazorServerTemplate.Components.Layout.MainLayout)
+2025-01-19 16:30:43.129 +01:00 [DBG] Rendering component 12 of type MudBlazor.MudThemeProvider
+2025-01-19 16:30:43.130 +01:00 [DBG] Rendering component 13 of type MudBlazor.MudPopoverProvider
+2025-01-19 16:30:43.130 +01:00 [DBG] Rendering component 14 of type MudBlazor.MudDialogProvider
+2025-01-19 16:30:43.130 +01:00 [DBG] Initializing component 17 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider]) as child of 14 (MudBlazor.MudDialogProvider)
+2025-01-19 16:30:43.131 +01:00 [DBG] Rendering component 15 of type MudBlazor.MudSnackbarProvider
+2025-01-19 16:30:43.131 +01:00 [DBG] Rendering component 16 of type MudBlazor.MudLayout
+2025-01-19 16:30:43.131 +01:00 [DBG] Initializing component 18 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]) as child of 16 (MudBlazor.MudLayout)
+2025-01-19 16:30:43.131 +01:00 [DBG] Rendering component 17 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider]
+2025-01-19 16:30:43.131 +01:00 [DBG] Initializing component 19 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.DialogOptions]) as child of 17 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider])
+2025-01-19 16:30:43.132 +01:00 [DBG] Rendering component 18 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]
+2025-01-19 16:30:43.132 +01:00 [DBG] Initializing component 20 (MudBlazor.MudAppBar) as child of 18 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout])
+2025-01-19 16:30:43.132 +01:00 [DBG] Initializing component 21 (MudBlazor.MudDrawer) as child of 18 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout])
+2025-01-19 16:30:43.132 +01:00 [DBG] Initializing component 22 (MudBlazor.MudMainContent) as child of 18 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout])
+2025-01-19 16:30:43.133 +01:00 [DBG] Rendering component 19 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.DialogOptions]
+2025-01-19 16:30:43.133 +01:00 [DBG] Rendering component 20 of type MudBlazor.MudAppBar
+2025-01-19 16:30:43.133 +01:00 [DBG] Initializing component 23 (MudBlazor.MudToolBar) as child of 20 (MudBlazor.MudAppBar)
+2025-01-19 16:30:43.133 +01:00 [DBG] Rendering component 16 of type MudBlazor.MudLayout
+2025-01-19 16:30:43.133 +01:00 [DBG] Rendering component 21 of type MudBlazor.MudDrawer
+2025-01-19 16:30:43.133 +01:00 [DBG] Initializing component 24 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]) as child of 21 (MudBlazor.MudDrawer)
+2025-01-19 16:30:43.134 +01:00 [DBG] Initializing component 25 (MudBlazor.MudOverlay) as child of 21 (MudBlazor.MudDrawer)
+2025-01-19 16:30:43.134 +01:00 [DBG] Rendering component 22 of type MudBlazor.MudMainContent
+2025-01-19 16:30:43.134 +01:00 [DBG] Initializing component 26 (BlazorServerTemplate.Components.Pages.Home) as child of 22 (MudBlazor.MudMainContent)
+2025-01-19 16:30:43.134 +01:00 [DBG] Rendering component 23 of type MudBlazor.MudToolBar
+2025-01-19 16:30:43.134 +01:00 [DBG] Initializing component 27 (MudBlazor.MudIconButton) as child of 23 (MudBlazor.MudToolBar)
+2025-01-19 16:30:43.135 +01:00 [DBG] Initializing component 28 (MudBlazor.MudText) as child of 23 (MudBlazor.MudToolBar)
+2025-01-19 16:30:43.135 +01:00 [DBG] Initializing component 29 (MudBlazor.MudSpacer) as child of 23 (MudBlazor.MudToolBar)
+2025-01-19 16:30:43.135 +01:00 [DBG] Initializing component 30 (MudBlazor.MudIconButton) as child of 23 (MudBlazor.MudToolBar)
+2025-01-19 16:30:43.135 +01:00 [DBG] Rendering component 18 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]
+2025-01-19 16:30:43.135 +01:00 [DBG] Rendering component 24 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]
+2025-01-19 16:30:43.135 +01:00 [DBG] Initializing component 31 (BlazorServerTemplate.Components.Layout.NavMenu) as child of 24 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer])
+2025-01-19 16:30:43.135 +01:00 [DBG] Rendering component 25 of type MudBlazor.MudOverlay
+2025-01-19 16:30:43.135 +01:00 [DBG] Rendering component 26 of type BlazorServerTemplate.Components.Pages.Home
+2025-01-19 16:30:43.136 +01:00 [DBG] Initializing component 32 (Microsoft.AspNetCore.Components.Web.PageTitle) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.136 +01:00 [DBG] Initializing component 33 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.136 +01:00 [DBG] Initializing component 34 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.136 +01:00 [DBG] Initializing component 35 (MudBlazor.MudAlert) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 36 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 37 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 38 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 39 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 40 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 41 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 42 (MudBlazor.MudText) as child of 26 (BlazorServerTemplate.Components.Pages.Home)
+2025-01-19 16:30:43.137 +01:00 [DBG] Rendering component 27 of type MudBlazor.MudIconButton
+2025-01-19 16:30:43.137 +01:00 [DBG] Initializing component 43 (MudBlazor.MudElement) as child of 27 (MudBlazor.MudIconButton)
+2025-01-19 16:30:43.138 +01:00 [DBG] Rendering component 28 of type MudBlazor.MudText
+2025-01-19 16:30:43.138 +01:00 [DBG] Initializing component 44 (MudBlazor.MudElement) as child of 28 (MudBlazor.MudText)
+2025-01-19 16:30:43.138 +01:00 [DBG] Rendering component 29 of type MudBlazor.MudSpacer
+2025-01-19 16:30:43.138 +01:00 [DBG] Rendering component 30 of type MudBlazor.MudIconButton
+2025-01-19 16:30:43.138 +01:00 [DBG] Initializing component 45 (MudBlazor.MudElement) as child of 30 (MudBlazor.MudIconButton)
+2025-01-19 16:30:43.139 +01:00 [DBG] Rendering component 20 of type MudBlazor.MudAppBar
+2025-01-19 16:30:43.139 +01:00 [DBG] Rendering component 21 of type MudBlazor.MudDrawer
+2025-01-19 16:30:43.139 +01:00 [DBG] Rendering component 22 of type MudBlazor.MudMainContent
+2025-01-19 16:30:43.139 +01:00 [DBG] Rendering component 31 of type BlazorServerTemplate.Components.Layout.NavMenu
+2025-01-19 16:30:43.139 +01:00 [DBG] Initializing component 46 (MudBlazor.MudNavMenu) as child of 31 (BlazorServerTemplate.Components.Layout.NavMenu)
+2025-01-19 16:30:43.140 +01:00 [DBG] Rendering component 32 of type Microsoft.AspNetCore.Components.Web.PageTitle
+2025-01-19 16:30:43.140 +01:00 [DBG] Initializing component 47 (Microsoft.AspNetCore.Components.Sections.SectionContent) as child of 32 (Microsoft.AspNetCore.Components.Web.PageTitle)
+2025-01-19 16:30:43.140 +01:00 [DBG] Rendering component 33 of type MudBlazor.MudText
+2025-01-19 16:30:43.140 +01:00 [DBG] Initializing component 48 (MudBlazor.MudElement) as child of 33 (MudBlazor.MudText)
+2025-01-19 16:30:43.141 +01:00 [DBG] Rendering component 34 of type MudBlazor.MudText
+2025-01-19 16:30:43.141 +01:00 [DBG] Initializing component 49 (MudBlazor.MudElement) as child of 34 (MudBlazor.MudText)
+2025-01-19 16:30:43.141 +01:00 [DBG] Rendering component 35 of type MudBlazor.MudAlert
+2025-01-19 16:30:43.141 +01:00 [DBG] Initializing component 50 (MudBlazor.MudIcon) as child of 35 (MudBlazor.MudAlert)
+2025-01-19 16:30:43.141 +01:00 [DBG] Initializing component 51 (MudBlazor.MudLink) as child of 35 (MudBlazor.MudAlert)
+2025-01-19 16:30:43.141 +01:00 [DBG] Rendering component 36 of type MudBlazor.MudText
+2025-01-19 16:30:43.142 +01:00 [DBG] Initializing component 52 (MudBlazor.MudElement) as child of 36 (MudBlazor.MudText)
+2025-01-19 16:30:43.142 +01:00 [DBG] Rendering component 37 of type MudBlazor.MudText
+2025-01-19 16:30:43.142 +01:00 [DBG] Initializing component 53 (MudBlazor.MudElement) as child of 37 (MudBlazor.MudText)
+2025-01-19 16:30:43.142 +01:00 [DBG] Rendering component 38 of type MudBlazor.MudText
+2025-01-19 16:30:43.142 +01:00 [DBG] Initializing component 54 (MudBlazor.MudElement) as child of 38 (MudBlazor.MudText)
+2025-01-19 16:30:43.142 +01:00 [DBG] Rendering component 39 of type MudBlazor.MudText
+2025-01-19 16:30:43.142 +01:00 [DBG] Initializing component 55 (MudBlazor.MudElement) as child of 39 (MudBlazor.MudText)
+2025-01-19 16:30:43.142 +01:00 [DBG] Rendering component 40 of type MudBlazor.MudText
+2025-01-19 16:30:43.142 +01:00 [DBG] Initializing component 56 (MudBlazor.MudElement) as child of 40 (MudBlazor.MudText)
+2025-01-19 16:30:43.142 +01:00 [DBG] Rendering component 41 of type MudBlazor.MudText
+2025-01-19 16:30:43.143 +01:00 [DBG] Initializing component 57 (MudBlazor.MudElement) as child of 41 (MudBlazor.MudText)
+2025-01-19 16:30:43.143 +01:00 [DBG] Rendering component 42 of type MudBlazor.MudText
+2025-01-19 16:30:43.143 +01:00 [DBG] Initializing component 58 (MudBlazor.MudElement) as child of 42 (MudBlazor.MudText)
+2025-01-19 16:30:43.143 +01:00 [DBG] Rendering component 43 of type MudBlazor.MudElement
+2025-01-19 16:30:43.144 +01:00 [DBG] Initializing component 59 (MudBlazor.MudIcon) as child of 43 (MudBlazor.MudElement)
+2025-01-19 16:30:43.144 +01:00 [DBG] Rendering component 44 of type MudBlazor.MudElement
+2025-01-19 16:30:43.144 +01:00 [DBG] Rendering component 45 of type MudBlazor.MudElement
+2025-01-19 16:30:43.144 +01:00 [DBG] Initializing component 60 (MudBlazor.MudIcon) as child of 45 (MudBlazor.MudElement)
+2025-01-19 16:30:43.144 +01:00 [DBG] Rendering component 23 of type MudBlazor.MudToolBar
+2025-01-19 16:30:43.145 +01:00 [DBG] Rendering component 24 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]
+2025-01-19 16:30:43.145 +01:00 [DBG] Rendering component 25 of type MudBlazor.MudOverlay
+2025-01-19 16:30:43.145 +01:00 [DBG] Rendering component 46 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:43.145 +01:00 [DBG] Initializing component 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]) as child of 46 (MudBlazor.MudNavMenu)
+2025-01-19 16:30:43.145 +01:00 [DBG] Rendering component 1 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.145 +01:00 [DBG] Initializing component 62 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 1 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:43.146 +01:00 [DBG] Disposing component 3 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.146 +01:00 [DBG] Rendering component 48 of type MudBlazor.MudElement
+2025-01-19 16:30:43.146 +01:00 [DBG] Rendering component 49 of type MudBlazor.MudElement
+2025-01-19 16:30:43.146 +01:00 [DBG] Rendering component 50 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.146 +01:00 [DBG] Rendering component 51 of type MudBlazor.MudLink
+2025-01-19 16:30:43.146 +01:00 [DBG] Rendering component 52 of type MudBlazor.MudElement
+2025-01-19 16:30:43.146 +01:00 [DBG] Rendering component 53 of type MudBlazor.MudElement
+2025-01-19 16:30:43.147 +01:00 [DBG] Rendering component 54 of type MudBlazor.MudElement
+2025-01-19 16:30:43.147 +01:00 [DBG] Rendering component 55 of type MudBlazor.MudElement
+2025-01-19 16:30:43.147 +01:00 [DBG] Rendering component 56 of type MudBlazor.MudElement
+2025-01-19 16:30:43.147 +01:00 [DBG] Initializing component 63 (MudBlazor.MudLink) as child of 56 (MudBlazor.MudElement)
+2025-01-19 16:30:43.147 +01:00 [DBG] Rendering component 57 of type MudBlazor.MudElement
+2025-01-19 16:30:43.147 +01:00 [DBG] Rendering component 58 of type MudBlazor.MudElement
+2025-01-19 16:30:43.147 +01:00 [DBG] Initializing component 64 (MudBlazor.MudLink) as child of 58 (MudBlazor.MudElement)
+2025-01-19 16:30:43.147 +01:00 [DBG] Rendering component 59 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.148 +01:00 [DBG] Rendering component 60 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.148 +01:00 [DBG] Rendering component 27 of type MudBlazor.MudIconButton
+2025-01-19 16:30:43.148 +01:00 [DBG] Rendering component 28 of type MudBlazor.MudText
+2025-01-19 16:30:43.148 +01:00 [DBG] Rendering component 61 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:43.148 +01:00 [DBG] Initializing component 65 (MudBlazor.MudNavLink) as child of 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.148 +01:00 [DBG] Initializing component 66 (MudBlazor.MudNavLink) as child of 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.148 +01:00 [DBG] Initializing component 67 (MudBlazor.MudNavLink) as child of 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.149 +01:00 [DBG] Initializing component 68 (MudBlazor.MudNavGroup) as child of 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.149 +01:00 [DBG] Initializing component 69 (MudBlazor.MudNavLink) as child of 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.149 +01:00 [DBG] Initializing component 70 (Microsoft.AspNetCore.Components.Authorization.AuthorizeView) as child of 61 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.149 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:30:43.149 +01:00 [DBG] Rendering component 62 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.149 +01:00 [DBG] Rendering component 63 of type MudBlazor.MudLink
+2025-01-19 16:30:43.150 +01:00 [DBG] Rendering component 64 of type MudBlazor.MudLink
+2025-01-19 16:30:43.150 +01:00 [DBG] Rendering component 43 of type MudBlazor.MudElement
+2025-01-19 16:30:43.150 +01:00 [DBG] Rendering component 44 of type MudBlazor.MudElement
+2025-01-19 16:30:43.150 +01:00 [DBG] Rendering component 65 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.150 +01:00 [DBG] Initializing component 71 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 65 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.150 +01:00 [DBG] Rendering component 66 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.150 +01:00 [DBG] Initializing component 72 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 66 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.151 +01:00 [DBG] Rendering component 67 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.151 +01:00 [DBG] Initializing component 73 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 67 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.151 +01:00 [DBG] Rendering component 68 of type MudBlazor.MudNavGroup
+2025-01-19 16:30:43.151 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudNavGroup_ToggleExpand' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:43.152 +01:00 [DBG] Initializing component 74 (MudBlazor.MudIcon) as child of 68 (MudBlazor.MudNavGroup)
+2025-01-19 16:30:43.153 +01:00 [DBG] Initializing component 75 (MudBlazor.MudCollapse) as child of 68 (MudBlazor.MudNavGroup)
+2025-01-19 16:30:43.153 +01:00 [DBG] Rendering component 69 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.153 +01:00 [DBG] Initializing component 76 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 69 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 70 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeView
+2025-01-19 16:30:43.154 +01:00 [DBG] Initializing component 77 (MudBlazor.MudNavLink) as child of 70 (Microsoft.AspNetCore.Components.Authorization.AuthorizeView)
+2025-01-19 16:30:43.154 +01:00 [DBG] Initializing component 78 (MudBlazor.MudNavLink) as child of 70 (Microsoft.AspNetCore.Components.Authorization.AuthorizeView)
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 71 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.154 +01:00 [DBG] Initializing component 79 (MudBlazor.MudIcon) as child of 71 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 72 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.154 +01:00 [DBG] Initializing component 80 (MudBlazor.MudIcon) as child of 72 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 73 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.154 +01:00 [DBG] Initializing component 81 (MudBlazor.MudIcon) as child of 73 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 74 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 75 of type MudBlazor.MudCollapse
+2025-01-19 16:30:43.154 +01:00 [DBG] Initializing component 82 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]) as child of 75 (MudBlazor.MudCollapse)
+2025-01-19 16:30:43.154 +01:00 [DBG] Rendering component 76 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.155 +01:00 [DBG] Initializing component 83 (MudBlazor.MudIcon) as child of 76 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 77 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.155 +01:00 [DBG] Initializing component 84 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 77 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 78 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.155 +01:00 [DBG] Initializing component 85 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 78 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 79 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 80 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 81 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 82 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:43.155 +01:00 [DBG] Initializing component 86 (MudBlazor.MudNavMenu) as child of 82 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 83 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 84 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.155 +01:00 [DBG] Initializing component 87 (MudBlazor.MudIcon) as child of 84 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.155 +01:00 [DBG] Rendering component 85 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.156 +01:00 [DBG] Initializing component 88 (MudBlazor.MudIcon) as child of 85 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 86 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:43.156 +01:00 [DBG] Initializing component 89 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]) as child of 86 (MudBlazor.MudNavMenu)
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 87 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 88 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 89 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:43.156 +01:00 [DBG] Initializing component 90 (MudBlazor.MudNavLink) as child of 89 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext])
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 90 of type MudBlazor.MudNavLink
+2025-01-19 16:30:43.156 +01:00 [DBG] Initializing component 91 (Microsoft.AspNetCore.Components.Routing.NavLink) as child of 90 (MudBlazor.MudNavLink)
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 91 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:43.156 +01:00 [DBG] Initializing component 92 (MudBlazor.MudIcon) as child of 91 (Microsoft.AspNetCore.Components.Routing.NavLink)
+2025-01-19 16:30:43.156 +01:00 [DBG] Rendering component 92 of type MudBlazor.MudIcon
+2025-01-19 16:30:43.157 +01:00 [DBG] Sending render batch 3 of size 48005 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:43.160 +01:00 [DBG] Update root components succeeded.
+2025-01-19 16:30:43.161 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 2,  ], StreamIds: [  ] }.
+2025-01-19 16:30:43.163 +01:00 [DBG] Received confirmation for batch 2
+2025-01-19 16:30:43.168 +01:00 [DBG] Completing batch 2 without error in 60.8107ms.
+2025-01-19 16:30:43.171 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 3,  ], StreamIds: [  ] }.
+2025-01-19 16:30:43.172 +01:00 [DBG] Received confirmation for batch 3
+2025-01-19 16:30:43.172 +01:00 [DBG] Completing batch 3 without error in 14.6743ms.
+2025-01-19 16:30:43.173 +01:00 [DBG] Begin invoke JS interop '3': 'Blazor._internal.PageTitle.getAndRemoveExistingTitle'
+2025-01-19 16:30:43.177 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 3, True, [3,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.195 +01:00 [DBG] Begin invoke JS interop '4': 'Blazor._internal.navigationManager.enableNavigationInterception'
+2025-01-19 16:30:43.200 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 4, True, [4,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.203 +01:00 [DBG] Begin invoke JS interop '5': 'Blazor._internal.domWrapper.focusBySelector'
+2025-01-19 16:30:43.207 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 5, True, [5,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.209 +01:00 [DBG] Begin invoke JS interop '6': 'watchDarkThemeMedia'
+2025-01-19 16:30:43.213 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 6, True, [6,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.219 +01:00 [DBG] Begin invoke JS interop '7': 'mudpopoverHelper.countProviders'
+2025-01-19 16:30:43.221 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 7, True, [7,true,1] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.255 +01:00 [DBG] Begin invoke JS interop '8': 'mudElementRef.getBoundingClientRect'
+2025-01-19 16:30:43.259 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 8, True, [8,true,{"x":0,"y":64,"width":240,"height":890,"top":64,"right":240,"bottom":954,"left":0,"scrollY":0,"scrollX":0,"windowHeight":954,"windowWidth":1912}] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.261 +01:00 [DBG] Begin invoke JS interop '9': 'mudElementRef.getBoundingClientRect'
+2025-01-19 16:30:43.263 +01:00 [DBG] The JS interop call with callback id '3' succeeded.
+2025-01-19 16:30:43.263 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 9, True, [9,true,{"x":0,"y":226,"width":240,"height":40.5,"top":226,"right":240,"bottom":266.5,"left":0,"scrollY":0,"scrollX":0,"windowHeight":954,"windowWidth":1912}] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.264 +01:00 [DBG] Rendering component 0 of type Microsoft.AspNetCore.Components.Web.HeadOutlet
+2025-01-19 16:30:43.265 +01:00 [DBG] Rendering component 1 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.265 +01:00 [DBG] Rendering component 2 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:43.265 +01:00 [DBG] Rendering component 62 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.265 +01:00 [DBG] Rendering component 4 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:43.265 +01:00 [DBG] Sending render batch 4 of size 96 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:43.266 +01:00 [DBG] The JS interop call with callback id '4' succeeded.
+2025-01-19 16:30:43.266 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 4,  ], StreamIds: [  ] }.
+2025-01-19 16:30:43.267 +01:00 [DBG] Received confirmation for batch 4
+2025-01-19 16:30:43.267 +01:00 [DBG] Completing batch 4 without error in 1.9476ms.
+2025-01-19 16:30:43.267 +01:00 [DBG] The JS interop call with callback id '5' succeeded.
+2025-01-19 16:30:43.268 +01:00 [DBG] The JS interop call with callback id '6' succeeded.
+2025-01-19 16:30:43.269 +01:00 [DBG] The JS interop call with callback id '7' succeeded.
+2025-01-19 16:30:43.271 +01:00 [DBG] The JS interop call with callback id '8' succeeded.
+2025-01-19 16:30:43.293 +01:00 [DBG] Begin invoke JS interop '10': 'mudResizeListenerFactory.listenForResize'
+2025-01-19 16:30:43.294 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 10, True, [10,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.296 +01:00 [DBG] The JS interop call with callback id '9' succeeded.
+2025-01-19 16:30:43.298 +01:00 [DBG] The JS interop call with callback id '10' succeeded.
+2025-01-19 16:30:43.300 +01:00 [DBG] Adding entry for MudBlazor.BrowserViewportSubscription/MudBlazor.MudDrawer. 1 total observers after add.
+2025-01-19 16:30:43.302 +01:00 [DBG] Begin invoke JS interop '11': 'mudResizeListener.getBrowserWindowSize'
+2025-01-19 16:30:43.304 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 11, True, [11,true,{"height":954,"width":1912}] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.306 +01:00 [DBG] The JS interop call with callback id '11' succeeded.
+2025-01-19 16:30:43.309 +01:00 [DBG] Begin invoke JS interop '12': 'mudResizeListener.getBrowserWindowSize'
+2025-01-19 16:30:43.310 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 12, True, [12,true,{"height":954,"width":1912}] ], StreamIds: [  ] }.
+2025-01-19 16:30:43.311 +01:00 [DBG] The JS interop call with callback id '12' succeeded.
+2025-01-19 16:30:44.956 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 1, , DispatchEventAsync, 1, [{"eventHandlerId":3,"eventName":"pointerenter","eventFieldInfo":null},{"detail":0,"screenX":1963,"screenY":424,"clientX":39,"clientY":350,"offsetX":39,"offsetY":286,"pageX":39,"pageY":350,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerenter","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:30:44.968 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '1'.
+2025-01-19 16:30:45.046 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '1' completed successfully.
+2025-01-19 16:30:47.058 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 2, , DispatchEventAsync, 1, [{"eventHandlerId":19,"eventName":"click","eventFieldInfo":null},{"detail":1,"screenX":2017,"screenY":316,"clientX":93,"clientY":242,"offsetX":21,"offsetY":8,"pageX":93,"pageY":242,"movementX":0,"movementY":0,"button":0,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"click"}] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.059 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '2'.
+2025-01-19 16:30:47.064 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnLocationChanged", Arguments: [ http://localhost:5273/mudextensiondemo, , True ], StreamIds: [  ] }.
+2025-01-19 16:30:47.064 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '2' completed successfully.
+2025-01-19 16:30:47.075 +01:00 [DBG] Location changing to http://localhost:5273/mudextensiondemo in circuit 'SVx2F-IBVd3ADUzIuDQJirjyyXkZw6j93LagdeSWwsk'.
+2025-01-19 16:30:47.087 +01:00 [DBG] Received notification that the URI has changed to http://localhost:5273/mudextensiondemo with isIntercepted=true
+2025-01-19 16:30:47.090 +01:00 [DBG] Request successfully matched the route with name 'null' and template '/mudextensiondemo'
+2025-01-19 16:30:47.090 +01:00 [DBG] Navigating to component BlazorServerTemplate.Components.Pages.Demo.MudExtensionsDemo in response to path '/mudextensiondemo' with base URI 'http://localhost:5273/'
+2025-01-19 16:30:47.090 +01:00 [DBG] Rendering component 6 of type Microsoft.AspNetCore.Components.Routing.Router
+2025-01-19 16:30:47.091 +01:00 [DBG] Rendering component 7 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView
+2025-01-19 16:30:47.091 +01:00 [DBG] Rendering component 8 of type Microsoft.AspNetCore.Components.Routing.FocusOnNavigate
+2025-01-19 16:30:47.091 +01:00 [DBG] Rendering component 9 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView+AuthorizeRouteViewCore
+2025-01-19 16:30:47.092 +01:00 [DBG] Rendering component 10 of type Microsoft.AspNetCore.Components.LayoutView
+2025-01-19 16:30:47.092 +01:00 [DBG] Rendering component 11 of type BlazorServerTemplate.Components.Layout.MainLayout
+2025-01-19 16:30:47.092 +01:00 [DBG] Rendering component 16 of type MudBlazor.MudLayout
+2025-01-19 16:30:47.093 +01:00 [DBG] Rendering component 18 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudLayout]
+2025-01-19 16:30:47.094 +01:00 [DBG] Rendering component 20 of type MudBlazor.MudAppBar
+2025-01-19 16:30:47.094 +01:00 [DBG] Rendering component 21 of type MudBlazor.MudDrawer
+2025-01-19 16:30:47.095 +01:00 [DBG] Rendering component 22 of type MudBlazor.MudMainContent
+2025-01-19 16:30:47.098 +01:00 [DBG] Initializing component 93 (BlazorServerTemplate.Components.Pages.Demo.MudExtensionsDemo) as child of 22 (MudBlazor.MudMainContent)
+2025-01-19 16:30:47.098 +01:00 [DBG] Disposing component 26 of type BlazorServerTemplate.Components.Pages.Home
+2025-01-19 16:30:47.098 +01:00 [DBG] Disposing component 32 of type Microsoft.AspNetCore.Components.Web.PageTitle
+2025-01-19 16:30:47.099 +01:00 [DBG] Disposing component 33 of type MudBlazor.MudText
+2025-01-19 16:30:47.099 +01:00 [DBG] Disposing component 34 of type MudBlazor.MudText
+2025-01-19 16:30:47.099 +01:00 [DBG] Disposing component 35 of type MudBlazor.MudAlert
+2025-01-19 16:30:47.099 +01:00 [DBG] Disposing component 36 of type MudBlazor.MudText
+2025-01-19 16:30:47.099 +01:00 [DBG] Disposing component 37 of type MudBlazor.MudText
+2025-01-19 16:30:47.099 +01:00 [DBG] Disposing component 38 of type MudBlazor.MudText
+2025-01-19 16:30:47.100 +01:00 [DBG] Disposing component 39 of type MudBlazor.MudText
+2025-01-19 16:30:47.100 +01:00 [DBG] Disposing component 40 of type MudBlazor.MudText
+2025-01-19 16:30:47.100 +01:00 [DBG] Disposing component 41 of type MudBlazor.MudText
+2025-01-19 16:30:47.100 +01:00 [DBG] Disposing component 42 of type MudBlazor.MudText
+2025-01-19 16:30:47.101 +01:00 [DBG] Disposing component 47 of type Microsoft.AspNetCore.Components.Sections.SectionContent
+2025-01-19 16:30:47.101 +01:00 [DBG] Disposing component 48 of type MudBlazor.MudElement
+2025-01-19 16:30:47.101 +01:00 [DBG] Disposing component 49 of type MudBlazor.MudElement
+2025-01-19 16:30:47.121 +01:00 [DBG] Disposing component 50 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.121 +01:00 [DBG] Disposing component 51 of type MudBlazor.MudLink
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 52 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 53 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 54 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 55 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 56 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 57 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 58 of type MudBlazor.MudElement
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 63 of type MudBlazor.MudLink
+2025-01-19 16:30:47.122 +01:00 [DBG] Disposing component 64 of type MudBlazor.MudLink
+2025-01-19 16:30:47.122 +01:00 [DBG] Rendering component 23 of type MudBlazor.MudToolBar
+2025-01-19 16:30:47.122 +01:00 [DBG] Rendering component 24 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDrawer]
+2025-01-19 16:30:47.122 +01:00 [DBG] Rendering component 25 of type MudBlazor.MudOverlay
+2025-01-19 16:30:47.122 +01:00 [DBG] Rendering component 93 of type BlazorServerTemplate.Components.Pages.Demo.MudExtensionsDemo
+2025-01-19 16:30:47.126 +01:00 [DBG] Initializing component 94 (MudBlazor.MudGrid) as child of 93 (BlazorServerTemplate.Components.Pages.Demo.MudExtensionsDemo)
+2025-01-19 16:30:47.128 +01:00 [DBG] Rendering component 1 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet
+2025-01-19 16:30:47.128 +01:00 [DBG] Initializing component 95 (Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer) as child of 1 (Microsoft.AspNetCore.Components.Sections.SectionOutlet)
+2025-01-19 16:30:47.128 +01:00 [DBG] Disposing component 62 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:47.128 +01:00 [DBG] Rendering component 27 of type MudBlazor.MudIconButton
+2025-01-19 16:30:47.128 +01:00 [DBG] Rendering component 28 of type MudBlazor.MudText
+2025-01-19 16:30:47.129 +01:00 [DBG] Rendering component 94 of type MudBlazor.MudGrid
+2025-01-19 16:30:47.131 +01:00 [DBG] Initializing component 96 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudGrid]) as child of 94 (MudBlazor.MudGrid)
+2025-01-19 16:30:47.131 +01:00 [DBG] Rendering component 95 of type Microsoft.AspNetCore.Components.Sections.SectionOutlet+SectionOutletContentRenderer
+2025-01-19 16:30:47.131 +01:00 [DBG] Rendering component 43 of type MudBlazor.MudElement
+2025-01-19 16:30:47.131 +01:00 [DBG] Rendering component 44 of type MudBlazor.MudElement
+2025-01-19 16:30:47.131 +01:00 [DBG] Rendering component 96 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudGrid]
+2025-01-19 16:30:47.134 +01:00 [DBG] Initializing component 97 (MudBlazor.MudItem) as child of 96 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudGrid])
+2025-01-19 16:30:47.136 +01:00 [DBG] Initializing component 98 (MudBlazor.MudItem) as child of 96 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudGrid])
+2025-01-19 16:30:47.136 +01:00 [DBG] Rendering component 97 of type MudBlazor.MudItem
+2025-01-19 16:30:47.155 +01:00 [DBG] Initializing component 99 (MudExtensions.MudCodeInput`1[System.String]) as child of 97 (MudBlazor.MudItem)
+2025-01-19 16:30:47.166 +01:00 [DBG] Rendering component 98 of type MudBlazor.MudItem
+2025-01-19 16:30:47.168 +01:00 [DBG] Initializing component 100 (MudBlazor.MudStack) as child of 98 (MudBlazor.MudItem)
+2025-01-19 16:30:47.168 +01:00 [DBG] Rendering component 99 of type MudExtensions.MudCodeInput`1[System.String]
+2025-01-19 16:30:47.170 +01:00 [DBG] Initializing component 101 (MudBlazor.MudInputControl) as child of 99 (MudExtensions.MudCodeInput`1[System.String])
+2025-01-19 16:30:47.170 +01:00 [DBG] Rendering component 100 of type MudBlazor.MudStack
+2025-01-19 16:30:47.178 +01:00 [DBG] Initializing component 102 (MudBlazor.MudText) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.184 +01:00 [DBG] Initializing component 103 (MudBlazor.MudTextField`1[System.String]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.200 +01:00 [DBG] Initializing component 104 (MudBlazor.MudNumericField`1[System.Int32]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.206 +01:00 [DBG] Initializing component 105 (MudBlazor.MudNumericField`1[System.Int32]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.215 +01:00 [DBG] Initializing component 106 (MudBlazor.MudSelect`1[MudBlazor.Variant]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.228 +01:00 [DBG] Initializing component 107 (MudBlazor.MudSelect`1[MudBlazor.Margin]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.238 +01:00 [DBG] Initializing component 108 (MudExtensions.MudSwitchM3`1[System.Boolean]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.239 +01:00 [DBG] Initializing component 109 (MudExtensions.MudSwitchM3`1[System.Boolean]) as child of 100 (MudBlazor.MudStack)
+2025-01-19 16:30:47.239 +01:00 [DBG] Rendering component 101 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.247 +01:00 [DBG] Initializing component 110 (MudExtensions.MudTextFieldExtended`1[System.String]) as child of 101 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.252 +01:00 [DBG] Initializing component 111 (MudExtensions.MudTextFieldExtended`1[System.String]) as child of 101 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.253 +01:00 [DBG] Initializing component 112 (MudExtensions.MudTextFieldExtended`1[System.String]) as child of 101 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.253 +01:00 [DBG] Initializing component 113 (MudExtensions.MudTextFieldExtended`1[System.String]) as child of 101 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.253 +01:00 [DBG] Rendering component 102 of type MudBlazor.MudText
+2025-01-19 16:30:47.253 +01:00 [DBG] Initializing component 114 (MudBlazor.MudElement) as child of 102 (MudBlazor.MudText)
+2025-01-19 16:30:47.253 +01:00 [DBG] Rendering component 103 of type MudBlazor.MudTextField`1[System.String]
+2025-01-19 16:30:47.254 +01:00 [DBG] Initializing component 115 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 103 (MudBlazor.MudTextField`1[System.String])
+2025-01-19 16:30:47.255 +01:00 [DBG] Rendering component 104 of type MudBlazor.MudNumericField`1[System.Int32]
+2025-01-19 16:30:47.255 +01:00 [DBG] Initializing component 116 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 104 (MudBlazor.MudNumericField`1[System.Int32])
+2025-01-19 16:30:47.255 +01:00 [DBG] Rendering component 105 of type MudBlazor.MudNumericField`1[System.Int32]
+2025-01-19 16:30:47.255 +01:00 [DBG] Initializing component 117 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 105 (MudBlazor.MudNumericField`1[System.Int32])
+2025-01-19 16:30:47.255 +01:00 [DBG] Rendering component 106 of type MudBlazor.MudSelect`1[MudBlazor.Variant]
+2025-01-19 16:30:47.256 +01:00 [DBG] Initializing component 118 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 106 (MudBlazor.MudSelect`1[MudBlazor.Variant])
+2025-01-19 16:30:47.256 +01:00 [DBG] Initializing component 119 (MudBlazor.MudOverlay) as child of 106 (MudBlazor.MudSelect`1[MudBlazor.Variant])
+2025-01-19 16:30:47.256 +01:00 [DBG] Rendering component 107 of type MudBlazor.MudSelect`1[MudBlazor.Margin]
+2025-01-19 16:30:47.256 +01:00 [DBG] Initializing component 120 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 107 (MudBlazor.MudSelect`1[MudBlazor.Margin])
+2025-01-19 16:30:47.256 +01:00 [DBG] Initializing component 121 (MudBlazor.MudOverlay) as child of 107 (MudBlazor.MudSelect`1[MudBlazor.Margin])
+2025-01-19 16:30:47.257 +01:00 [DBG] Rendering component 108 of type MudExtensions.MudSwitchM3`1[System.Boolean]
+2025-01-19 16:30:47.271 +01:00 [DBG] Initializing component 122 (MudBlazor.MudText) as child of 108 (MudExtensions.MudSwitchM3`1[System.Boolean])
+2025-01-19 16:30:47.271 +01:00 [DBG] Rendering component 109 of type MudExtensions.MudSwitchM3`1[System.Boolean]
+2025-01-19 16:30:47.271 +01:00 [DBG] Initializing component 123 (MudBlazor.MudText) as child of 109 (MudExtensions.MudSwitchM3`1[System.Boolean])
+2025-01-19 16:30:47.271 +01:00 [DBG] Rendering component 110 of type MudExtensions.MudTextFieldExtended`1[System.String]
+2025-01-19 16:30:47.271 +01:00 [DBG] Initializing component 124 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 110 (MudExtensions.MudTextFieldExtended`1[System.String])
+2025-01-19 16:30:47.272 +01:00 [DBG] Rendering component 111 of type MudExtensions.MudTextFieldExtended`1[System.String]
+2025-01-19 16:30:47.272 +01:00 [DBG] Initializing component 125 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 111 (MudExtensions.MudTextFieldExtended`1[System.String])
+2025-01-19 16:30:47.272 +01:00 [DBG] Rendering component 112 of type MudExtensions.MudTextFieldExtended`1[System.String]
+2025-01-19 16:30:47.272 +01:00 [DBG] Initializing component 126 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 112 (MudExtensions.MudTextFieldExtended`1[System.String])
+2025-01-19 16:30:47.272 +01:00 [DBG] Rendering component 113 of type MudExtensions.MudTextFieldExtended`1[System.String]
+2025-01-19 16:30:47.272 +01:00 [DBG] Initializing component 127 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 113 (MudExtensions.MudTextFieldExtended`1[System.String])
+2025-01-19 16:30:47.272 +01:00 [DBG] Rendering component 114 of type MudBlazor.MudElement
+2025-01-19 16:30:47.272 +01:00 [DBG] Rendering component 115 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.273 +01:00 [DBG] Initializing component 128 (MudBlazor.MudInputControl) as child of 115 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.274 +01:00 [DBG] Rendering component 116 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.276 +01:00 [DBG] Initializing component 129 (MudBlazor.MudInputControl) as child of 116 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.276 +01:00 [DBG] Rendering component 117 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.276 +01:00 [DBG] Initializing component 130 (MudBlazor.MudInputControl) as child of 117 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.276 +01:00 [DBG] Rendering component 118 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.278 +01:00 [DBG] Initializing component 131 (MudBlazor.MudInputControl) as child of 118 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.279 +01:00 [DBG] Initializing component 132 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect]) as child of 118 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.279 +01:00 [DBG] Rendering component 119 of type MudBlazor.MudOverlay
+2025-01-19 16:30:47.279 +01:00 [DBG] Rendering component 120 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.281 +01:00 [DBG] Initializing component 133 (MudBlazor.MudInputControl) as child of 120 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.282 +01:00 [DBG] Initializing component 134 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect]) as child of 120 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.282 +01:00 [DBG] Rendering component 121 of type MudBlazor.MudOverlay
+2025-01-19 16:30:47.282 +01:00 [DBG] Rendering component 122 of type MudBlazor.MudText
+2025-01-19 16:30:47.282 +01:00 [DBG] Initializing component 135 (MudBlazor.MudElement) as child of 122 (MudBlazor.MudText)
+2025-01-19 16:30:47.282 +01:00 [DBG] Rendering component 123 of type MudBlazor.MudText
+2025-01-19 16:30:47.282 +01:00 [DBG] Initializing component 136 (MudBlazor.MudElement) as child of 123 (MudBlazor.MudText)
+2025-01-19 16:30:47.282 +01:00 [DBG] Rendering component 124 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.283 +01:00 [DBG] Initializing component 137 (MudBlazor.MudInputControl) as child of 124 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.283 +01:00 [DBG] Rendering component 125 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.283 +01:00 [DBG] Initializing component 138 (MudBlazor.MudInputControl) as child of 125 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.283 +01:00 [DBG] Rendering component 126 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.283 +01:00 [DBG] Initializing component 139 (MudBlazor.MudInputControl) as child of 126 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.283 +01:00 [DBG] Rendering component 127 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.283 +01:00 [DBG] Initializing component 140 (MudBlazor.MudInputControl) as child of 127 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.283 +01:00 [DBG] Rendering component 128 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.284 +01:00 [DBG] Initializing component 141 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 128 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.285 +01:00 [DBG] Initializing component 142 (MudBlazor.MudInputLabel) as child of 128 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.285 +01:00 [DBG] Rendering component 129 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.286 +01:00 [DBG] Initializing component 143 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 129 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.286 +01:00 [DBG] Initializing component 144 (MudBlazor.MudInputLabel) as child of 129 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.286 +01:00 [DBG] Rendering component 130 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.286 +01:00 [DBG] Initializing component 145 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 130 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.286 +01:00 [DBG] Initializing component 146 (MudBlazor.MudInputLabel) as child of 130 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.286 +01:00 [DBG] Rendering component 131 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.292 +01:00 [DBG] Initializing component 147 (MudBlazor.MudInput`1[System.String]) as child of 131 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.300 +01:00 [DBG] Initializing component 148 (MudBlazor.MudPopover) as child of 131 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.306 +01:00 [DBG] Initializing component 149 (MudBlazor.MudInputLabel) as child of 131 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.306 +01:00 [DBG] Rendering component 132 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect]
+2025-01-19 16:30:47.306 +01:00 [DBG] Initializing component 150 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 132 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect])
+2025-01-19 16:30:47.306 +01:00 [DBG] Rendering component 133 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.308 +01:00 [DBG] Initializing component 151 (MudBlazor.MudInput`1[System.String]) as child of 133 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.309 +01:00 [DBG] Initializing component 152 (MudBlazor.MudPopover) as child of 133 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.309 +01:00 [DBG] Initializing component 153 (MudBlazor.MudInputLabel) as child of 133 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.309 +01:00 [DBG] Rendering component 134 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect]
+2025-01-19 16:30:47.309 +01:00 [DBG] Initializing component 154 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 134 (Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect])
+2025-01-19 16:30:47.310 +01:00 [DBG] Rendering component 135 of type MudBlazor.MudElement
+2025-01-19 16:30:47.310 +01:00 [DBG] Rendering component 136 of type MudBlazor.MudElement
+2025-01-19 16:30:47.310 +01:00 [DBG] Rendering component 137 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.311 +01:00 [DBG] Initializing component 155 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 137 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.311 +01:00 [DBG] Rendering component 138 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.311 +01:00 [DBG] Initializing component 156 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 138 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.311 +01:00 [DBG] Rendering component 139 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.311 +01:00 [DBG] Initializing component 157 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 139 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.311 +01:00 [DBG] Rendering component 140 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.311 +01:00 [DBG] Initializing component 158 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]) as child of 140 (MudBlazor.MudInputControl)
+2025-01-19 16:30:47.311 +01:00 [DBG] Rendering component 141 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.316 +01:00 [DBG] Initializing component 159 (MudBlazor.MudInput`1[System.String]) as child of 141 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.317 +01:00 [DBG] Rendering component 142 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.318 +01:00 [DBG] Rendering component 143 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.320 +01:00 [DBG] Initializing component 160 (MudBlazor.MudInput`1[System.String]) as child of 143 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.322 +01:00 [DBG] Rendering component 144 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.322 +01:00 [DBG] Rendering component 145 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.322 +01:00 [DBG] Initializing component 161 (MudBlazor.MudInput`1[System.String]) as child of 145 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.323 +01:00 [DBG] Rendering component 146 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.323 +01:00 [DBG] Rendering component 147 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.329 +01:00 [DBG] Initializing component 162 (MudBlazor.Internal.MudInputAdornment) as child of 147 (MudBlazor.MudInput`1[System.String])
+2025-01-19 16:30:47.331 +01:00 [DBG] Rendering component 13 of type MudBlazor.MudPopoverProvider
+2025-01-19 16:30:47.332 +01:00 [DBG] Initializing component 163 (MudBlazor.MudRender) as child of 13 (MudBlazor.MudPopoverProvider)
+2025-01-19 16:30:47.332 +01:00 [DBG] Initializing component 164 (MudBlazor.MudRender) as child of 13 (MudBlazor.MudPopoverProvider)
+2025-01-19 16:30:47.332 +01:00 [DBG] Rendering component 148 of type MudBlazor.MudPopover
+2025-01-19 16:30:47.332 +01:00 [DBG] Rendering component 149 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.333 +01:00 [DBG] Rendering component 150 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.334 +01:00 [DBG] Initializing component 165 (MudBlazor.MudSelectItem`1[MudBlazor.Variant]) as child of 150 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.336 +01:00 [DBG] Initializing component 166 (MudBlazor.MudSelectItem`1[MudBlazor.Variant]) as child of 150 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.336 +01:00 [DBG] Initializing component 167 (MudBlazor.MudSelectItem`1[MudBlazor.Variant]) as child of 150 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.336 +01:00 [DBG] Rendering component 151 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.337 +01:00 [DBG] Initializing component 168 (MudBlazor.Internal.MudInputAdornment) as child of 151 (MudBlazor.MudInput`1[System.String])
+2025-01-19 16:30:47.337 +01:00 [DBG] Rendering component 152 of type MudBlazor.MudPopover
+2025-01-19 16:30:47.337 +01:00 [DBG] Rendering component 153 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.337 +01:00 [DBG] Rendering component 154 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.338 +01:00 [DBG] Initializing component 169 (MudBlazor.MudSelectItem`1[MudBlazor.Margin]) as child of 154 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.340 +01:00 [DBG] Initializing component 170 (MudBlazor.MudSelectItem`1[MudBlazor.Margin]) as child of 154 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.340 +01:00 [DBG] Initializing component 171 (MudBlazor.MudSelectItem`1[MudBlazor.Margin]) as child of 154 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.340 +01:00 [DBG] Rendering component 155 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.344 +01:00 [DBG] Initializing component 172 (MudExtensions.MudInputExtended`1[System.String]) as child of 155 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.350 +01:00 [DBG] Rendering component 156 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.350 +01:00 [DBG] Initializing component 173 (MudExtensions.MudInputExtended`1[System.String]) as child of 156 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.350 +01:00 [DBG] Rendering component 157 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.350 +01:00 [DBG] Initializing component 174 (MudExtensions.MudInputExtended`1[System.String]) as child of 157 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.350 +01:00 [DBG] Rendering component 158 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.350 +01:00 [DBG] Initializing component 175 (MudExtensions.MudInputExtended`1[System.String]) as child of 158 (Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean])
+2025-01-19 16:30:47.350 +01:00 [DBG] Rendering component 159 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.351 +01:00 [DBG] Rendering component 160 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.351 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudInput_Increment' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:47.352 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudInput_Decrement' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:47.353 +01:00 [DBG] Initializing component 176 (MudBlazor.MudButton) as child of 160 (MudBlazor.MudInput`1[System.String])
+2025-01-19 16:30:47.355 +01:00 [DBG] Initializing component 177 (MudBlazor.MudButton) as child of 160 (MudBlazor.MudInput`1[System.String])
+2025-01-19 16:30:47.355 +01:00 [DBG] Rendering component 161 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.355 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudInput_Increment' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:47.355 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudInput_Decrement' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:47.355 +01:00 [DBG] Initializing component 178 (MudBlazor.MudButton) as child of 161 (MudBlazor.MudInput`1[System.String])
+2025-01-19 16:30:47.356 +01:00 [DBG] Initializing component 179 (MudBlazor.MudButton) as child of 161 (MudBlazor.MudInput`1[System.String])
+2025-01-19 16:30:47.356 +01:00 [DBG] Rendering component 162 of type MudBlazor.Internal.MudInputAdornment
+2025-01-19 16:30:47.356 +01:00 [DBG] Initializing component 180 (MudBlazor.MudIcon) as child of 162 (MudBlazor.Internal.MudInputAdornment)
+2025-01-19 16:30:47.356 +01:00 [DBG] Rendering component 163 of type MudBlazor.MudRender
+2025-01-19 16:30:47.357 +01:00 [DBG] Rendering component 164 of type MudBlazor.MudRender
+2025-01-19 16:30:47.357 +01:00 [DBG] Rendering component 165 of type MudBlazor.MudSelectItem`1[MudBlazor.Variant]
+2025-01-19 16:30:47.358 +01:00 [DBG] Rendering component 166 of type MudBlazor.MudSelectItem`1[MudBlazor.Variant]
+2025-01-19 16:30:47.358 +01:00 [DBG] Rendering component 167 of type MudBlazor.MudSelectItem`1[MudBlazor.Variant]
+2025-01-19 16:30:47.358 +01:00 [DBG] Rendering component 168 of type MudBlazor.Internal.MudInputAdornment
+2025-01-19 16:30:47.358 +01:00 [DBG] Initializing component 181 (MudBlazor.MudIcon) as child of 168 (MudBlazor.Internal.MudInputAdornment)
+2025-01-19 16:30:47.358 +01:00 [DBG] Rendering component 169 of type MudBlazor.MudSelectItem`1[MudBlazor.Margin]
+2025-01-19 16:30:47.358 +01:00 [DBG] Rendering component 170 of type MudBlazor.MudSelectItem`1[MudBlazor.Margin]
+2025-01-19 16:30:47.358 +01:00 [DBG] Rendering component 171 of type MudBlazor.MudSelectItem`1[MudBlazor.Margin]
+2025-01-19 16:30:47.359 +01:00 [DBG] Rendering component 172 of type MudExtensions.MudInputExtended`1[System.String]
+2025-01-19 16:30:47.366 +01:00 [DBG] Rendering component 173 of type MudExtensions.MudInputExtended`1[System.String]
+2025-01-19 16:30:47.366 +01:00 [DBG] Rendering component 174 of type MudExtensions.MudInputExtended`1[System.String]
+2025-01-19 16:30:47.366 +01:00 [DBG] Rendering component 175 of type MudExtensions.MudInputExtended`1[System.String]
+2025-01-19 16:30:47.366 +01:00 [DBG] Rendering component 176 of type MudBlazor.MudButton
+2025-01-19 16:30:47.368 +01:00 [DBG] Initializing component 182 (MudBlazor.MudElement) as child of 176 (MudBlazor.MudButton)
+2025-01-19 16:30:47.368 +01:00 [DBG] Rendering component 177 of type MudBlazor.MudButton
+2025-01-19 16:30:47.369 +01:00 [DBG] Initializing component 183 (MudBlazor.MudElement) as child of 177 (MudBlazor.MudButton)
+2025-01-19 16:30:47.369 +01:00 [DBG] Rendering component 178 of type MudBlazor.MudButton
+2025-01-19 16:30:47.369 +01:00 [DBG] Initializing component 184 (MudBlazor.MudElement) as child of 178 (MudBlazor.MudButton)
+2025-01-19 16:30:47.369 +01:00 [DBG] Rendering component 179 of type MudBlazor.MudButton
+2025-01-19 16:30:47.369 +01:00 [DBG] Initializing component 185 (MudBlazor.MudElement) as child of 179 (MudBlazor.MudButton)
+2025-01-19 16:30:47.369 +01:00 [DBG] Rendering component 180 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.369 +01:00 [DBG] Rendering component 181 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.369 +01:00 [DBG] Rendering component 182 of type MudBlazor.MudElement
+2025-01-19 16:30:47.370 +01:00 [DBG] Initializing component 186 (MudBlazor.MudIcon) as child of 182 (MudBlazor.MudElement)
+2025-01-19 16:30:47.370 +01:00 [DBG] Rendering component 183 of type MudBlazor.MudElement
+2025-01-19 16:30:47.371 +01:00 [DBG] Initializing component 187 (MudBlazor.MudIcon) as child of 183 (MudBlazor.MudElement)
+2025-01-19 16:30:47.371 +01:00 [DBG] Rendering component 184 of type MudBlazor.MudElement
+2025-01-19 16:30:47.371 +01:00 [DBG] Initializing component 188 (MudBlazor.MudIcon) as child of 184 (MudBlazor.MudElement)
+2025-01-19 16:30:47.371 +01:00 [DBG] Rendering component 185 of type MudBlazor.MudElement
+2025-01-19 16:30:47.371 +01:00 [DBG] Initializing component 189 (MudBlazor.MudIcon) as child of 185 (MudBlazor.MudElement)
+2025-01-19 16:30:47.371 +01:00 [DBG] Rendering component 186 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.371 +01:00 [DBG] Rendering component 187 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.371 +01:00 [DBG] Rendering component 188 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.371 +01:00 [DBG] Rendering component 189 of type MudBlazor.MudIcon
+2025-01-19 16:30:47.372 +01:00 [DBG] Sending render batch 5 of size 53179 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.373 +01:00 [DBG] Rendering component 14 of type MudBlazor.MudDialogProvider
+2025-01-19 16:30:47.373 +01:00 [DBG] Rendering component 17 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.MudDialogProvider]
+2025-01-19 16:30:47.373 +01:00 [DBG] Rendering component 19 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.DialogOptions]
+2025-01-19 16:30:47.373 +01:00 [DBG] Sending render batch 6 of size 72 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.374 +01:00 [DBG] Rendering component 31 of type BlazorServerTemplate.Components.Layout.NavMenu
+2025-01-19 16:30:47.374 +01:00 [DBG] Rendering component 46 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:47.375 +01:00 [DBG] Rendering component 61 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:47.375 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:30:47.375 +01:00 [DBG] Rendering component 65 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.375 +01:00 [DBG] Rendering component 66 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.375 +01:00 [DBG] Rendering component 67 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.376 +01:00 [DBG] Rendering component 68 of type MudBlazor.MudNavGroup
+2025-01-19 16:30:47.376 +01:00 [DBG] ResourceManagerStringLocalizer searched for 'MudNavGroup_ToggleExpand' in 'MudBlazor.Resources.LanguageResource' with culture 'de-DE'.
+2025-01-19 16:30:47.376 +01:00 [DBG] Rendering component 69 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.376 +01:00 [DBG] Rendering component 70 of type Microsoft.AspNetCore.Components.Authorization.AuthorizeView
+2025-01-19 16:30:47.377 +01:00 [DBG] Rendering component 71 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.377 +01:00 [DBG] Rendering component 72 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.377 +01:00 [DBG] Rendering component 73 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.378 +01:00 [DBG] Rendering component 75 of type MudBlazor.MudCollapse
+2025-01-19 16:30:47.378 +01:00 [DBG] Rendering component 76 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.379 +01:00 [DBG] Rendering component 77 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.379 +01:00 [DBG] Rendering component 78 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.379 +01:00 [DBG] Rendering component 82 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:47.379 +01:00 [DBG] Rendering component 86 of type MudBlazor.MudNavMenu
+2025-01-19 16:30:47.379 +01:00 [DBG] Rendering component 84 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.380 +01:00 [DBG] Rendering component 85 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.380 +01:00 [DBG] Rendering component 89 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.NavigationContext]
+2025-01-19 16:30:47.380 +01:00 [DBG] Rendering component 90 of type MudBlazor.MudNavLink
+2025-01-19 16:30:47.380 +01:00 [DBG] Rendering component 91 of type Microsoft.AspNetCore.Components.Routing.NavLink
+2025-01-19 16:30:47.380 +01:00 [DBG] Sending render batch 7 of size 598 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.381 +01:00 [DBG] Location change to 'http://localhost:5273/mudextensiondemo' in circuit 'SVx2F-IBVd3ADUzIuDQJirjyyXkZw6j93LagdeSWwsk' succeeded.
+2025-01-19 16:30:47.381 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 5,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.381 +01:00 [DBG] Received confirmation for batch 5
+2025-01-19 16:30:47.381 +01:00 [DBG] Completing batch 5 without error in 9.3524ms.
+2025-01-19 16:30:47.381 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 6,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.382 +01:00 [DBG] Received confirmation for batch 6
+2025-01-19 16:30:47.382 +01:00 [DBG] Completing batch 6 without error in 8.8659ms.
+2025-01-19 16:30:47.382 +01:00 [DBG] Begin invoke JS interop '13': 'Blazor._internal.domWrapper.focusBySelector'
+2025-01-19 16:30:47.382 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 7,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.382 +01:00 [DBG] Received confirmation for batch 7
+2025-01-19 16:30:47.382 +01:00 [DBG] Completing batch 7 without error in 1.7016ms.
+2025-01-19 16:30:47.383 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 13, True, [13,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.389 +01:00 [DBG] Begin invoke JS interop '14': 'mudKeyInterceptor.connect'
+2025-01-19 16:30:47.392 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 14, True, [14,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.392 +01:00 [DBG] Begin invoke JS interop '15': 'mudKeyInterceptor.connect'
+2025-01-19 16:30:47.392 +01:00 [DBG] Rendering component 106 of type MudBlazor.MudSelect`1[MudBlazor.Variant]
+2025-01-19 16:30:47.392 +01:00 [DBG] Rendering component 118 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.392 +01:00 [DBG] Rendering component 119 of type MudBlazor.MudOverlay
+2025-01-19 16:30:47.392 +01:00 [DBG] Rendering component 131 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.393 +01:00 [DBG] Rendering component 132 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect]
+2025-01-19 16:30:47.393 +01:00 [DBG] Rendering component 147 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.394 +01:00 [DBG] Rendering component 148 of type MudBlazor.MudPopover
+2025-01-19 16:30:47.394 +01:00 [DBG] Rendering component 149 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.394 +01:00 [DBG] Rendering component 150 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.394 +01:00 [DBG] Rendering component 165 of type MudBlazor.MudSelectItem`1[MudBlazor.Variant]
+2025-01-19 16:30:47.394 +01:00 [DBG] Rendering component 166 of type MudBlazor.MudSelectItem`1[MudBlazor.Variant]
+2025-01-19 16:30:47.394 +01:00 [DBG] Rendering component 167 of type MudBlazor.MudSelectItem`1[MudBlazor.Variant]
+2025-01-19 16:30:47.394 +01:00 [DBG] Sending render batch 8 of size 469 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.396 +01:00 [DBG] Begin invoke JS interop '16': 'mudKeyInterceptor.connect'
+2025-01-19 16:30:47.397 +01:00 [DBG] Rendering component 107 of type MudBlazor.MudSelect`1[MudBlazor.Margin]
+2025-01-19 16:30:47.398 +01:00 [DBG] Rendering component 120 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.398 +01:00 [DBG] Rendering component 121 of type MudBlazor.MudOverlay
+2025-01-19 16:30:47.398 +01:00 [DBG] Rendering component 133 of type MudBlazor.MudInputControl
+2025-01-19 16:30:47.399 +01:00 [DBG] Rendering component 134 of type Microsoft.AspNetCore.Components.CascadingValue`1[MudBlazor.IMudShadowSelect]
+2025-01-19 16:30:47.399 +01:00 [DBG] Rendering component 151 of type MudBlazor.MudInput`1[System.String]
+2025-01-19 16:30:47.399 +01:00 [DBG] Rendering component 152 of type MudBlazor.MudPopover
+2025-01-19 16:30:47.399 +01:00 [DBG] Rendering component 153 of type MudBlazor.MudInputLabel
+2025-01-19 16:30:47.400 +01:00 [DBG] Rendering component 154 of type Microsoft.AspNetCore.Components.CascadingValue`1[System.Boolean]
+2025-01-19 16:30:47.400 +01:00 [DBG] Rendering component 169 of type MudBlazor.MudSelectItem`1[MudBlazor.Margin]
+2025-01-19 16:30:47.400 +01:00 [DBG] Rendering component 170 of type MudBlazor.MudSelectItem`1[MudBlazor.Margin]
+2025-01-19 16:30:47.400 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 15, True, [15,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.400 +01:00 [DBG] Rendering component 171 of type MudBlazor.MudSelectItem`1[MudBlazor.Margin]
+2025-01-19 16:30:47.400 +01:00 [DBG] Sending render batch 9 of size 465 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.401 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 8,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.401 +01:00 [DBG] Received confirmation for batch 8
+2025-01-19 16:30:47.401 +01:00 [DBG] Completing batch 8 without error in 6.7111ms.
+2025-01-19 16:30:47.401 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 16, True, [16,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.402 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 9,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.402 +01:00 [DBG] Received confirmation for batch 9
+2025-01-19 16:30:47.402 +01:00 [DBG] Completing batch 9 without error in 1.5771ms.
+2025-01-19 16:30:47.402 +01:00 [DBG] Begin invoke JS interop '17': 'mudKeyInterceptor.connect'
+2025-01-19 16:30:47.404 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 17, True, [17,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.405 +01:00 [DBG] Begin invoke JS interop '18': 'mudKeyInterceptor.connect'
+2025-01-19 16:30:47.406 +01:00 [DBG] Begin invoke JS interop '19': 'mudKeyInterceptor.connect'
+2025-01-19 16:30:47.407 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 18, True, [18,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.408 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 19, True, [19,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.412 +01:00 [DBG] Begin invoke JS interop '20': 'mudPopover.initialize'
+2025-01-19 16:30:47.414 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 20, True, [20,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.415 +01:00 [DBG] Begin invoke JS interop '21': 'mudPopover.connect'
+2025-01-19 16:30:47.417 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 21, True, [21,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.418 +01:00 [DBG] The JS interop call with callback id '13' succeeded.
+2025-01-19 16:30:47.418 +01:00 [DBG] The JS interop call with callback id '14' succeeded.
+2025-01-19 16:30:47.419 +01:00 [DBG] Adding entry for numericFieldpk4vx2u3/MudBlazor.KeyObserver. 1 total observers after add.
+2025-01-19 16:30:47.422 +01:00 [DBG] The JS interop call with callback id '15' succeeded.
+2025-01-19 16:30:47.422 +01:00 [DBG] Adding entry for numericFieldo62bx3tr/MudBlazor.KeyObserver. 2 total observers after add.
+2025-01-19 16:30:47.423 +01:00 [DBG] The JS interop call with callback id '16' succeeded.
+2025-01-19 16:30:47.423 +01:00 [DBG] Adding entry for select48blhgvk/MudBlazor.KeyObserver. 3 total observers after add.
+2025-01-19 16:30:47.425 +01:00 [DBG] The JS interop call with callback id '17' succeeded.
+2025-01-19 16:30:47.425 +01:00 [DBG] Adding entry for selecthi3o3431/MudBlazor.KeyObserver. 4 total observers after add.
+2025-01-19 16:30:47.426 +01:00 [DBG] The JS interop call with callback id '18' succeeded.
+2025-01-19 16:30:47.427 +01:00 [DBG] Adding entry for switchm3_a1bc87ad/MudBlazor.KeyObserver. 5 total observers after add.
+2025-01-19 16:30:47.428 +01:00 [DBG] The JS interop call with callback id '19' succeeded.
+2025-01-19 16:30:47.428 +01:00 [DBG] Adding entry for switchm3_69c3785c/MudBlazor.KeyObserver. 6 total observers after add.
+2025-01-19 16:30:47.428 +01:00 [DBG] The JS interop call with callback id '20' succeeded.
+2025-01-19 16:30:47.432 +01:00 [DBG] Begin invoke JS interop '22': 'mudPopover.connect'
+2025-01-19 16:30:47.433 +01:00 [DBG] The JS interop call with callback id '21' succeeded.
+2025-01-19 16:30:47.433 +01:00 [DBG] Rendering component 164 of type MudBlazor.MudRender
+2025-01-19 16:30:47.434 +01:00 [DBG] Sending render batch 10 of size 48 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.434 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "EndInvokeJSFromDotNet", Arguments: [ 22, True, [22,true,null] ], StreamIds: [  ] }.
+2025-01-19 16:30:47.434 +01:00 [DBG] The JS interop call with callback id '22' succeeded.
+2025-01-19 16:30:47.435 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 10,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.435 +01:00 [DBG] Rendering component 163 of type MudBlazor.MudRender
+2025-01-19 16:30:47.435 +01:00 [DBG] Received confirmation for batch 10
+2025-01-19 16:30:47.435 +01:00 [DBG] Sending render batch 11 of size 48 bytes to client 6Nx8vQxDe8mMyai17kC0-w.
+2025-01-19 16:30:47.435 +01:00 [DBG] Completing batch 10 without error in 1.1592ms.
+2025-01-19 16:30:47.436 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "OnRenderCompleted", Arguments: [ 11,  ], StreamIds: [  ] }.
+2025-01-19 16:30:47.436 +01:00 [DBG] Received confirmation for batch 11
+2025-01-19 16:30:47.436 +01:00 [DBG] Completing batch 11 without error in 1.3892ms.
+2025-01-19 16:30:53.544 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 3, , DispatchEventAsync, 1, [{"eventHandlerId":21,"eventName":"pointerleave","eventFieldInfo":null},{"detail":0,"screenX":2226,"screenY":341,"clientX":302,"clientY":267,"offsetX":302,"offsetY":203,"pageX":302,"pageY":267,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerleave","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:30:53.545 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '3'.
+2025-01-19 16:30:53.549 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '3' completed successfully.
+2025-01-19 16:30:54.876 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 4, , DispatchEventAsync, 1, [{"eventHandlerId":20,"eventName":"pointerenter","eventFieldInfo":null},{"detail":0,"screenX":2094,"screenY":406,"clientX":170,"clientY":332,"offsetX":170,"offsetY":268,"pageX":170,"pageY":332,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerenter","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:30:54.877 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '4'.
+2025-01-19 16:30:54.879 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '4' completed successfully.
+2025-01-19 16:30:54.900 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 5, , DispatchEventAsync, 1, [{"eventHandlerId":21,"eventName":"pointerleave","eventFieldInfo":null},{"detail":0,"screenX":1881,"screenY":495,"clientX":-43,"clientY":421,"offsetX":-43,"offsetY":357,"pageX":-43,"pageY":421,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerleave","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:30:54.900 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '5'.
+2025-01-19 16:30:54.902 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '5' completed successfully.
+2025-01-19 16:31:09.591 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 6, , DispatchEventAsync, 1, [{"eventHandlerId":20,"eventName":"pointerenter","eventFieldInfo":null},{"detail":0,"screenX":1961,"screenY":587,"clientX":37,"clientY":513,"offsetX":37,"offsetY":449,"pageX":37,"pageY":513,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerenter","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:31:09.591 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '6'.
+2025-01-19 16:31:09.592 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '6' completed successfully.
+2025-01-19 16:31:09.594 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 7, , DispatchEventAsync, 1, [{"eventHandlerId":21,"eventName":"pointerleave","eventFieldInfo":null},{"detail":0,"screenX":2002,"screenY":585,"clientX":78,"clientY":511,"offsetX":78,"offsetY":447,"pageX":78,"pageY":511,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerleave","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:31:09.595 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '7'.
+2025-01-19 16:31:09.596 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '7' completed successfully.
+2025-01-19 16:31:16.726 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 8, , DispatchEventAsync, 1, [{"eventHandlerId":20,"eventName":"pointerenter","eventFieldInfo":null},{"detail":0,"screenX":2002,"screenY":445,"clientX":78,"clientY":371,"offsetX":78,"offsetY":307,"pageX":78,"pageY":371,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerenter","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:31:16.727 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '8'.
+2025-01-19 16:31:16.729 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '8' completed successfully.
+2025-01-19 16:31:16.752 +01:00 [DBG] Received hub invocation: InvocationMessage { InvocationId: "", Target: "BeginInvokeDotNetFromJS", Arguments: [ 9, , DispatchEventAsync, 1, [{"eventHandlerId":21,"eventName":"pointerleave","eventFieldInfo":null},{"detail":0,"screenX":1820,"screenY":487,"clientX":-104,"clientY":413,"offsetX":-104,"offsetY":349,"pageX":-104,"pageY":413,"movementX":0,"movementY":0,"button":-1,"buttons":0,"ctrlKey":false,"shiftKey":false,"altKey":false,"metaKey":false,"type":"pointerleave","pointerId":1,"width":1,"height":1,"pressure":0,"tiltX":0,"tiltY":0,"pointerType":"mouse","isPrimary":true}] ], StreamIds: [  ] }.
+2025-01-19 16:31:16.753 +01:00 [DBG] Invoking instance method 'DispatchEventAsync' on instance '1' with callback id '9'.
+2025-01-19 16:31:16.755 +01:00 [DBG] Invocation of 'DispatchEventAsync' on reference '1' with callback id '9' completed successfully.
+2025-01-19 16:31:59.083 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-01-19 16:31:59.145 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-19 16:31:59.434 +01:00 [INF] Now listening on: http://localhost:5273
+2025-01-19 16:31:59.439 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-19 16:31:59.440 +01:00 [INF] Hosting environment: Development
+2025-01-19 16:31:59.440 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-01-19 16:31:59.619 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/ - null null
+2025-01-19 16:31:59.661 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-19 16:31:59.665 +01:00 [INF] Executing endpoint '/ (/)'
+2025-01-19 16:31:59.873 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:31:59.958 +01:00 [INF] Executed endpoint '/ (/)'
+2025-01-19 16:31:59.983 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/ - 200 null text/html; charset=utf-8 366.1344ms
+2025-01-19 16:32:00.004 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:32:00.042 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:32:00.115 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:32:00.116 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:32:00.117 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 113.7818ms
+2025-01-19 16:32:00.138 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-01-19 16:32:00.142 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:00.148 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:00.148 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 9.5046ms
+2025-01-19 16:32:00.171 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:32:00.172 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:00.182 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:00.182 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 11.7288ms
+2025-01-19 16:32:00.189 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=MxnjUcKV-E9-PbLDD1h5jg - null null
+2025-01-19 16:32:00.190 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:00.362 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:32:05.057 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:32:07.488 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:32:07.544 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/Account/Login?returnUrl=http%3A%2F%2Flocalhost%3A5273%2Fauth - null null
+2025-01-19 16:32:07.545 +01:00 [INF] Executing endpoint '/Account/Login (/Account/Login)'
+2025-01-19 16:32:07.550 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:32:07.591 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2025-01-19 16:32:07.593 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:32:07.898 +01:00 [INF] Executed endpoint '/Account/Login (/Account/Login)'
+2025-01-19 16:32:07.909 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/Account/Login?returnUrl=http%3A%2F%2Flocalhost%3A5273%2Fauth - 200 null text/html; charset=utf-8 365.2125ms
+2025-01-19 16:32:07.911 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryRPyAw3YKIpcbhxkJ 359
+2025-01-19 16:32:07.911 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:07.939 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:07.940 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor?id=MxnjUcKV-E9-PbLDD1h5jg - 101 null null 7750.7634ms
+2025-01-19 16:32:07.961 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:32:07.963 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:32:07.963 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:32:07.964 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:32:07.964 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 3.4125ms
+2025-01-19 16:32:08.048 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:32:08.048 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - 200 0 null 137.5844ms
+2025-01-19 16:33:04.319 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-01-19 16:33:04.387 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-19 16:33:04.707 +01:00 [INF] Now listening on: http://localhost:5273
+2025-01-19 16:33:04.711 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-19 16:33:04.711 +01:00 [INF] Hosting environment: Development
+2025-01-19 16:33:04.712 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-01-19 16:33:04.846 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/ - null null
+2025-01-19 16:33:04.890 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-19 16:33:04.892 +01:00 [INF] Executing endpoint '/ (/)'
+2025-01-19 16:33:05.106 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:33:05.208 +01:00 [INF] Executed endpoint '/ (/)'
+2025-01-19 16:33:05.229 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/ - 200 null text/html; charset=utf-8 384.0645ms
+2025-01-19 16:33:05.255 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:33:05.263 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:33:05.273 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:33:05.274 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:33:05.275 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 20.0598ms
+2025-01-19 16:33:05.364 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-01-19 16:33:05.369 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:33:05.373 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:33:05.374 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 9.9593ms
+2025-01-19 16:33:05.407 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:33:05.409 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:33:05.424 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:33:05.424 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 17.3927ms
+2025-01-19 16:33:05.436 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=XwdFpOHZOxRxuHCJcL_Eyw - null null
+2025-01-19 16:33:05.437 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:33:05.575 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:33:10.153 +01:00 [WRN] This is a warning message
+2025-01-19 16:33:15.407 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
