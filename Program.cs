@@ -8,6 +8,8 @@ using BlazorServerTemplate.Data;
 using MudExtensions.Services;
 using Serilog;
 using KristofferStrube.Blazor.FileSystemAccess;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Localization;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -54,13 +56,31 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+
 builder.Services.AddFileSystemAccessService();
+
+builder.Services.AddLocalization();
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[] { "en-US", "de-DE" };
+    var localizationOptions = new RequestLocalizationOptions()
+        .SetDefaultCulture(supportedCultures[0])
+        .AddSupportedCultures(supportedCultures)
+        .AddSupportedUICultures(supportedCultures);
+});
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     context.Database.EnsureCreated();
+}
+
+var localizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+if (localizationOptions != null)
+{
+    app.UseRequestLocalization(localizationOptions.Value);
 }
 
 // Configure the HTTP request pipeline.
@@ -85,5 +105,23 @@ app.MapRazorComponents<App>()
 
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
+
+app.MapGet("Culture/Set", async (HttpRequest request, [FromQuery] string culture, [FromQuery] string redirectUri) =>
+{
+    if (culture != null)
+    {
+        request.HttpContext.Response.Cookies.Append(
+            CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(
+             new RequestCulture(culture, culture)),
+              new CookieOptions
+              {
+                  Path = "/",
+                  Expires = DateTime.Now.AddYears(1)
+              });
+    }
+
+    return Results.LocalRedirect(redirectUri);
+});
 
 app.Run();
