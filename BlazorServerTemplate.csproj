@@ -15,6 +15,7 @@
   <ItemGroup>
     <PackageReference Include="Bromix.MudBlazor.MaterialDesignIcons" Version="7.4.47.56" />
     <PackageReference Include="CodeBeam.MudBlazor.Extensions" Version="7.1.0" />
+    <PackageReference Include="KristofferStrube.Blazor.FileSystemAccess" Version="3.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.*" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.*" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.*" />

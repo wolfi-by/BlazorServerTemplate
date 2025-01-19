@@ -7,6 +7,7 @@ using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
 using MudExtensions.Services;
 using Serilog;
+using KristofferStrube.Blazor.FileSystemAccess;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,7 +54,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
-
+builder.Services.AddFileSystemAccessService();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
