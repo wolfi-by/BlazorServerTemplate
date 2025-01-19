@@ -10,6 +10,7 @@ using Serilog;
 using KristofferStrube.Blazor.FileSystemAccess;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -110,7 +111,7 @@ app.MapRazorComponents<App>()
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
 
-app.MapGet("Culture/Set", async (HttpRequest request, [FromQuery] string culture, [FromQuery] string redirectUri) =>
+app.MapGet("Culture/Set", (HttpRequest request, [FromQuery] string culture, [FromQuery] string redirectUri) =>
 {
     if (culture != null)
     {
@@ -128,4 +129,4 @@ app.MapGet("Culture/Set", async (HttpRequest request, [FromQuery] string culture
     return Results.LocalRedirect(redirectUri);
 });
 
-app.Run();
+await app.RunAsync();

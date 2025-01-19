@@ -38,7 +38,7 @@
         _drawerOpen = !_drawerOpen;
     }
     private bool _isDarkMode;
-    private MudThemeProvider _mudThemeProvider;
+    private MudThemeProvider _mudThemeProvider = default!;
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
