@@ -1,0 +1,40 @@
+@page "/fileaccess"
+@using KristofferStrube.Blazor.FileSystem
+@inject IFileSystemAccessService FileSystemAccessService;
+
+<MudButton OnClick="OpenAndReadFile" Variant="Variant.Outlined">Open File Picker for Single File and Read</MudButton>
+<br />
+@Text
+
+@code {
+    private string Text = "";
+
+    private async Task OpenAndReadFile()
+    {
+        FileSystemFileHandle? fileHandle = null;
+        try
+        {
+            OpenFilePickerOptionsStartInWellKnownDirectory options = new()
+                {
+                    Multiple = false,
+                    StartIn = WellKnownDirectory.Downloads
+                };
+            var fileHandles = await FileSystemAccessService.ShowOpenFilePickerAsync(options);
+            fileHandle = fileHandles.Single();
+        }
+        catch (JSException ex)
+        {
+            // Handle Exception or cancelation of File Access prompt
+            Console.WriteLine(ex);
+        }
+        finally
+        {
+            if (fileHandle is not null)
+            {
+                var file = await fileHandle.GetFileAsync();
+                Text = await file.TextAsync();
+                StateHasChanged();
+            }
+        }
+    }
+}
