@@ -6,20 +6,19 @@ using BlazorServerTemplate.Components;
 using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
 using MudExtensions.Services;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-//var appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-//var appname = Assembly.GetExecutingAssembly().GetName().Name ?? nameof(builder);
+Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .WriteTo.Console()
+                .WriteTo.File("logs/liu_api-.txt",
+                              rollingInterval: RollingInterval.Day)
+                .CreateLogger();
 
-
-//Log.Logger = new LoggerConfiguration()
-//   .MinimumLevel.Error()
-//  .WriteTo.Debug(new RenderedCompactJsonFormatter())
-
-//.WriteTo.File(Path.Combine(appdata, appname, "log.txt"), rollingInterval: RollingInterval.Day)
-// .CreateLogger();
+builder.Services.AddSerilog();
 
 // Add MudBlazor services
 builder.Services.AddMudServices();
