@@ -11,6 +11,9 @@ using KristofferStrube.Blazor.FileSystemAccess;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Toolbelt.Blazor.Extensions.DependencyInjection;
+using Toolbelt.Blazor.I18nText;
+using System.Globalization;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -69,11 +72,13 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
         .AddSupportedCultures(supportedCultures)
         .AddSupportedUICultures(supportedCultures);
 });
+
 builder.Services.AddI18nText(options =>
 {
-    options.PersistanceLevel = PersistanceLevel.None;
+    options.PersistenceLevel = PersistanceLevel.Cookie;
     options.GetInitialLanguageAsync = (_, _) => ValueTask.FromResult(CultureInfo.CurrentUICulture.Name);
 });
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

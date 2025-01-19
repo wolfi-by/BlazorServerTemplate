@@ -2,17 +2,18 @@
 @using Microsoft.Extensions.Options
 @inject NavigationManager Nav
 @inject IOptions<RequestLocalizationOptions> RequestLocalizationOptions
-<p>
-    <label>
-        Select your locale:
-        <select @bind="Culture">
+
+<MudStack Style="width: 250px">
+    <MudPaper style="color:aliceblue ">
+        <MudSelect @bind-Value="Culture" Variant="Variant.Text" Label="Select your locale" Dense="true"
+            Placeholder="Placeholder">
             @foreach (var culture in supportedCultures)
             {
-                    <option value="@culture">@culture.DisplayName</option>
+                <MudSelectItem Value="@culture">@culture.DisplayName</MudSelectItem>
             }
-        </select>
-    </label>
-</p>
+        </MudSelect>
+    </MudPaper>
+</MudStack>
 
 @code
 {
@@ -35,13 +36,13 @@
             if (CultureInfo.CurrentCulture != value)
             {
                 var uri = new Uri(Nav.Uri)
-                    .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+                .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
                 var cultureEscaped = Uri.EscapeDataString(value.Name);
                 var uriEscaped = Uri.EscapeDataString(uri);
 
                 Nav.NavigateTo(
-                    $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
-                    forceLoad: true);
+                $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
+                forceLoad: true);
             }
         }
     }
