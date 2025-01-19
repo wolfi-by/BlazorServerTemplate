@@ -68,7 +68,11 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
         .AddSupportedCultures(supportedCultures)
         .AddSupportedUICultures(supportedCultures);
 });
-
+builder.Services.AddI18nText(options =>
+{
+    options.PersistanceLevel = PersistanceLevel.None;
+    options.GetInitialLanguageAsync = (_, _) => ValueTask.FromResult(CultureInfo.CurrentUICulture.Name);
+});
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
