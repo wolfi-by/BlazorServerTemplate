@@ -1,0 +1,115 @@
+2025-01-19 16:37:32.334 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2025-01-19 16:37:32.405 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-19 16:37:32.717 +01:00 [INF] Now listening on: http://localhost:5273
+2025-01-19 16:37:32.725 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-19 16:37:32.726 +01:00 [INF] Hosting environment: Development
+2025-01-19 16:37:32.727 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-01-19 16:37:32.865 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/ - null null
+2025-01-19 16:37:32.866 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:37:33.021 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:37:33.035 +01:00 [WRN] Failed to determine the https port for redirect.
+2025-01-19 16:37:33.039 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.039 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.039 +01:00 [INF] Executing endpoint '/ (/)'
+2025-01-19 16:37:33.056 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.056 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.058 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 195.3888ms
+2025-01-19 16:37:33.058 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 36.7979ms
+2025-01-19 16:37:33.097 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=FxAMMvR40Ihqj-KPCTzIGg - null null
+2025-01-19 16:37:33.100 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.133 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=fmrZK5sB_yQxz7P0tdrhiw - null null
+2025-01-19 16:37:33.133 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.181 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/mudextensiondemo - null null
+2025-01-19 16:37:33.181 +01:00 [INF] Executing endpoint '/mudextensiondemo (/mudextensiondemo)'
+2025-01-19 16:37:33.268 +01:00 [WRN] This is a warning message
+2025-01-19 16:37:33.305 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:37:33.305 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:37:33.381 +01:00 [INF] Executed endpoint '/ (/)'
+2025-01-19 16:37:33.384 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/ - null null
+2025-01-19 16:37:33.384 +01:00 [INF] Executing endpoint '/ (/)'
+2025-01-19 16:37:33.415 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/ - 200 null text/html; charset=utf-8 553.0319ms
+2025-01-19 16:37:33.417 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:37:33.419 +01:00 [INF] Executed endpoint '/ (/)'
+2025-01-19 16:37:33.420 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/ - 200 null text/html; charset=utf-8 36.8439ms
+2025-01-19 16:37:33.425 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:37:33.425 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:37:33.431 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:37:33.433 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:37:33.433 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 8.4887ms
+2025-01-19 16:37:33.442 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.442 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor?id=fmrZK5sB_yQxz7P0tdrhiw - 101 null null 309.6613ms
+2025-01-19 16:37:33.453 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundarynlJj9epJX2UJb7am 359
+2025-01-19 16:37:33.454 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.460 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:37:33.461 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:37:33.462 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:37:33.462 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:37:33.462 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 1.9875ms
+2025-01-19 16:37:33.470 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.470 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - 200 0 null 17.4096ms
+2025-01-19 16:37:33.496 +01:00 [INF] Executed endpoint '/mudextensiondemo (/mudextensiondemo)'
+2025-01-19 16:37:33.505 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.505 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor?id=FxAMMvR40Ihqj-KPCTzIGg - 101 null null 408.0925ms
+2025-01-19 16:37:33.510 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/mudextensiondemo - 200 null text/html; charset=utf-8 328.7769ms
+2025-01-19 16:37:33.510 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryyVBQzeNKLB8NNazv 359
+2025-01-19 16:37:33.510 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.511 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.511 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - 200 0 null 1.2243ms
+2025-01-19 16:37:33.528 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-01-19 16:37:33.528 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-01-19 16:37:33.528 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-01-19 16:37:33.529 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-01-19 16:37:33.529 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 0.7785ms
+2025-01-19 16:37:33.532 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-01-19 16:37:33.532 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.538 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.538 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 6.0763ms
+2025-01-19 16:37:33.546 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:37:33.547 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.547 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.547 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.8419ms
+2025-01-19 16:37:33.554 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=jcPmwST09c1j9EC6Y1drIw - null null
+2025-01-19 16:37:33.554 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.562 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-01-19 16:37:33.562 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.563 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.563 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 0.9031ms
+2025-01-19 16:37:33.588 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:37:33.589 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.589 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.589 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.7733ms
+2025-01-19 16:37:33.602 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=PwkDYqm4Qt625WSXHR-stA - null null
+2025-01-19 16:37:33.603 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.612 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-01-19 16:37:33.612 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.613 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.613 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 0.6214ms
+2025-01-19 16:37:33.625 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-01-19 16:37:33.625 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.626 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.626 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 0.8667ms
+2025-01-19 16:37:33.631 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=jiR2KLAhyEKgCx9QicdGIw - null null
+2025-01-19 16:37:33.631 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:33.679 +01:00 [WRN] This is a warning message
+2025-01-19 16:37:33.679 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:37:33.679 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:37:33.679 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-19 16:37:35.557 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:35.558 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor?id=PwkDYqm4Qt625WSXHR-stA - 101 null null 1954.9249ms
+2025-01-19 16:37:35.558 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryL540qTtarmTiAYqZ 359
+2025-01-19 16:37:35.559 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:35.572 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:35.572 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - 200 0 null 14.1327ms
+2025-01-19 16:37:36.795 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:36.796 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryAUs1fCQIgypM4Aw7 359
+2025-01-19 16:37:36.796 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor?id=jcPmwST09c1j9EC6Y1drIw - 101 null null 3241.3886ms
+2025-01-19 16:37:36.797 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:36.806 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-01-19 16:37:36.806 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - 200 0 null 10.3025ms

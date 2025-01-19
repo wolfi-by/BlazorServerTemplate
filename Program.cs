@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
                 .WriteTo.Console()
-                .WriteTo.File("logs/liu_api-.txt",
+                .WriteTo.File("logs/log-.txt",
                               rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
