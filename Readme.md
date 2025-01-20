@@ -13,3 +13,9 @@
   - [Playground](https://codebeam-mudextensions.pages.dev/)
 - Using File system access
   - [Source](https://github.com/KristofferStrube/Blazor.FileSystemAccess/tree/main)
+- Using OpenApi/Scalar Controllers visualizer
+  - [Tutorial](https://steven-giesel.com/blogPost/777776a2-a13c-46bb-bf6b-89316d88508c)
+  - [Source](https://github.com/scalar/scalar/blob/main/packages/scalar.aspnetcore/README.md)
+  - Call api using "/scalar"
+- Using Localizasion
+  - [Source](https://github.com/EngstromJimmy/BlazorLocalization/tree/main)

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components.Authorization;
+﻿using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Toolbelt.Blazor.Extensions.DependencyInjection;
 using Toolbelt.Blazor.I18nText;
 using System.Globalization;
+using Scalar.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -63,7 +64,11 @@ builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSe
 
 builder.Services.AddFileSystemAccessService();
 
-builder.Services.AddLocalization();
+builder.Services.AddI18nText(options =>
+{
+    options.PersistenceLevel = PersistanceLevel.Cookie;
+    options.GetInitialLanguageAsync = (_, _) => ValueTask.FromResult(CultureInfo.CurrentUICulture.Name);
+});
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[] { "en-US", "de-DE" };
@@ -72,19 +77,41 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
         .AddSupportedCultures(supportedCultures)
         .AddSupportedUICultures(supportedCultures);
 });
-
-builder.Services.AddI18nText(options =>
+builder.Services.AddLocalization(options =>
 {
-    options.PersistenceLevel = PersistanceLevel.Cookie;
-    options.GetInitialLanguageAsync = (_, _) => ValueTask.FromResult(CultureInfo.CurrentUICulture.Name);
+    options.ResourcesPath = "i18ntext";
 });
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    context.Database.EnsureCreated();
+    using (var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>())
+    {
+        var databaseExisted = context.Database.GetAppliedMigrations().Any();
+        //context.Database.EnsureCreated();
+        context.Database.Migrate();
+
+        if (!databaseExisted)
+        {
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            await roleManager.CreateAsync(new() { Name = "Administrator" });
+
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            ApplicationUser adminUser = new()
+            {
+                Email = "admin",
+                UserName = "admin",
+                EmailConfirmed = true,
+                                PasswordHash="admin"
+            };
+
+            var result= await userManager.CreateAsync(adminUser, adminUser.PasswordHash);
+            await userManager.AddToRoleAsync(adminUser, "Administrators");
+        }
+
+    }
 }
 
 var localizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
@@ -97,6 +124,8 @@ if (localizationOptions != null)
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 else
 {
