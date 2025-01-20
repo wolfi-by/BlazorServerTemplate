@@ -1,0 +1,58 @@
+@using System.Globalization
+@using Microsoft.Extensions.Options
+@inject NavigationManager Nav
+@inject IOptions<RequestLocalizationOptions> RequestLocalizationOptions
+@inject Toolbelt.Blazor.I18nText.I18nText loc
+
+<MudStack Style="width: 250px">
+    <MudPaper style="color:aliceblue ">
+        <MudSelect @bind-Value="Culture" Variant="Variant.Text" Label=@MyText.SelectLocale Dense="true"
+            Placeholder="Placeholder">
+            @foreach (var culture in supportedCultures)
+            {
+                <MudSelectItem Value="@culture">@culture.DisplayName</MudSelectItem>
+            }
+        </MudSelect>
+    </MudPaper>
+</MudStack>
+
+@code
+{
+
+    I18nText.Localization MyText = new();
+    protected async override Task OnInitializedAsync()
+    {
+        MyText = await loc.GetTextTableAsync<I18nText.Localization>(this);
+        await base.OnInitializedAsync();
+    }
+
+    private CultureInfo[] supportedCultures = new CultureInfo[0];
+
+    protected override void OnInitialized()
+    {
+        if (RequestLocalizationOptions != null && RequestLocalizationOptions.Value.SupportedCultures != null)
+        {
+            supportedCultures = RequestLocalizationOptions.Value.SupportedCultures.ToArray();
+        }
+        Culture = CultureInfo.CurrentCulture;
+    }
+
+    private CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                var uri = new Uri(Nav.Uri)
+                .GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+                var cultureEscaped = Uri.EscapeDataString(value.Name);
+                var uriEscaped = Uri.EscapeDataString(uri);
+
+                Nav.NavigateTo(
+                $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
+                forceLoad: true);
+            }
+        }
+    }
+}
