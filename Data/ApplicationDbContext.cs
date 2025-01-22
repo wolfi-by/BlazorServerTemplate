@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +6,7 @@ namespace BlazorServerTemplate.Data;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
-
+    //public DbSet<CustomTheme> CustomThemes { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -20,4 +20,5 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
 
         base.OnConfiguring(optionsBuilder);
     }
+    
 }
