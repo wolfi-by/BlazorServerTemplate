@@ -1,5 +1,6 @@
 @using System.Globalization
 @using Microsoft.Extensions.Options
+@using PSC.Blazor.Components.Icons
 @inject ILocalizationInterceptor loc
 
 @inject NavigationManager Nav
@@ -12,7 +13,12 @@
         <MudSelect @bind-Value="Culture" onselect="SelectionChanged" Variant="Variant.Text" Label="language" Dense="true" Placeholder="Placeholder">
             @foreach (var culture in supportedCultures)
             {
-                <MudSelectItem Value="@culture">@culture.DisplayName</MudSelectItem>
+                <MudSelectItem Value="@culture">
+                    <MudStack Row="true">
+                        <SVGFlag CountryCode="@culture.Name.Split("-").Last()" FlagType="FlagType.Wide" Width="20" Height="15" />
+                        <p>@culture.DisplayName</p>
+                    </MudStack>
+                </MudSelectItem>
             }
         </MudSelect>
     </MudPaper>
@@ -31,10 +37,10 @@
 
     protected override void OnInitialized()
     {
-        if (RequestLocalizationOptions != null && RequestLocalizationOptions.Value!=null)
+        if (RequestLocalizationOptions != null && RequestLocalizationOptions.Value != null)
         {
             var aaa = RequestLocalizationOptions.Value.SupportedCultures?.ToArray();
-            
+
         }
         selectedCulture = CultureInfo.CurrentCulture;
     }

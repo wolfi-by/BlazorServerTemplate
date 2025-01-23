@@ -8,7 +8,7 @@
 
 <style>
     .my-custom-class {
-        backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     }
 </style>
 
@@ -18,55 +18,55 @@
     <Authorized>
         @if (@context.User.IsInRole(ADMINISTRATION_ROLE))
         {
-                                <MudTable Items="ColUsers" Hover="true" Breakpoint="Breakpoint.Sm" Context="user">
-                                    <HeaderContent>
-                                        <MudTh>Id</MudTh>
-                                        <MudTh>User Name</MudTh>
-                                        <MudTh>Email</MudTh>
-                                        <MudTh></MudTh>
-                                    </HeaderContent>
-                                    <RowTemplate>
-                                        <MudTd DataLabel="Id">@user.Id.Substring(0, 5) ...</MudTd>
-                                        <MudTd DataLabel="Name">@user.UserName</MudTd>
-                                        <MudTd DataLabel="Email">@user.Email</MudTd>
-                                        <MudIconButton Icon="@MaterialDesignIcons.Normal.ShieldEdit" OnClick="@(()=> EditUser(@user))" Variant="Variant.Outlined" Color="Color.Primary" />
-                                    </RowTemplate>
-                                </MudTable>
+            <MudTable Items="ColUsers" Hover="true" Breakpoint="Breakpoint.Sm" Context="user">
+                <HeaderContent>
+                    <MudTh>Id</MudTh>
+                    <MudTh>User Name</MudTh>
+                    <MudTh>Email</MudTh>
+                    <MudTh></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Id">@user.Id.Substring(0, 5) ...</MudTd>
+                    <MudTd DataLabel="Name">@user.UserName</MudTd>
+                    <MudTd DataLabel="Email">@user.Email</MudTd>
+                    <MudIconButton Icon="@MaterialDesignIcons.Normal.ShieldEdit" OnClick="@(()=> EditUser(@user))" Variant="Variant.Outlined" Color="Color.Primary" />
+                </RowTemplate>
+            </MudTable>
 
-                                <MudPopover Open="@ShowPopup" Fixed="true" Class="px-4 pt-4" OverflowBehavior="OverflowBehavior.FlipAlways" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
-                                    <div class="d-flex flex-column">
-                                        <MudTextField ReadOnly=true Text="@objUser.Id" T="string" title="ID" />
+            <MudPopover Open="@ShowPopup" Fixed="true" Class="px-4 pt-4" OverflowBehavior="OverflowBehavior.FlipAlways" AnchorOrigin="Origin.BottomCenter" TransformOrigin="Origin.TopCenter">
+                <div class="d-flex flex-column">
+                    <MudTextField ReadOnly=true Text="@objUser.Id" T="string" title="ID" />
                     @if (objUser.Id != "")
                     {
-                                                                <MudTextField ReadOnly=true Text="@objUser.UserName" T="string" title="Username" />
+                        <MudTextField ReadOnly=true Text="@objUser.UserName" T="string" title="Username" />
                     }
                     else
                     {
-                                                                <MudTextField ReadOnly=false Text="@objUser.UserName" T="string" title="Username"
-                                                                    Placeholder="Username" />
+                        <MudTextField ReadOnly=false Text="@objUser.UserName" T="string" title="Username"
+                        Placeholder="Username" />
                     }
-                                        <MudTextField ReadOnly=false Text="@objUser.Email" T="string" title="Email" Placeholder="Email" />
-                                        <MudTextField ReadOnly=false InputType="@PasswordInput" Text="@objUser.PasswordHash" T="string"
-                                            Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick"
-                                            AdornmentAriaLabel="Show Password" title="Email" Placeholder="Password" />
-                                        <MudSelect Label="Role" T="string" @bind-Value="@CurrentUserRole">
+                    <MudTextField ReadOnly=false Text="@objUser.Email" T="string" title="Email" Placeholder="Email" />
+                    <MudTextField ReadOnly=false InputType="@PasswordInput" Text="@objUser.PasswordHash" T="string"
+                    Adornment="Adornment.End" AdornmentIcon="@PasswordInputIcon" OnAdornmentClick="ButtonTestclick"
+                    AdornmentAriaLabel="Show Password" title="Email" Placeholder="Password" />
+                    <MudSelect Label="Role" T="string" @bind-Value="@CurrentUserRole">
                         @foreach (var option in Options)
                         {
-                                                                    <MudSelectItem value="@option">
+                            <MudSelectItem value="@option">
                                 @option
-                                                                    </MudSelectItem>
+                            </MudSelectItem>
                         }
-                                        </MudSelect>
-                                        <span style="color:red">@strError</span>
-                                        <MudButton onclick="SaveUser" Color="Color.Warning">Save</MudButton>
-                                        <MudButton onclick="DeleteUser" Color="Color.Warning">Delete</MudButton>
-                                        <MudButton OnClick="@ClosePopup" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudButton>
-                                    </div>
-                                </MudPopover>
+                    </MudSelect>
+                    <span style="color:red">@strError</span>
+                    <MudButton onclick="SaveUser" Color="Color.Warning">Save</MudButton>
+                    <MudButton onclick="DeleteUser" Color="Color.Warning">Delete</MudButton>
+                    <MudButton OnClick="@ClosePopup" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudButton>
+                </div>
+            </MudPopover>
         }
         else
         {
-                                <p>You're not signed in as a user in @ADMINISTRATION_ROLE.</p>
+            <p>You're not signed in as a user in @ADMINISTRATION_ROLE.</p>
         }
     </Authorized>
     <NotAuthorized>
@@ -92,7 +92,7 @@
     bool ShowPopup = false;
     bool isShow;
     string PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
-    InputType PasswordInput = InputType.Password;
+    MudBlazor.InputType PasswordInput = MudBlazor.InputType.Password;
     protected override async Task OnInitializedAsync()
     {
         // ensure there is a ADMINISTRATION_ROLE
@@ -335,13 +335,13 @@
         {
             isShow = false;
             PasswordInputIcon = Icons.Material.Filled.VisibilityOff;
-            PasswordInput = InputType.Password;
+            PasswordInput = MudBlazor.InputType.Password;
         }
         else
         {
             isShow = true;
             PasswordInputIcon = Icons.Material.Filled.Visibility;
-            PasswordInput = InputType.Text;
+            PasswordInput = MudBlazor.InputType.Text;
         }
     }
 }
