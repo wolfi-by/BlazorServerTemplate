@@ -3,7 +3,8 @@
 - Using MudBlazor
 - Using SQLite
 - Using Authentication
-- Using Rolebase Authentication
+- Using Localizasion
+- - Using Rolebase Authentication
   - [Source](https://blazorhelpwebsite.com/ViewBlogPost/21)
 - Using Material Design Icons from
   - [Source](https://www.nuget.org/packages/Bromix.MudBlazor.MaterialDesignIcons/7.0.96.43)
@@ -17,5 +18,7 @@
   - [Tutorial](https://steven-giesel.com/blogPost/777776a2-a13c-46bb-bf6b-89316d88508c)
   - [Source](https://github.com/scalar/scalar/blob/main/packages/scalar.aspnetcore/README.md)
   - Call api using "/scalar"
-- Using Localizasion
-  - [Source](https://github.com/EngstromJimmy/BlazorLocalization/tree/main)
+- Later: MutTheme
+  - [Tutorial](https://crispycode.net/exploring-the-mudthemeprovider-in-mudblazor/)
+- Using Flags
+  - [repo](https://www.nuget.org/packages/PSC.Blazor.Components.Icons/)

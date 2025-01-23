@@ -1,21 +1,25 @@
-﻿using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using MudBlazor.Services;
+﻿using System.Globalization;
 using BlazorServerTemplate.Components;
 using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
-using MudExtensions.Services;
-using Serilog;
 using KristofferStrube.Blazor.FileSystemAccess;
-using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using Toolbelt.Blazor.Extensions.DependencyInjection;
-using Toolbelt.Blazor.I18nText;
-using System.Globalization;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using MudBlazor;
+using MudBlazor.Services;
+using MudExtensions.Services;
 using Scalar.AspNetCore;
+using Serilog;
 
+var supportedCultures = new[] {new  CultureInfo("en-US"), new CultureInfo( "de-DE") };
+//var localizationOptions = new RequestLocalizationOptions()
+//.SetDefaultCulture(supportedCultures[0])
+//.AddSupportedCultures(supportedCultures)
+//.AddSupportedUICultures(supportedCultures);
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +33,18 @@ Log.Logger = new LoggerConfiguration()
 builder.Services.AddSerilog();
 
 // Add MudBlazor services
-builder.Services.AddMudServices();
+builder.Services.AddMudServices(config =>
+{
+    config.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomLeft;
+
+    config.SnackbarConfiguration.PreventDuplicates = true;
+    config.SnackbarConfiguration.NewestOnTop = false;
+    config.SnackbarConfiguration.ShowCloseIcon = true;
+    config.SnackbarConfiguration.VisibleStateDuration = 1500;
+    config.SnackbarConfiguration.HideTransitionDuration = 500;
+    config.SnackbarConfiguration.ShowTransitionDuration = 500;
+    config.SnackbarConfiguration.SnackbarVariant = Variant.Outlined;
+});
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -64,24 +79,18 @@ builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSe
 
 builder.Services.AddFileSystemAccessService();
 
-builder.Services.AddI18nText(options =>
-{
-    options.PersistenceLevel = PersistanceLevel.Cookie;
-    options.GetInitialLanguageAsync = (_, _) => ValueTask.FromResult(CultureInfo.CurrentUICulture.Name);
-});
+builder.Services.AddLocalization();
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-    var supportedCultures = new[] { "en-US", "de-DE" };
-    var localizationOptions = new RequestLocalizationOptions()
-        .SetDefaultCulture(supportedCultures[0])
-        .AddSupportedCultures(supportedCultures)
-        .AddSupportedUICultures(supportedCultures);
+   
+
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
 });
-builder.Services.AddLocalization(options =>
-{
-    options.ResourcesPath = "i18ntext";
-});
+
+
 builder.Services.AddOpenApi();
+
 
 var app = builder.Build();
 
@@ -104,21 +113,24 @@ using (var scope = app.Services.CreateScope())
                 Email = "admin",
                 UserName = "admin",
                 EmailConfirmed = true,
-                                PasswordHash="admin"
+                PasswordHash = "admin"
             };
 
-            var result= await userManager.CreateAsync(adminUser, adminUser.PasswordHash);
+            var result = await userManager.CreateAsync(adminUser, adminUser.PasswordHash);
             await userManager.AddToRoleAsync(adminUser, "Administrators");
         }
 
     }
 }
 
-var localizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
-if (localizationOptions != null)
+
+//localizationOptions.RequestCultureProviders.Insert(0, new AcceptLanguageHeaderRequestCultureProvider());
+app.UseRequestLocalization(new RequestLocalizationOptions
 {
-    app.UseRequestLocalization(localizationOptions.Value);
-}
+    DefaultRequestCulture = new RequestCulture("en-US"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -154,7 +166,7 @@ app.MapGet("Culture/Set", (HttpRequest request, [FromQuery] string culture, [Fro
             CookieRequestCultureProvider.MakeCookieValue(
              new RequestCulture(culture, culture)),
               new CookieOptions
-              {
+              {IsEssential=true,
                   Path = "/",
                   Expires = DateTime.Now.AddYears(1)
               });

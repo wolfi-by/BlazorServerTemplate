@@ -6,7 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-BlazorServerTemplate-1f213570-a9f1-4717-8956-c1b29187cf04</UserSecretsId>
   </PropertyGroup>
-
+  <PropertyGroup>
+    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+  </PropertyGroup>
   <ItemGroup>
     <None Update="Data\app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
   </ItemGroup>
@@ -24,9 +26,27 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.*" />
     <PackageReference Include="MudBlazor" Version="7.*" />
     <PackageReference Include="Extensions.MudBlazor.StaticInput" Version="2.*" />
+    <PackageReference Include="PSC.Blazor.Components.Icons" Version="6.0.8" />
     <PackageReference Include="Scalar.AspNetCore" Version="2.0.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
-    <PackageReference Include="Toolbelt.Blazor.I18nText" Version="13.0.0" />
   </ItemGroup>
 
+
+
+
+  <ItemGroup>
+    <Compile Update="Resources\Localization.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Localization.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Localization.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

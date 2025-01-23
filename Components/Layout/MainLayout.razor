@@ -1,22 +1,22 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" />
+<MudThemeProvider @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode" Theme="customTheme" />
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 <MudLayout>
     <MudAppBar Elevation="1">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
-                       OnClick="@((e) => DrawerToggle())" />
+        OnClick="@((e) => DrawerToggle())" />
         <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
         <MudSpacer />
-       
-            
-                <MudSwitch @bind-Value="_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool"
-                           Label="Toggle Light/Dark Mode" />
-                <CultureSelector />
-             
-       
+
+
+        <MudSwitch @bind-Value="_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool"
+        Label="Toggle Light/Dark Mode" />
+        <CultureSelector />
+
+
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
         <NavMenu />
@@ -32,7 +32,6 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
-
 @code {
     private bool _drawerOpen = true;
 
@@ -43,13 +42,32 @@
     private bool _isDarkMode;
     private MudThemeProvider _mudThemeProvider = default!;
 
-    
+    private MudTheme customTheme = new MudTheme();
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             await _mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
+         
+            customTheme = new MudTheme()
+                {
+                    
+                    PaletteLight = new PaletteLight()
+                    {
+                        AppbarBackground = new MudBlazor.Utilities.MudColor("#003D59"),
+                        Primary = new MudBlazor.Utilities.MudColor("#003D59"),
+                        Secondary = new MudBlazor.Utilities.MudColor("#013243"),
+                    },
+                    PaletteDark = new PaletteDark()
+                    {
+                        AppbarBackground = new MudBlazor.Utilities.MudColor("#1DACD6"),
+                        Primary = new MudBlazor.Utilities.MudColor("#1DACD6"),
+                        Secondary = new MudBlazor.Utilities.MudColor("#48D1CC"),
+                    }
+                };
+            
+
             StateHasChanged();
         }
     }
@@ -60,4 +78,7 @@
         StateHasChanged();
         return Task.CompletedTask;
     }
+
+    
+
 }

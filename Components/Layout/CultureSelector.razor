@@ -1,40 +1,48 @@
 @using System.Globalization
 @using Microsoft.Extensions.Options
+@using PSC.Blazor.Components.Icons
+@inject ILocalizationInterceptor loc
+
 @inject NavigationManager Nav
 @inject IOptions<RequestLocalizationOptions> RequestLocalizationOptions
-@inject Toolbelt.Blazor.I18nText.I18nText loc
+
+
 
 <MudStack Style="width: 250px">
     <MudPaper style="color:aliceblue ">
-        <MudSelect @bind-Value="Culture" Variant="Variant.Text" Label=@MyText.SelectLocale Dense="true"
-            Placeholder="Placeholder">
+        <MudSelect @bind-Value="Culture" onselect="SelectionChanged" Variant="Variant.Text" Label="language" Dense="true" Placeholder="Placeholder">
             @foreach (var culture in supportedCultures)
             {
-                <MudSelectItem Value="@culture">@culture.DisplayName</MudSelectItem>
+                <MudSelectItem Value="@culture">
+                    <MudStack Row="true">
+                        <SVGFlag CountryCode="@culture.Name.Split("-").Last()" FlagType="FlagType.Wide" Width="20" Height="15" />
+                        <p>@culture.DisplayName</p>
+                    </MudStack>
+                </MudSelectItem>
             }
         </MudSelect>
     </MudPaper>
 </MudStack>
 
+
 @code
 {
-
-    I18nText.Localization MyText = new();
-    protected async override Task OnInitializedAsync()
+    private CultureInfo[] supportedCultures = new[]
     {
-        MyText = await loc.GetTextTableAsync<I18nText.Localization>(this);
-        await base.OnInitializedAsync();
-    }
+        new CultureInfo("en-US"),
+        new CultureInfo("de-DE"),
+    };
 
-    private CultureInfo[] supportedCultures = new CultureInfo[0];
+    private CultureInfo? selectedCulture;
 
     protected override void OnInitialized()
     {
-        if (RequestLocalizationOptions != null && RequestLocalizationOptions.Value.SupportedCultures != null)
+        if (RequestLocalizationOptions != null && RequestLocalizationOptions.Value != null)
         {
-            supportedCultures = RequestLocalizationOptions.Value.SupportedCultures.ToArray();
+            var aaa = RequestLocalizationOptions.Value.SupportedCultures?.ToArray();
+
         }
-        Culture = CultureInfo.CurrentCulture;
+        selectedCulture = CultureInfo.CurrentCulture;
     }
 
     private CultureInfo Culture
@@ -49,9 +57,14 @@
                 var cultureEscaped = Uri.EscapeDataString(value.Name);
                 var uriEscaped = Uri.EscapeDataString(uri);
 
+
+
+
                 Nav.NavigateTo(
                 $"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}",
                 forceLoad: true);
+
+
             }
         }
     }
