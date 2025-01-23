@@ -1,21 +1,36 @@
-﻿@page "/themeeditor"
+﻿
 <h3>ThemeEditor</h3>
 
 <MudButton Variant="Variant.Filled" OnClick="ChangeTheme">Change Theme</MudButton>
 <MudButton Variant="Variant.Filled" OnClick="DefaultTheme">Default Theme</MudButton>
 
 @code {
-    [CascadingParameter]
-    public MudTheme? theme { get; set; }
+    [Parameter]
+    public MudTheme? Theme
+    {
+        get {
+            return _theme;
+        }
+        set
+        {
+            if (value is null) return;
+            if (_theme == value) return;
+            _theme = value;
+            ThemeChanged.InvokeAsync(value);
+        }
+    } 
+    [Parameter]
+    public EventCallback<MudTheme> ThemeChanged { get; set; }
 
+    private MudTheme _theme=new MudTheme();
     void DefaultTheme()
     {
-        theme = new MudTheme();
+        Theme = new MudTheme();
         StateHasChanged();
     }
 
     void ChangeTheme(){
-        theme = new MudTheme()
+        Theme = new MudTheme()
             {
                 PaletteLight = new PaletteLight()
                 {

@@ -5,29 +5,37 @@
 <MudDialogProvider />
 <MudSnackbarProvider />
 <CascadingValue Value="customTheme">
-<MudLayout>
-    <MudAppBar Elevation="1">
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
-                       OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
-        <MudSpacer />
+    <MudLayout>
+        <MudAppBar Elevation="1">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
+                           OnClick="@((e) => DrawerToggle())" />
+            <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
+            <MudSpacer />
+
+            <MudSwitch @bind-Value="_themeEditor" Color="Color.Secondary" Class="ma-4" T="bool"
+                       Label="Theme Editor" />
+            <MudSwitch @bind-Value="_isDarkMode" Color="Color.Secondary" Class="ma-4" T="bool"
+                       Label="Toggle Light/Dark Mode" />
+            <CultureSelector />
 
 
-        <MudSwitch @bind-Value="_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool"
-                   Label="Toggle Light/Dark Mode" />
-        <CultureSelector />
+        </MudAppBar>
+        <MudDrawer @bind-Open="_drawerOpen" Anchor="Anchor.Left" Overlay="false" Elevation="0" Variant="@DrawerVariant.Responsive" ClipMode="DrawerClipMode.Never">
+            <NavMenu />
+        </MudDrawer>
 
-
-    </MudAppBar>
-    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
-        <NavMenu />
-    </MudDrawer>
-    <MudMainContent Class="mt-16 pa-4">
-        
-            @Body
+        <MudDrawer @bind-Open="_themeEditor" Anchor="Anchor.Right" Overlay="false" Elevation="0" Variant="@DrawerVariant.Responsive" ClipMode="DrawerClipMode.Never">
+            <ThemeEditor @bind-Theme="customTheme" />
+            </MudDrawer>
        
-    </MudMainContent>
-</MudLayout>
+        <MudMainContent Class="mt-16 pa-4">
+            
+            
+                @Body
+           
+
+        </MudMainContent>
+    </MudLayout>
 </CascadingValue>
 
 <div id="blazor-error-ui">
@@ -37,7 +45,7 @@
 </div>
 @code {
     private bool _drawerOpen = true;
-
+    private bool _themeEditor;
     private void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
@@ -53,7 +61,7 @@
         {
             await _mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
 
-            
+
 
 
             StateHasChanged();

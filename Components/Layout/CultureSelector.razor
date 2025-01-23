@@ -6,24 +6,19 @@
 @inject NavigationManager Nav
 @inject IOptions<RequestLocalizationOptions> RequestLocalizationOptions
 
-
-
-<MudStack Style="width: 250px">
-    <MudPaper style="color:aliceblue ">
-        <MudSelect @bind-Value="Culture" onselect="SelectionChanged" Variant="Variant.Text" Label="language" Dense="true" Placeholder="Placeholder">
+    <MudPaper Style="background-color:transparent;">
+            <MudSelect @bind-Value="Culture" onselect="SelectionChanged" Variant="Variant.Outlined"  Dense="true" Placeholder="Placeholder">
             @foreach (var culture in supportedCultures)
             {
                 <MudSelectItem Value="@culture">
                     <MudStack Row="true">
                         <SVGFlag CountryCode="@culture.Name.Split("-").Last()" FlagType="FlagType.Wide" Width="20" Height="15" />
-                        <p>@culture.DisplayName</p>
+                       @*  <p>@culture.DisplayName</p> *@
                     </MudStack>
                 </MudSelectItem>
             }
         </MudSelect>
-    </MudPaper>
-</MudStack>
-
+</MudPaper>
 
 @code
 {
