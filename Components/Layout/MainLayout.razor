@@ -4,16 +4,17 @@
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
+<CascadingValue Value="customTheme">
 <MudLayout>
     <MudAppBar Elevation="1">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
-        OnClick="@((e) => DrawerToggle())" />
+                       OnClick="@((e) => DrawerToggle())" />
         <MudText Typo="Typo.h5" Class="ml-3">Application</MudText>
         <MudSpacer />
 
 
         <MudSwitch @bind-Value="_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool"
-        Label="Toggle Light/Dark Mode" />
+                   Label="Toggle Light/Dark Mode" />
         <CultureSelector />
 
 
@@ -22,10 +23,12 @@
         <NavMenu />
     </MudDrawer>
     <MudMainContent Class="mt-16 pa-4">
-        @Body
+        
+            @Body
+       
     </MudMainContent>
 </MudLayout>
-
+</CascadingValue>
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.
@@ -49,24 +52,9 @@
         if (firstRender)
         {
             await _mudThemeProvider.WatchSystemPreference(OnSystemPreferenceChanged);
-         
-            customTheme = new MudTheme()
-                {
-                    
-                    PaletteLight = new PaletteLight()
-                    {
-                        AppbarBackground = new MudBlazor.Utilities.MudColor("#003D59"),
-                        Primary = new MudBlazor.Utilities.MudColor("#003D59"),
-                        Secondary = new MudBlazor.Utilities.MudColor("#013243"),
-                    },
-                    PaletteDark = new PaletteDark()
-                    {
-                        AppbarBackground = new MudBlazor.Utilities.MudColor("#1DACD6"),
-                        Primary = new MudBlazor.Utilities.MudColor("#1DACD6"),
-                        Secondary = new MudBlazor.Utilities.MudColor("#48D1CC"),
-                    }
-                };
+
             
+
 
             StateHasChanged();
         }
@@ -79,6 +67,6 @@
         return Task.CompletedTask;
     }
 
-    
+
 
 }

@@ -1,6 +1,35 @@
 ﻿@page "/themeeditor"
 <h3>ThemeEditor</h3>
 
-@code {
+<MudButton Variant="Variant.Filled" OnClick="ChangeTheme">Change Theme</MudButton>
+<MudButton Variant="Variant.Filled" OnClick="DefaultTheme">Default Theme</MudButton>
 
+@code {
+    [CascadingParameter]
+    public MudTheme? theme { get; set; }
+
+    void DefaultTheme()
+    {
+        theme = new MudTheme();
+        StateHasChanged();
+    }
+
+    void ChangeTheme(){
+        theme = new MudTheme()
+            {
+                PaletteLight = new PaletteLight()
+                {
+                    AppbarBackground = new MudBlazor.Utilities.MudColor("#003D59"),
+                    Primary = new MudBlazor.Utilities.MudColor("#003D59"),
+                    Secondary = new MudBlazor.Utilities.MudColor("#013243"),
+                },
+                PaletteDark = new PaletteDark()
+                {
+                    AppbarBackground = new MudBlazor.Utilities.MudColor("#1DACD6"),
+                    Primary = new MudBlazor.Utilities.MudColor("#1DACD6"),
+                    Secondary = new MudBlazor.Utilities.MudColor("#48D1CC"),
+                }
+            };
+            StateHasChanged();
+    }
 }
