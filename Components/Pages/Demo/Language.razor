@@ -1,5 +1,6 @@
 @page "/culture-example-1"
 @using System.Globalization
+@using BlazorServerTemplate.Data
 @using BlazorServerTemplate.Resources
 
 
@@ -46,9 +47,20 @@ Api: /scalar
     <li><label><b>Number:</b> <input type="number" @bind="number" /></label></li>
 </ul>
 
+
+
 @code {
     private DateTime dt = DateTime.Now;
     private double number = 1999.69;
+
+    private List<TestData> testData = new List<TestData>
+    {
+        new TestData { Id = 1, Name = "Test 1" },
+        new TestData { Id = 2, Name = "Test 2" },
+        new TestData { Id = 3, Name = "Test 3" },
+        new TestData { Id = 4, Name = "Test 4" },
+        new TestData { Id = 5, Name = "Test 5" },
+    };
 
     // I18nText.MyText MyText = new();
     protected async override Task OnInitializedAsync()

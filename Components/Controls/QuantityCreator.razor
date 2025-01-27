@@ -1,0 +1,84 @@
+﻿
+<h3>QuantityCreator</h3>
+
+<MudStepper NonLinear ShowResetButton Ripple="Ripple">
+    <MudStep Title="Select Quantity">
+        <MudSelect @bind-Value="quantity"
+                   Variant="Variant.Outlined"
+                   Label="Quantity">
+            @foreach (var quantityname in Quantity.Names)
+            {
+                <MudSelectItem Value="quantityname">@quantityname</MudSelectItem>
+            }
+        </MudSelect>
+    </MudStep>
+    <MudStep Title="Select Unit">
+        <MudSelect @bind-Value="unit"
+                   Variant="Variant.Outlined"
+                   Label="Quantity">
+            @foreach (var unitname in _quantity.UnitInfos)
+            {
+                <MudSelectItem Value="unitname.Name">@unitname.Name</MudSelectItem>
+            }
+        </MudSelect>
+    </MudStep>
+    <MudStep Title="Mapping" SecondaryText="Value range mapper">
+        <MudNumericField Label="Min Value" @bind-Value="minvalue" />
+        <MudNumericField Label="Max Value" @bind-Value="maxvalue" />
+        <MudNumericField Label="Test value" @bind-Value="test" />
+        <p>Quantity: @testvalue  </p>
+    </MudStep>
+</MudStepper>
+
+
+@code {
+    private QuantityInfo _quantity = default!;
+    private UnitInfo _unit = default!;
+    private double minvalue = 0;
+    private double maxvalue = 100;
+    private double _test = 50;
+    private IQuantity? testvalue;
+    private double test
+    {
+        get { return _test; }
+        set
+        {
+            if (Quantity.TryFrom(value, _unit.Value, out IQuantity? unitinfo))
+            {
+                testvalue = unitinfo;
+            };
+             _test=value;
+        }
+    }
+    private string quantity
+    {
+        get
+        {
+            if (_quantity is null) return string.Empty;
+            return _quantity.Name;
+        }
+        set
+        {
+            if (!string.IsNullOrEmpty(value))
+            {
+                _quantity = Quantity.ByName[value];
+            }
+        }
+    }
+    private string unit
+    {
+        get
+        {
+            if (_unit is null) return string.Empty;
+            return _unit.Name;
+        }
+        set
+        {
+            if (!string.IsNullOrEmpty(value) && _quantity is not null)
+            {
+                var unitinfos = _quantity.UnitInfos;
+                _unit = unitinfos.FirstOrDefault(x => x.Name == value) ?? default!;
+            }
+        }
+    }
+}

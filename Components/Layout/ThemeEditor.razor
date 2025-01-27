@@ -4,9 +4,23 @@
 <MudButton Variant="Variant.Filled" OnClick="ChangeTheme">Change Theme</MudButton>
 <MudButton Variant="Variant.Filled" OnClick="DefaultTheme">Default Theme</MudButton>
 
+<MudCard >
+    <MudCardHeader>
+        Palette
+    </MudCardHeader>
+    <MudCardContent>
+        <MudColorPicker Disabled="isCustom" Label="Basic Color Picker" @bind-Value="_theme.PaletteLight.AppbarBackground" Style="@($"color: {@_theme.PaletteLight.AppbarBackground};")" Placeholder="Select Color" />
+    </MudCardContent>
+</MudCard>
+
+
+<MudButton Variant="Variant.Filled" OnClick="activate">activate</MudButton>
+
+
 @code {
+    private bool isCustom;
     [Parameter]
-    public MudTheme? Theme
+    public MudTheme Theme
     {
         get {
             return _theme;
@@ -16,21 +30,29 @@
             if (value is null) return;
             if (_theme == value) return;
             _theme = value;
-            ThemeChanged.InvokeAsync(value);
+           
         }
     } 
+
+
     [Parameter]
     public EventCallback<MudTheme> ThemeChanged { get; set; }
+
+    void activate(){
+        ThemeChanged.InvokeAsync(_theme);
+    }
 
     private MudTheme _theme=new MudTheme();
     void DefaultTheme()
     {
-        Theme = new MudTheme();
+        isCustom = false;
+        _theme = new MudTheme();
         StateHasChanged();
     }
 
     void ChangeTheme(){
-        Theme = new MudTheme()
+        isCustom = true;
+        _theme = new MudTheme()
             {
                 PaletteLight = new PaletteLight()
                 {
@@ -43,7 +65,7 @@
                     AppbarBackground = new MudBlazor.Utilities.MudColor("#1DACD6"),
                     Primary = new MudBlazor.Utilities.MudColor("#1DACD6"),
                     Secondary = new MudBlazor.Utilities.MudColor("#48D1CC"),
-                }
+                }, 
             };
             StateHasChanged();
     }
