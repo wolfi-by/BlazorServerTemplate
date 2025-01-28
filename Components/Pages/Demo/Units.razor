@@ -14,9 +14,9 @@
         <PropertyColumn Property="x => x.QuantityName" />
         <PropertyColumn Property="x => x.UnitName" />
         <PropertyColumn Property="x => x.MinValue" />
-        <PropertyColumn Property="x => x.MaxValue"  />
+        <PropertyColumn Property="x => x.MaxValue" />
         <PropertyColumn Property="@((x)=>GetQuantity(x))" />
-        <TemplateColumn CellClass="d-flex justify-end" >
+        <TemplateColumn CellClass="d-flex justify-end">
             <CellTemplate>
                 <MudStack Row>
                     <MudButton OnClick="@(()=>RemoveItem(context.Item.id))" Size="@Size.Small" Variant="@Variant.Filled" Color="@Color.Error">Remove</MudButton>
@@ -39,24 +39,26 @@
 
     string GetQuantity(QuantityMappingRecord mapping)
     {
-        if (Quantity.TryFrom(mapping.Value,mapping.QuantityName, mapping.UnitName, out IQuantity? quantity))
+        if (Quantity.TryFrom(mapping.Value, mapping.QuantityName, mapping.UnitName, out IQuantity? quantity))
         {
-            if (quantity is not null){
-            return quantity!.ToString();
+            if (quantity is not null)
+            {
+                return quantity!.ToString(CultureInfo.CurrentCulture);
             }
             return string.Empty;
         }
         return string.Empty;
     }
-   async void RemoveItem(string id)
+    async void RemoveItem(string id)
     {
-       var removeResult = await context.RemoveQuantityMappingsAsync(Guid.Parse(id));
+        var removeResult = await context.RemoveQuantityMappingsAsync(Guid.Parse(id));
         if (removeResult is not null)
         {
             _quantityMappings = await context.GetQuantityMappingsAsync();
             Snackbar.Add("Item removed", Severity.Success);
         }
-        else{
+        else
+        {
             Snackbar.Add("Failed to remove item", Severity.Error);
         }
     }

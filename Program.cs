@@ -15,7 +15,7 @@ using MudExtensions.Services;
 using Scalar.AspNetCore;
 using Serilog;
 
-var supportedCultures = new[] {new  CultureInfo("en-US"), new CultureInfo( "de-DE") };
+var supportedCultures = new[] {new  CultureInfo("en-US"), new CultureInfo( "de-DE"), new CultureInfo("ru-RU") , new CultureInfo("ii-CN") , new CultureInfo("tig-ER") };
 //var localizationOptions = new RequestLocalizationOptions()
 //.SetDefaultCulture(supportedCultures[0])
 //.AddSupportedCultures(supportedCultures)

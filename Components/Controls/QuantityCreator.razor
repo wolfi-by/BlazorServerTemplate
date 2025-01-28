@@ -5,24 +5,26 @@
 
 <MudStepper NonLinear ShowResetButton Ripple="Ripple">
     <MudStep Title="Select Quantity">
-        <MudSelect @bind-Value="quantity"
-                   Variant="Variant.Outlined"
-                   Label="Quantity">
+
+        <MudComboBox @bind-Value="quantity" @bind-Text="quantity" Variant="Variant.Outlined" Label="Select quantity" Editable="true" Disabled="false" ReadOnly="false" MultiSelection="false"
+                     Clearable="true">
+
             @foreach (var quantityname in Quantity.Names)
             {
-                <MudSelectItem Value="quantityname">@quantityname</MudSelectItem>
+                <MudComboBoxItem Value="@quantityname">@quantityname</MudComboBoxItem>
             }
-        </MudSelect>
+        </MudComboBox>
     </MudStep>
     <MudStep Title="Select Unit">
-        <MudSelect @bind-Value="unit"
-                   Variant="Variant.Outlined"
-                   Label="Quantity">
+
+        <MudComboBox @bind-Value="unit" Variant="Variant.Outlined" Label="Select unit" Editable="true" Disabled="false" ReadOnly="false" MultiSelection="false"
+                     Clearable="true">
+
             @foreach (var unitname in _quantity.UnitInfos)
             {
-                <MudSelectItem Value="unitname.Name">@unitname.Name</MudSelectItem>
+                <MudComboBoxItem Value="unitname.Name">@unitname.Name</MudComboBoxItem>
             }
-        </MudSelect>
+        </MudComboBox>
     </MudStep>
     <MudStep Title="Mapping" SecondaryText="Value range mapper">
         <MudNumericField Label="Min Value" @bind-Value="minvalue" />
@@ -66,6 +68,8 @@
             {
                 _quantity = Quantity.ByName[value];
             }
+            else
+            { _quantity = default!; }
         }
     }
     private string unit
