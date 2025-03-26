@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Ardalis.Result;
+using BlazorServerTemplate.Data.OPCUA;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,8 +8,17 @@ namespace BlazorServerTemplate.Data;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
 {
+    public DbSet<OPCUAElement> OPCUAElements { get; set; }
     public DbSet<QuantityDto> Units { get; set; }
     public DbSet<QuantityMappingDto> UnitMappings { get; set; }
+
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+       
+    }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

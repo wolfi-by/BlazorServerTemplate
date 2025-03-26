@@ -1,0 +1,124 @@
+﻿
+@using Microsoft.Extensions.Configuration
+@using BlazorServerTemplate.Data.OPCUA
+@using OpcLabs.EasyOpc.UA
+@using OpcLabs.EasyOpc.UA.OperationModel
+
+@inject IConfiguration config
+
+<div style="@GetStyle" draggable="true" @ondragstart="OnDragStart" @ondragend="OnDragEnd" @oncontextmenu:preventDefault="true" @oncontextmenu="OnContextMenu">
+
+    @if (element.Type== OPCUAElementType.ToggleSwitch.Value)
+    {
+        <BlazorServerTemplate.Components.Controls.OPCUA.Elements.ToggleSwitch _value="@_value" client="@client" element="@element" opcuaserver="@opcuaserver" />
+    }
+    else if (element.Type == OPCUAElementType.IntField.Value)
+    {
+        <BlazorServerTemplate.Components.Controls.OPCUA.Elements.IntField _value="@_value" client="@client" element="@element" opcuaserver="@opcuaserver" />
+    }
+    else if (element.Type == OPCUAElementType.FloatField.Value)
+    {
+        <BlazorServerTemplate.Components.Controls.OPCUA.Elements.FloatField _value="@_value" client="@client" element="@element" opcuaserver="@opcuaserver" />
+    }
+    else
+    {
+        <p>right click</p>
+    }
+
+
+    <MudPopover Open="@_open" Class="pa-4" Fixed="true" RelativeWidth="@_dropdownWidth" AnchorOrigin="Origin.BottomLeft" TransformOrigin="Origin.TopLeft">
+        <MudTextField @bind-Value="element.Label" Label="Outlined" Variant="Variant.Outlined"></MudTextField>
+
+        <MudSelect T="int" @bind-Value="@element.Type"
+        Variant="Variant.Outlined"
+        Label="Select type"
+        Margin="Margin.Dense"
+        Dense="true">
+
+            @foreach (var item in OPCUAElementType.List)
+            {
+                <MudSelectItem Value="@item.Value">@item.Name</MudSelectItem>
+            }
+        </MudSelect>
+        <MudTextField @bind-Value="element.Source" Label="Source" Variant="Variant.Outlined"></MudTextField>
+        <MudTextField @bind-Value="element.Target" Label="Target" Variant="Variant.Outlined"></MudTextField>
+        <MudButton OnClick="@ToggleOpen" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudButton>
+    </MudPopover>
+
+</div>
+@code {
+    private int subscriptionhandle=0;
+    OpcLabs.EasyOpc.UA.EasyUAClient client = OpcLabs.EasyOpc.UA.EasyUAClient.SharedInstance;
+    private bool _open;
+    private object _value =default!;
+    private DropdownWidth _dropdownWidth = DropdownWidth.Ignore;
+    private async Task ToggleOpen()
+    {
+        _open = !_open;
+        if (!_open)
+        {
+            AddSubscription();
+            await Refresh.InvokeAsync();
+        }
+        else
+        {
+            if (subscriptionhandle==0) return;
+            client.UnsubscribeMonitoredItem(subscriptionhandle);
+        }
+
+    }
+    [Parameter]
+    public OPCUAElement element { get; set; } = default!;
+    [Parameter]
+    public EventCallback<OPCUAElement> DeleteMe { get; set; }
+    [Parameter]
+    public EventCallback Refresh { get; set; }
+    private string GetStyle
+    {
+        get
+        {
+            return $"position:absolute; top: {element.Top}px; left: {element.Left}px;";
+        }
+    }
+    private string opcuaserver = string.Empty;
+
+    private double startX, startY, offsetX, offsetY;
+    private void OnDragStart(DragEventArgs args)
+    {
+        startX = args.ClientX;
+        startY = args.ClientY;
+    }
+    private async void OnDragEnd(DragEventArgs args)
+    {
+        offsetX = args.ClientX - startX;
+        offsetY = args.ClientY - startY;
+        element.Left += offsetX;
+        element.Top += offsetY;
+        _open = false;
+        await Refresh.InvokeAsync();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        opcuaserver = config["OPCUAServer"] ?? string.Empty;
+        await base.OnInitializedAsync();
+    }
+    private async Task OnContextMenu()
+    {
+        await ToggleOpen();
+    }
+
+    private void AddSubscription()
+    {
+        if (string.IsNullOrEmpty(opcuaserver)) return;
+        if (string.IsNullOrEmpty(element.Source)) return;
+
+        subscriptionhandle= client.SubscribeDataChange(opcuaserver, element.Source, 500, (_, args) => HandleSubscriptionValue(args));
+    }
+    private async Task HandleSubscriptionValue(EasyUADataChangeNotificationEventArgs args)
+    {
+
+        _value =args.AttributeData.Value;
+        await Refresh.InvokeAsync();
+    }
+}

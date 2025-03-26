@@ -1,0 +1,53 @@
+﻿@page "/opcua"
+@using BlazorServerTemplate.Data
+@using BlazorServerTemplate.Data.OPCUA
+@inject ApplicationDbContext dbContext
+<h3>OPCUA</h3>
+
+
+@foreach(var item in opcuaelements)
+{
+    <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer  element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
+}
+
+<MudPaper Elevation="25">
+    <MudToolBar>
+        <MudIconButton Icon="@Icons.Material.Outlined.Add" OnClick="Add" />
+        <MudIconButton Icon="@Icons.Material.Outlined.Save" OnClick="Save" />
+    </MudToolBar>
+</MudPaper>
+
+
+
+
+@code {
+    private List<OPCUAElement> opcuaelements = new List<OPCUAElement>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        opcuaelements = dbContext.OPCUAElements.ToList();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task Refresh()
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+    private async void RemoveElement(OPCUAElement element)
+    {
+        opcuaelements.Remove(element);
+        dbContext.OPCUAElements.Remove(element);
+        await dbContext.SaveChangesAsync();
+        await Refresh();
+    }
+    private async Task Add()
+    {
+        opcuaelements.Add(new OPCUAElement { Top = 200, Left = 300 });
+        await Refresh();
+    }
+    private async Task Save()
+    {
+        dbContext.UpdateRange(opcuaelements);
+        await dbContext.SaveChangesAsync();
+    }
+}

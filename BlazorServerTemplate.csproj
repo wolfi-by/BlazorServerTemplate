@@ -16,21 +16,26 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.Result" Version="10.1.0" />
+    <PackageReference Include="Ardalis.SmartEnum" Version="8.2.0" />
     <PackageReference Include="Bromix.MudBlazor.MaterialDesignIcons" Version="7.4.47.56" />
-    <PackageReference Include="CodeBeam.MudBlazor.Extensions" Version="7.1.0" />
+    <PackageReference Include="CodeBeam.MudBlazor.Extensions" Version="8.0.0" />
     <PackageReference Include="KristofferStrube.Blazor.FileSystemAccess" Version="3.2.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.*" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.*" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.3.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.*" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.*" />
-    <PackageReference Include="MudBlazor" Version="7.*" />
-    <PackageReference Include="Extensions.MudBlazor.StaticInput" Version="2.*" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MudBlazor" Version="8.3.0" />
+    <PackageReference Include="Extensions.MudBlazor.StaticInput" Version="3.2.0" />
+    <PackageReference Include="OpcLabs.QuickOpc" Version="5.81.485" />
     <PackageReference Include="PSC.Blazor.Components.Icons" Version="6.0.8" />
-    <PackageReference Include="Scalar.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
-    <PackageReference Include="UnitsNet" Version="5.66.0" />
+    <PackageReference Include="UnitsNet" Version="5.73.0" />
   </ItemGroup>
 
 
@@ -63,7 +68,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Components\Controls\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
 </Project>

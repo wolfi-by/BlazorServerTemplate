@@ -3,7 +3,7 @@
 @inject NavigationManager Nav
 <h3>QuantityCreator</h3>
 
-<MudStepper NonLinear ShowResetButton Ripple="Ripple">
+<MudStepper NonLinear ShowResetButton Ripple="true">
     <MudStep Title="Select Quantity">
 
         <MudComboBox @bind-Value="quantity" @bind-Text="quantity" Variant="Variant.Outlined" Label="Select quantity" Editable="true" Disabled="false" ReadOnly="false" MultiSelection="false"
