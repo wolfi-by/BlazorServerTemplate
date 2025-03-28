@@ -4,6 +4,10 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerTemplate", "BlazorServerTemplate.csproj", "{A1CA26C9-2BF0-0FFE-3256-8AB9A65D0920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPCUaClient", "..\OPCUaClient\OPCUaClient\OPCUaClient.csproj", "{E51238F6-F38B-9A74-4799-DC70D6160D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\OPCUaClient\Test\Test.csproj", "{03B9C3FE-3364-A19C-1044-7E16E52CB515}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +18,14 @@ Global
 		{A1CA26C9-2BF0-0FFE-3256-8AB9A65D0920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1CA26C9-2BF0-0FFE-3256-8AB9A65D0920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1CA26C9-2BF0-0FFE-3256-8AB9A65D0920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E51238F6-F38B-9A74-4799-DC70D6160D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E51238F6-F38B-9A74-4799-DC70D6160D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E51238F6-F38B-9A74-4799-DC70D6160D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E51238F6-F38B-9A74-4799-DC70D6160D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B9C3FE-3364-A19C-1044-7E16E52CB515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B9C3FE-3364-A19C-1044-7E16E52CB515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B9C3FE-3364-A19C-1044-7E16E52CB515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B9C3FE-3364-A19C-1044-7E16E52CB515}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

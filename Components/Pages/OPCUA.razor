@@ -2,18 +2,27 @@
 @using BlazorServerTemplate.Data
 @using BlazorServerTemplate.Data.OPCUA
 @inject ApplicationDbContext dbContext
+
+@inject IConfiguration config
 <h3>OPCUA</h3>
 
 
 @foreach(var item in opcuaelements)
 {
-    <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer  element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
+    <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
 }
 
 <MudPaper Elevation="25">
     <MudToolBar>
         <MudIconButton Icon="@Icons.Material.Outlined.Add" OnClick="Add" />
         <MudIconButton Icon="@Icons.Material.Outlined.Save" OnClick="Save" />
+        <MudSpacer />
+        <MudToggleIconButton Toggled="client.IsConnected"
+        Icon="@Icons.Material.Filled.SignalWifiBad"
+        Color="@Color.Error"
+        ToggledIcon="@Icons.Material.Filled.SignalWifiStatusbar4Bar"
+        ToggledColor="@Color.Success" Disabled
+        />
     </MudToolBar>
 </MudPaper>
 
@@ -21,12 +30,25 @@
 
 
 @code {
+    UaClient client = default!;
     private List<OPCUAElement> opcuaelements = new List<OPCUAElement>();
-
+    private string? server;
     protected override async Task OnInitializedAsync()
     {
-        opcuaelements = dbContext.OPCUAElements.ToList();
+        await InitPage();
         await base.OnInitializedAsync();
+    }
+
+    private async Task InitPage()
+    {
+        server = config["OPCUAServer"] ?? string.Empty;
+        if (!string.IsNullOrEmpty(server))
+        {
+            client = new UaClient("test", server, true, true);
+           await client.ConnectAsync((uint)30, true);
+        }
+
+        opcuaelements = dbContext.OPCUAElements.ToList();
     }
 
     private async Task Refresh()

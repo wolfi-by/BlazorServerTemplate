@@ -1,24 +1,24 @@
 ﻿
 @using Microsoft.Extensions.Configuration
 @using BlazorServerTemplate.Data.OPCUA
-@using OpcLabs.EasyOpc.UA
-@using OpcLabs.EasyOpc.UA.OperationModel
-
+@using Opc.Ua.Client
 @inject IConfiguration config
+
 
 <div style="@GetStyle" draggable="true" @ondragstart="OnDragStart" @ondragend="OnDragEnd" @oncontextmenu:preventDefault="true" @oncontextmenu="OnContextMenu">
 
     @if (element.Type== OPCUAElementType.ToggleSwitch.Value)
     {
-        <BlazorServerTemplate.Components.Controls.OPCUA.Elements.ToggleSwitch _value="@_value" client="@client" element="@element" opcuaserver="@opcuaserver" />
+        <MudSwitch T="bool" Value="@boolValue" ValueChanged="BoolChanged" Label="@element.Label" LabelPlacement="Placement.Right" Color="Color.Info" UncheckedColor="Color.Warning" />
     }
     else if (element.Type == OPCUAElementType.IntField.Value)
     {
-        <BlazorServerTemplate.Components.Controls.OPCUA.Elements.IntField _value="@_value" client="@client" element="@element" opcuaserver="@opcuaserver" />
+        <MudNumericField T="Int16" Value="@IntValue" ValueChanged="IntChanged" Label="@element.Label" Variant="Variant.Text" />
+
     }
     else if (element.Type == OPCUAElementType.FloatField.Value)
     {
-        <BlazorServerTemplate.Components.Controls.OPCUA.Elements.FloatField _value="@_value" client="@client" element="@element" opcuaserver="@opcuaserver" />
+        <MudNumericField T="double" Value="@DoubleValue" ValueChanged="DoubleChanged" Label="@element.Label" Variant="Variant.Filled" />
     }
     else
     {
@@ -43,15 +43,32 @@
         <MudTextField @bind-Value="element.Source" Label="Source" Variant="Variant.Outlined"></MudTextField>
         <MudTextField @bind-Value="element.Target" Label="Target" Variant="Variant.Outlined"></MudTextField>
         <MudButton OnClick="@ToggleOpen" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudButton>
+        <MudIconButton Icon="@Icons.Material.Outlined.Delete"  OnClick="@Delete" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudIconButton>
     </MudPopover>
 
 </div>
 @code {
+
+    private bool boolValue = false;
+    private Int16 IntValue = 0;
+    private double DoubleValue = 0;
+
+
     private int subscriptionhandle=0;
-    OpcLabs.EasyOpc.UA.EasyUAClient client = OpcLabs.EasyOpc.UA.EasyUAClient.SharedInstance;
     private bool _open;
     private object _value =default!;
     private DropdownWidth _dropdownWidth = DropdownWidth.Ignore;
+
+
+
+
+    private void WriteValue(object value)
+    {
+        var tag=client.Read(element.Target);
+        client.Write(element.Target, value);
+    }
+
+
     private async Task ToggleOpen()
     {
         _open = !_open;
@@ -62,17 +79,26 @@
         }
         else
         {
+            RemoveSubscription();
             if (subscriptionhandle==0) return;
-            client.UnsubscribeMonitoredItem(subscriptionhandle);
+
         }
 
     }
+    [Parameter]
+    public UaClient client { get; set; } = default!;
     [Parameter]
     public OPCUAElement element { get; set; } = default!;
     [Parameter]
     public EventCallback<OPCUAElement> DeleteMe { get; set; }
     [Parameter]
     public EventCallback Refresh { get; set; }
+
+    private async Task Delete()
+    {
+        _open = false;
+        await DeleteMe.InvokeAsync(element);
+    }
     private string GetStyle
     {
         get
@@ -100,7 +126,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        opcuaserver = config["OPCUAServer"] ?? string.Empty;
+        AddSubscription();
         await base.OnInitializedAsync();
     }
     private async Task OnContextMenu()
@@ -110,15 +136,77 @@
 
     private void AddSubscription()
     {
+        if (client == null || !client.IsConnected) return;
         if (string.IsNullOrEmpty(opcuaserver)) return;
         if (string.IsNullOrEmpty(element.Source)) return;
 
-        subscriptionhandle= client.SubscribeDataChange(opcuaserver, element.Source, 500, (_, args) => HandleSubscriptionValue(args));
+        client.Monitoring( element.Source, 500,  (sender, args) => {  HandleSubscriptionValue(sender, args); });
     }
-    private async Task HandleSubscriptionValue(EasyUADataChangeNotificationEventArgs args)
+    private void RemoveSubscription()
+
+    {
+        if (client == null || !client.IsConnected) return;
+        if (string.IsNullOrEmpty(opcuaserver)) return;
+        if (string.IsNullOrEmpty(element.Source)) return;
+
+        client.RemoveMonitoring(element.Source);
+    }
+    private  void HandleSubscriptionValue(MonitoredItem sender, MonitoredItemNotificationEventArgs args)
+    {
+        var monitored = (Opc.Ua.MonitoredItemNotification)args.NotificationValue;
+        if (element.Type == OPCUAElementType.ToggleSwitch.Value)
+        {
+            if (bool.TryParse(monitored.Value.ToString(), out bool result))
+            {
+                boolValue = result;
+            }
+            else
+            {
+                boolValue = false;
+            }
+            
+        }
+        else if (element.Type == OPCUAElementType.IntField.Value)
+        {
+            if (Int16.TryParse(monitored.Value.ToString(), out Int16 result))
+            {
+                IntValue = result;
+            }
+            else
+            {
+                IntValue = 0;
+            }
+            
+        }
+        else if (element.Type == OPCUAElementType.FloatField.Value)
+        {
+            if (double.TryParse(monitored.Value.ToString(), out double result))
+            {
+                DoubleValue = result;
+            }
+            else
+            {
+                DoubleValue = 0;
+            }
+           
+        }
+        InvokeAsync(StateHasChanged);
+    }
+    private void BoolChanged(bool args)
     {
 
-        _value =args.AttributeData.Value;
-        await Refresh.InvokeAsync();
+        boolValue = !boolValue;
+        WriteValue(args);
+
+    }
+    private void IntChanged(Int16 args)
+    {
+        IntValue = args;
+        WriteValue(args);
+    }
+    private void DoubleChanged(double args)
+    {
+        DoubleValue = args;
+        WriteValue(args);
     }
 }
