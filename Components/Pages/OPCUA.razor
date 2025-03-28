@@ -44,7 +44,7 @@
         server = config["OPCUAServer"] ?? string.Empty;
         if (!string.IsNullOrEmpty(server))
         {
-            client = new UaClient("test", server, true, true);
+            client = new UaClient("test", server, false, true);
            await client.ConnectAsync((uint)30, true);
         }
 

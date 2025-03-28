@@ -137,7 +137,7 @@
     private void AddSubscription()
     {
         if (client == null || !client.IsConnected) return;
-        if (string.IsNullOrEmpty(opcuaserver)) return;
+        
         if (string.IsNullOrEmpty(element.Source)) return;
 
         client.Monitoring( element.Source, 500,  (sender, args) => {  HandleSubscriptionValue(sender, args); });

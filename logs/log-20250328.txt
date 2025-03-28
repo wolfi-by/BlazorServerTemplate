@@ -1,0 +1,747 @@
+2025-03-28 06:03:39.764 +01:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:03:39.871 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:03:40.325 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 06:03:40.327 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 06:03:40.335 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-28 05:03:40.33145+00:00');
+SELECT changes();
+2025-03-28 06:03:40.382 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 06:03:40.397 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:03:40.401 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:03:40.409 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 06:03:40.414 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 06:03:40.513 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 06:03:41.320 +01:00 [INF] Now listening on: https://localhost:7190
+2025-03-28 06:03:41.322 +01:00 [INF] Now listening on: http://localhost:5273
+2025-03-28 06:03:41.349 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-28 06:03:41.413 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 06:03:41.415 +01:00 [INF] Hosting environment: Development
+2025-03-28 06:03:41.417 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-03-28 06:03:46.714 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-03-28 06:03:47.068 +01:00 [INF] Executing endpoint '/ (/)'
+2025-03-28 06:03:47.467 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:03:47.724 +01:00 [INF] Executed endpoint '/ (/)'
+2025-03-28 06:03:47.784 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:03:47.784 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:03:47.784 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:03:47.796 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 1095.7758ms
+2025-03-28 06:03:47.823 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:03:47.924 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 140.1215ms
+2025-03-28 06:03:47.942 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:03:47.945 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:03:47.948 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 164.3286ms
+2025-03-28 06:03:47.948 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 164.3276ms
+2025-03-28 06:03:47.997 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:03:48.010 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:03:48.016 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/favicon.ico - null null
+2025-03-28 06:03:48.021 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:03:48.025 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 27.8113ms
+2025-03-28 06:03:48.026 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/favicon.ico - 404 0 null 10.0151ms
+2025-03-28 06:03:48.035 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:03:48.038 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7190/favicon.ico, Response status code: 404
+2025-03-28 06:03:48.048 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:03:48.055 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:03:48.057 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 22.2639ms
+2025-03-28 06:03:48.063 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=l-o-HgX4jQPy1uhMYQBIdw - null null
+2025-03-28 06:03:48.067 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:03:48.275 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:03:55.873 +01:00 [WRN] Unhandled exception rendering component: Error establishing a connection: BadNotConnected
+Opc.Ua.ServiceResultException: Error establishing a connection: BadNotConnected
+   at Opc.Ua.Bindings.ChannelAsyncOperation`1.End(Int32 timeout, Boolean throwOnError)
+   at Opc.Ua.Bindings.UaSCUaBinaryClientChannel.EndSendRequest(IAsyncResult result)
+   at Opc.Ua.Bindings.UaSCUaBinaryTransportChannel.EndSendRequest(IAsyncResult result)
+   at Opc.Ua.Bindings.UaSCUaBinaryTransportChannel.SendRequest(IServiceRequest request)
+   at Opc.Ua.DiscoveryClient.GetEndpoints(RequestHeader requestHeader, String endpointUrl, StringCollection localeIds, StringCollection profileUris, EndpointDescriptionCollection& endpoints)
+   at Opc.Ua.DiscoveryClient.GetEndpoints(StringCollection profileUris)
+   at Opc.Ua.Client.CoreClientUtils.SelectEndpoint(ApplicationConfiguration application, String discoveryUrl, Boolean useSecurity, Int32 discoverTimeout)
+   at Opc.Ua.Client.CoreClientUtils.SelectEndpoint(ApplicationConfiguration application, String discoveryUrl, Boolean useSecurity)
+   at OPCUaClient.UaClient..ctor(String appName, String serverUrl, Boolean security, Boolean untrusted, String user, String password) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 165
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 47
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:03:55.971 +01:00 [ERR] Unhandled exception in circuit 'uNmAp0LfnvytNp7vdLx2z1O-uRcAWxJvXEBSTRpxND0'.
+Opc.Ua.ServiceResultException: Error establishing a connection: BadNotConnected
+   at Opc.Ua.Bindings.ChannelAsyncOperation`1.End(Int32 timeout, Boolean throwOnError)
+   at Opc.Ua.Bindings.UaSCUaBinaryClientChannel.EndSendRequest(IAsyncResult result)
+   at Opc.Ua.Bindings.UaSCUaBinaryTransportChannel.EndSendRequest(IAsyncResult result)
+   at Opc.Ua.Bindings.UaSCUaBinaryTransportChannel.SendRequest(IServiceRequest request)
+   at Opc.Ua.DiscoveryClient.GetEndpoints(RequestHeader requestHeader, String endpointUrl, StringCollection localeIds, StringCollection profileUris, EndpointDescriptionCollection& endpoints)
+   at Opc.Ua.DiscoveryClient.GetEndpoints(StringCollection profileUris)
+   at Opc.Ua.Client.CoreClientUtils.SelectEndpoint(ApplicationConfiguration application, String discoveryUrl, Boolean useSecurity, Int32 discoverTimeout)
+   at Opc.Ua.Client.CoreClientUtils.SelectEndpoint(ApplicationConfiguration application, String discoveryUrl, Boolean useSecurity)
+   at OPCUaClient.UaClient..ctor(String appName, String serverUrl, Boolean security, Boolean untrusted, String user, String password) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 165
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 47
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:03:56.006 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:03:56.010 +01:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=l-o-HgX4jQPy1uhMYQBIdw - 200 null null 7947.1586ms
+2025-03-28 06:03:56.017 +01:00 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:03:56.024 +01:00 [INF] Connection id "0HNBDMNKA12O9", Request id "0HNBDMNKA12O9:0000000F": the application completed without reading the entire request body.
+2025-03-28 06:03:56.027 +01:00 [ERR] Unhandled exception in circuit 'uNmAp0LfnvytNp7vdLx2z1O-uRcAWxJvXEBSTRpxND0'.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:04:03.659 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-03-28 06:04:03.672 +01:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-03-28 06:04:06.404 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryqbSNLZY7RUqIKdh9 359
+2025-03-28 06:04:06.414 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:06.458 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:06.465 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/disconnect - 200 0 null 60.4237ms
+2025-03-28 06:04:24.688 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:04:24.763 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:04:24.903 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 06:04:24.925 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 06:04:24.934 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-28 05:04:24.9307268+00:00');
+SELECT changes();
+2025-03-28 06:04:25.002 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 06:04:25.016 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:04:25.078 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:04:25.138 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 06:04:25.144 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 06:04:25.205 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 06:04:25.580 +01:00 [INF] Now listening on: https://localhost:7190
+2025-03-28 06:04:25.583 +01:00 [INF] Now listening on: http://localhost:5273
+2025-03-28 06:04:25.590 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-28 06:04:25.626 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 06:04:25.631 +01:00 [INF] Hosting environment: Development
+2025-03-28 06:04:25.634 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-03-28 06:04:26.184 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-03-28 06:04:26.367 +01:00 [INF] Executing endpoint '/ (/)'
+2025-03-28 06:04:26.705 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:04:26.915 +01:00 [INF] Executed endpoint '/ (/)'
+2025-03-28 06:04:26.966 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 787.8349ms
+2025-03-28 06:04:26.970 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:04:26.970 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:04:26.988 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:04:26.970 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:04:27.097 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:04:27.177 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 207.0924ms
+2025-03-28 06:04:27.179 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:04:27.192 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 221.9877ms
+2025-03-28 06:04:27.221 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 250.9622ms
+2025-03-28 06:04:27.247 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:04:27.259 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:27.265 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:27.266 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 19.0126ms
+2025-03-28 06:04:27.295 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:04:27.304 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:27.310 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:27.313 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 17.5345ms
+2025-03-28 06:04:27.317 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=pzVNygtU1VWuWiQqByT3Jg - null null
+2025-03-28 06:04:27.321 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:27.477 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:04:29.285 +01:00 [WRN] Unhandled exception rendering component: Invalid URI: The hostname could not be parsed.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:04:29.317 +01:00 [ERR] Unhandled exception in circuit 'O46j4owf6v_jIaH8LKgTLoggWlmfESX1Z-dw-LJBfZg'.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:04:29.390 +01:00 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:04:29.398 +01:00 [ERR] Unhandled exception in circuit 'O46j4owf6v_jIaH8LKgTLoggWlmfESX1Z-dw-LJBfZg'.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:04:29.410 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:29.412 +01:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=pzVNygtU1VWuWiQqByT3Jg - 200 null null 2094.7837ms
+2025-03-28 06:04:29.420 +01:00 [INF] Connection id "0HNBDMO1GB1A8", Request id "0HNBDMO1GB1A8:0000000D": the application completed without reading the entire request body.
+2025-03-28 06:04:45.691 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundarymvBeZHKJ2rXoJOpW 359
+2025-03-28 06:04:45.698 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:45.721 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:04:45.723 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/disconnect - 200 0 null 32.0355ms
+2025-03-28 06:05:25.388 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:05:25.452 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:05:25.585 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 06:05:25.588 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 06:05:25.594 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-28 05:05:25.5917763+00:00');
+SELECT changes();
+2025-03-28 06:05:25.650 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 06:05:25.664 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:05:25.666 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:05:25.671 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 06:05:25.678 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 06:05:25.733 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 06:05:26.204 +01:00 [INF] Now listening on: https://localhost:7190
+2025-03-28 06:05:26.209 +01:00 [INF] Now listening on: http://localhost:5273
+2025-03-28 06:05:26.219 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-28 06:05:26.261 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 06:05:26.266 +01:00 [INF] Hosting environment: Development
+2025-03-28 06:05:26.268 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-03-28 06:05:26.905 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-03-28 06:05:27.121 +01:00 [INF] Executing endpoint '/ (/)'
+2025-03-28 06:05:27.417 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:05:27.619 +01:00 [INF] Executed endpoint '/ (/)'
+2025-03-28 06:05:27.658 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:05:27.658 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:05:27.658 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:05:27.665 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 767.7901ms
+2025-03-28 06:05:27.689 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 31.1349ms
+2025-03-28 06:05:27.699 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:05:27.722 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:05:27.725 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.8868ms
+2025-03-28 06:05:27.728 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:05:27.736 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 78.9474ms
+2025-03-28 06:05:27.825 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:05:27.838 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:05:27.846 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:05:27.849 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 24.1336ms
+2025-03-28 06:05:27.863 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:05:27.873 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:05:27.880 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:05:27.882 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 18.8582ms
+2025-03-28 06:05:27.886 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=ZT9E3Jk5cLk70zdoopuSkg - null null
+2025-03-28 06:05:27.892 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:05:28.046 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:05:29.257 +01:00 [WRN] Unhandled exception rendering component: Invalid URI: The hostname could not be parsed.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:05:29.283 +01:00 [ERR] Unhandled exception in circuit 'P86M92Pi5q5juePZredVHSdlMRGEYNp8Waf0O9bm92c'.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:05:29.315 +01:00 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:05:29.321 +01:00 [ERR] Unhandled exception in circuit 'P86M92Pi5q5juePZredVHSdlMRGEYNp8Waf0O9bm92c'.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:05:29.335 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:05:29.339 +01:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=ZT9E3Jk5cLk70zdoopuSkg - 200 null null 1452.5673ms
+2025-03-28 06:05:29.348 +01:00 [INF] Connection id "0HNBDMOJIIRJ6", Request id "0HNBDMOJIIRJ6:0000000D": the application completed without reading the entire request body.
+2025-03-28 06:06:03.686 +01:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:06:03.770 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:06:03.917 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 06:06:03.926 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 06:06:03.946 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-28 05:06:03.9424233+00:00');
+SELECT changes();
+2025-03-28 06:06:03.996 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 06:06:04.003 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:06:04.006 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:06:04.012 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 06:06:04.017 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 06:06:04.080 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 06:06:04.564 +01:00 [INF] Now listening on: https://localhost:7190
+2025-03-28 06:06:04.567 +01:00 [INF] Now listening on: http://localhost:5273
+2025-03-28 06:06:04.575 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-28 06:06:04.609 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 06:06:04.612 +01:00 [INF] Hosting environment: Development
+2025-03-28 06:06:04.613 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-03-28 06:06:05.240 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-03-28 06:06:05.423 +01:00 [INF] Executing endpoint '/ (/)'
+2025-03-28 06:06:05.813 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:06:06.114 +01:00 [INF] Executed endpoint '/ (/)'
+2025-03-28 06:06:06.162 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 926.6867ms
+2025-03-28 06:06:06.166 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:06:06.166 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:06:06.166 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:06:06.175 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 8.4675ms
+2025-03-28 06:06:06.183 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:06:06.200 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:06:06.203 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:06:06.205 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 38.5903ms
+2025-03-28 06:06:06.225 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.6074ms
+2025-03-28 06:06:06.300 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:06:06.310 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:06:06.316 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:06:06.320 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 19.5125ms
+2025-03-28 06:06:06.334 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:06:06.344 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:06:06.350 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:06:06.352 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 18.4764ms
+2025-03-28 06:06:06.361 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=4pZKPFFfFitT11lj8F8gRA - null null
+2025-03-28 06:06:06.365 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:06:06.532 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:13:29.914 +01:00 [WRN] Unhandled exception rendering component: Invalid URI: The hostname could not be parsed.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:13:29.944 +01:00 [ERR] Unhandled exception in circuit '1TZLSQgJTH6TwcX34hl5WO7uyABQ0E3qKFHK5vuuFSU'.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:13:32.168 +01:00 [WRN] Unhandled exception rendering component: Cannot access a disposed object.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:13:32.198 +01:00 [ERR] Unhandled exception in circuit '1TZLSQgJTH6TwcX34hl5WO7uyABQ0E3qKFHK5vuuFSU'.
+System.ObjectDisposedException: Cannot access a disposed object.
+   at Microsoft.AspNetCore.Components.RenderTree.ArrayBuilder`1.GrowBuffer(Int32 desiredCapacity)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForFramesWithSameSequence(DiffContext& diffContext, Int32 oldFrameIndex, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment, Exception& renderFragmentException)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+2025-03-28 06:13:33.652 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:13:33.655 +01:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=4pZKPFFfFitT11lj8F8gRA - 200 null null 447294.3031ms
+2025-03-28 06:13:40.400 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:13:40.514 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:13:40.661 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 06:13:40.666 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 06:13:40.677 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-28 05:13:40.6713959+00:00');
+SELECT changes();
+2025-03-28 06:13:40.752 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 06:13:40.762 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:13:40.767 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:13:40.775 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 06:13:40.780 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 06:13:40.852 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 06:13:41.318 +01:00 [INF] Now listening on: https://localhost:7190
+2025-03-28 06:13:41.319 +01:00 [INF] Now listening on: http://localhost:5273
+2025-03-28 06:13:41.326 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-28 06:13:41.362 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 06:13:41.364 +01:00 [INF] Hosting environment: Development
+2025-03-28 06:13:41.367 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-03-28 06:13:41.876 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-03-28 06:13:42.078 +01:00 [INF] Executing endpoint '/ (/)'
+2025-03-28 06:13:42.381 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:13:42.579 +01:00 [INF] Executed endpoint '/ (/)'
+2025-03-28 06:13:42.621 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 756.3765ms
+2025-03-28 06:13:42.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:13:42.623 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:13:42.689 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:13:42.624 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:13:42.714 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 90.8617ms
+2025-03-28 06:13:42.724 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:13:42.762 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:13:42.767 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 144.1801ms
+2025-03-28 06:13:42.793 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 169.5348ms
+2025-03-28 06:13:42.796 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:13:42.808 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:13:42.813 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:13:42.815 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 19.1591ms
+2025-03-28 06:13:42.842 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:13:42.855 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:13:42.861 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:13:42.863 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 21.0634ms
+2025-03-28 06:13:42.869 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=9KcuNpMt8e7q_-Xw4oXo4A - null null
+2025-03-28 06:13:42.873 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:13:43.046 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:14:02.964 +01:00 [WRN] Unhandled exception rendering component: Invalid URI: The hostname could not be parsed.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:14:02.983 +01:00 [ERR] Unhandled exception in circuit 'E70D2UWMPer5Yg_8I47pViDxEpAjAu0CF04q7n4DoaE'.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at Opc.Ua.UaChannelBase.CreateUaBinaryChannel(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.SessionChannel.Create(ApplicationConfiguration configuration, EndpointDescription description, EndpointConfiguration endpointConfiguration, X509Certificate2 clientCertificate, X509Certificate2Collection clientCertificateChain, IServiceMessageContext messageContext)
+   at Opc.Ua.Client.Session.CreateChannelAsync(ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, CancellationToken ct)
+   at Opc.Ua.Client.Session.Create(ISessionInstantiator sessionInstantiator, ApplicationConfiguration configuration, ITransportWaitingConnection connection, ConfiguredEndpoint endpoint, Boolean updateBeforeConnect, Boolean checkDomain, String sessionName, UInt32 sessionTimeout, IUserIdentity identity, IList`1 preferredLocales, CancellationToken ct)
+   at OPCUaClient.UaClient.ConnectAsync(UInt32 timeOut, Boolean keepAlive, CancellationToken ct) in C:\Users\Wolfgang\source\OPCUaClient\OPCUaClient\UaClient.cs:line 214
+   at BlazorServerTemplate.Components.Pages.OPCUA.InitPage() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 48
+   at BlazorServerTemplate.Components.Pages.OPCUA.OnInitializedAsync() in C:\Users\Wolfgang\source\BlazorServerTemplate\Components\Pages\OPCUA.razor:line 38
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+2025-03-28 06:14:23.124 +01:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:14:23.187 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:14:23.335 +01:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 06:14:23.367 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 06:14:23.376 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-28 05:14:23.3728355+00:00');
+SELECT changes();
+2025-03-28 06:14:23.435 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 06:14:23.447 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 06:14:23.452 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 06:14:23.459 +01:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 06:14:23.463 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 06:14:23.520 +01:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 06:14:24.119 +01:00 [INF] Now listening on: https://localhost:7190
+2025-03-28 06:14:24.124 +01:00 [INF] Now listening on: http://localhost:5273
+2025-03-28 06:14:24.145 +01:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-03-28 06:14:24.187 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 06:14:24.192 +01:00 [INF] Hosting environment: Development
+2025-03-28 06:14:24.201 +01:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-03-28 06:14:24.436 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-03-28 06:14:24.632 +01:00 [INF] Executing endpoint '/ (/)'
+2025-03-28 06:14:25.042 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:14:25.256 +01:00 [INF] Executed endpoint '/ (/)'
+2025-03-28 06:14:25.298 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 869.599ms
+2025-03-28 06:14:25.310 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:14:25.310 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:14:25.310 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:14:25.327 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:14:25.347 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 37.6043ms
+2025-03-28 06:14:25.359 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:14:25.363 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:14:25.363 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.1756ms
+2025-03-28 06:14:25.365 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 55.5441ms
+2025-03-28 06:14:25.442 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:14:25.450 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:14:25.455 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:14:25.458 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 15.4896ms
+2025-03-28 06:14:25.469 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:14:25.477 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:14:25.485 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:14:25.487 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 17.9824ms
+2025-03-28 06:14:25.499 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=m9NhyXEQDReko-wbXC2SmQ - null null
+2025-03-28 06:14:25.503 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:14:25.652 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:14:51.273 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:14:54.885 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-03-28 06:15:38.768 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p6='?' (DbType = Guid), @p0='?' (Size = 4), @p1='?' (DbType = Double), @p2='?' (Size = 8), @p3='?' (Size = 8), @p4='?' (DbType = Double), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "OPCUAElements" SET "Label" = @p0, "Left" = @p1, "Source" = @p2, "Target" = @p3, "Top" = @p4, "Type" = @p5
+WHERE "ID" = @p6
+RETURNING 1;
+2025-03-28 06:15:39.823 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:15:45.955 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:15:48.082 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-03-28 06:16:18.623 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:21.508 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:23.610 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-03-28 06:16:48.261 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:48.280 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-03-28 06:16:48.304 +01:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-03-28 06:16:48.590 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:50.014 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:50.454 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:50.504 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:52.607 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:16:52.636 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-03-28 06:16:57.446 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-03-28 06:16:59.560 +01:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-03-28 06:16:59.572 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 11292.721ms
+2025-03-28 06:19:47.558 +01:00 [WRN] Unhandled exception rendering component: Error writing value. Code: 2149515264
+OPCUaClient.Exceptions.WriteException: Error writing value. Code: 2149515264
+   at OPCUaClient.UaClient.Write(String address, Object value)
+   at BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer.WriteValue(Object value)
+   at BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer.DoubleChanged(Double args)
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at MudBlazor.MudBaseInput`1.SetValueAsync(T value, Boolean updateText, Boolean force)
+   at MudBlazor.MudBaseInput`1.SetTextAsync(String text, Boolean updateValue)
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at MudBlazor.MudBaseInput`1.SetValueAsync(T value, Boolean updateText, Boolean force)
+   at MudBlazor.MudBaseInput`1.SetTextAsync(String text, Boolean updateValue)
+   at MudBlazor.MudInput`1.OnChange(ChangeEventArgs args)
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+2025-03-28 06:19:47.658 +01:00 [ERR] Unhandled exception in circuit 'KIldtP31EaceVB2DDBreOAIy3CpMoAcloIRZFBY7oMA'.
+OPCUaClient.Exceptions.WriteException: Error writing value. Code: 2149515264
+   at OPCUaClient.UaClient.Write(String address, Object value)
+   at BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer.WriteValue(Object value)
+   at BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer.DoubleChanged(Double args)
+   at InvokeStub_Action`1.Invoke(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at MudBlazor.MudBaseInput`1.SetValueAsync(T value, Boolean updateText, Boolean force)
+   at MudBlazor.MudBaseInput`1.SetTextAsync(String text, Boolean updateValue)
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at MudBlazor.MudBaseInput`1.SetValueAsync(T value, Boolean updateText, Boolean force)
+   at MudBlazor.MudBaseInput`1.SetTextAsync(String text, Boolean updateValue)
+   at MudBlazor.MudInput`1.OnChange(ChangeEventArgs args)
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+2025-03-28 06:19:47.700 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:47.702 +01:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=m9NhyXEQDReko-wbXC2SmQ - 200 null null 322203.4241ms
+2025-03-28 06:19:47.711 +01:00 [INF] Connection id "0HNBDMTJPLMKA", Request id "0HNBDMTJPLMKA:0000000D": the application completed without reading the entire request body.
+2025-03-28 06:19:53.360 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-03-28 06:19:53.386 +01:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-03-28 06:19:55.521 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:19:57.613 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-03-28 06:19:57.667 +01:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-03-28 06:19:57.677 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundarykqWCkgLJJZBYEBPT 359
+2025-03-28 06:19:57.680 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 4320.3788ms
+2025-03-28 06:19:57.695 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:57.726 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-03-28 06:19:57.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-03-28 06:19:57.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 06:19:57.735 +01:00 [INF] Executing endpoint 'Blazor web static files'
+2025-03-28 06:19:57.737 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:57.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 11.4922ms
+2025-03-28 06:19:57.746 +01:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-03-28 06:19:57.748 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/disconnect - 200 0 null 70.8602ms
+2025-03-28 06:19:57.755 +01:00 [INF] Executed endpoint 'Blazor web static files'
+2025-03-28 06:19:57.756 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.3886ms
+2025-03-28 06:19:57.764 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 37.986ms
+2025-03-28 06:19:57.801 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-03-28 06:19:57.807 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:57.810 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:57.812 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 10.9715ms
+2025-03-28 06:19:57.829 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-03-28 06:19:57.834 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:57.837 +01:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:57.838 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 9.0663ms
+2025-03-28 06:19:57.842 +01:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=lqndmqmAnXYRf5OuqO9O9w - null null
+2025-03-28 06:19:57.847 +01:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-28 06:19:59.980 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-03-28 06:20:02.083 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
