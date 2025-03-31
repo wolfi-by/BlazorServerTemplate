@@ -64,8 +64,12 @@
 
     private void WriteValue(object value)
     {
-        var tag=client.Read(element.Target);
-        client.Write(element.Target, value);
+        var tag=client.Read<MyObject>(element.Target);
+
+
+
+        //tag.Value = (double)value;
+        //client.Write(tag);
     }
 
 
@@ -134,12 +138,12 @@
         await ToggleOpen();
     }
 
-    private void AddSubscription()
+    private async void AddSubscription()
     {
         if (client == null || !client.IsConnected) return;
         
         if (string.IsNullOrEmpty(element.Source)) return;
-
+      
         client.Monitoring( element.Source, 500,  (sender, args) => {  HandleSubscriptionValue(sender, args); });
     }
     private void RemoveSubscription()
