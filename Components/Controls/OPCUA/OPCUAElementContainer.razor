@@ -42,6 +42,7 @@
         </MudSelect>
         <MudTextField @bind-Value="element.Source" Label="Source" Variant="Variant.Outlined"></MudTextField>
         <MudTextField @bind-Value="element.Target" Label="Target" Variant="Variant.Outlined"></MudTextField>
+        <MudButton OnClick="@Read" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Read</MudButton>
         <MudButton OnClick="@ToggleOpen" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudButton>
         <MudIconButton Icon="@Icons.Material.Outlined.Delete"  OnClick="@Delete" Class="ml-auto mr-n3 mb-1" Color="Color.Error">Close</MudIconButton>
     </MudPopover>
@@ -64,6 +65,8 @@
 
     private void WriteValue(object value)
     {
+
+
         var tag=client.Read<MyObject>(element.Target);
 
 
@@ -72,6 +75,21 @@
         //client.Write(tag);
     }
 
+
+    private async Task Read()
+    {
+        if (client._complexTypeSystem == null) return;
+            if (string.IsNullOrEmpty(element.Source)) return;
+        if (client == null || !client.IsConnected) return;
+        try
+        {
+            var tag =await client.Read<WorkOrderVariable>(element.Source);
+        }
+        catch (Exception)
+        {
+        }
+        
+    }
 
     private async Task ToggleOpen()
     {

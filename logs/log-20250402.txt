@@ -1,0 +1,872 @@
+2025-04-02 06:01:51.952 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:01:52.020 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:01:52.522 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:01:52.524 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:01:52.540 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:01:52.530147+00:00');
+SELECT changes();
+2025-04-02 06:01:52.605 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:01:52.617 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:01:52.623 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:01:52.630 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:01:52.636 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:01:52.734 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:01:53.573 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:01:53.577 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:01:53.588 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:01:53.652 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:01:53.654 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:01:53.654 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:01:54.384 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:01:54.713 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:01:55.175 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:01:55.484 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:01:55.546 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:01:55.551 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:01:55.552 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:01:55.995 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 414.9769ms
+2025-04-02 06:01:56.018 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:01:56.046 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 1671.8946ms
+2025-04-02 06:01:56.046 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:01:56.057 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:01:56.060 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 508.8265ms
+2025-04-02 06:01:56.085 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:01:56.094 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 542.4284ms
+2025-04-02 06:01:56.097 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:01:56.111 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:01:56.114 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 29.5863ms
+2025-04-02 06:01:56.130 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:01:56.142 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/favicon.ico - null null
+2025-04-02 06:01:56.145 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:01:56.149 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/favicon.ico - 404 0 null 7.3024ms
+2025-04-02 06:01:56.157 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7190/favicon.ico, Response status code: 404
+2025-04-02 06:01:56.159 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:01:56.162 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 32.5706ms
+2025-04-02 06:01:56.169 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=WGVJ-gnK_1IYk7UYCoLVsg - null null
+2025-04-02 06:01:56.176 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:01:56.394 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:01:59.548 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:01:59.940 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:03:36.124 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:03:39.014 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:03:40.197 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:03:40.899 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 4820.0243ms
+2025-04-02 06:03:41.501 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=XVrQLMj0TaAjWk-TMOBoFg - null null
+2025-04-02 06:04:10.511 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:04:10.514 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:04:10.523 +02:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=WGVJ-gnK_1IYk7UYCoLVsg - 200 null null 134353.596ms
+2025-04-02 06:04:10.534 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:04:10.535 +02:00 [INF] Connection id "0HNBHJCDBQMP8", Request id "0HNBHJCDBQMP8:0000000F": the application completed without reading the entire request body.
+2025-04-02 06:10:57.090 +02:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:10:57.148 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:10:57.334 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:10:57.337 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:10:57.346 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:10:57.3430492+00:00');
+SELECT changes();
+2025-04-02 06:10:57.412 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:10:57.430 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:10:57.436 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:10:57.444 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:10:57.448 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:10:57.516 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:10:58.065 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:10:58.068 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:10:58.076 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:10:58.143 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:10:58.203 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:10:58.230 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:10:58.375 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:10:58.566 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:10:58.887 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:10:59.111 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:10:59.149 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 781.4468ms
+2025-04-02 06:10:59.155 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:10:59.155 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:10:59.155 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:10:59.236 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 80.6399ms
+2025-04-02 06:10:59.247 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:10:59.268 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:10:59.272 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:10:59.272 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 116.9907ms
+2025-04-02 06:10:59.275 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 119.2814ms
+2025-04-02 06:10:59.344 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:10:59.354 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:10:59.359 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:10:59.361 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 16.9716ms
+2025-04-02 06:10:59.370 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:10:59.378 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:10:59.384 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:10:59.386 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 16.1289ms
+2025-04-02 06:10:59.401 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=aC_ypF7xYFrimMmrNcPI_g - null null
+2025-04-02 06:10:59.406 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:10:59.563 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:11:04.060 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:11:04.604 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:11:52.536 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:11:52.587 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:11:52.848 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:11:52.880 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:11:52.915 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:11:52.9107598+00:00');
+SELECT changes();
+2025-04-02 06:11:52.994 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:11:53.035 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:11:53.041 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:11:53.052 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:11:53.057 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:11:53.114 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:11:53.503 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:11:53.512 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:11:53.523 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:11:53.604 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:11:53.606 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:11:53.609 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:11:53.814 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:11:53.991 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:11:54.289 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:11:54.507 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:11:54.543 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 734.9532ms
+2025-04-02 06:11:54.551 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:11:54.551 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:11:54.551 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:11:54.596 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 45.4153ms
+2025-04-02 06:11:54.603 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:11:54.668 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:11:54.672 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:11:54.675 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 124.8422ms
+2025-04-02 06:11:54.691 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 140.406ms
+2025-04-02 06:11:54.703 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:11:54.710 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:11:54.715 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:11:54.717 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 14.6677ms
+2025-04-02 06:11:54.736 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:11:54.745 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:11:54.751 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:11:54.753 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 16.9061ms
+2025-04-02 06:11:54.760 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=wb-7ZEfMG8b2_NPU9fFFWg - null null
+2025-04-02 06:11:54.764 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:11:54.946 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:11:57.831 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:11:58.187 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:19:34.549 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:19:34.608 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:19:34.763 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:19:34.766 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:19:34.774 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:19:34.770639+00:00');
+SELECT changes();
+2025-04-02 06:19:34.842 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:19:34.860 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:19:34.869 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:19:34.880 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:19:34.884 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:19:34.946 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:19:35.411 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:19:35.414 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:19:35.426 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:19:35.469 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:19:35.475 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:19:35.477 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:19:35.910 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:19:36.136 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:19:36.490 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:19:36.695 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:19:36.733 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 832.9409ms
+2025-04-02 06:19:36.738 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:19:36.739 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:19:36.739 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:19:36.751 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:19:36.792 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 52.7668ms
+2025-04-02 06:19:36.838 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:19:36.842 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:19:36.844 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 106.3983ms
+2025-04-02 06:19:36.861 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 122.0593ms
+2025-04-02 06:19:36.871 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:19:36.879 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:19:36.884 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:19:36.886 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 14.9757ms
+2025-04-02 06:19:36.911 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:19:36.921 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:19:36.928 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:19:36.930 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 18.3195ms
+2025-04-02 06:19:36.935 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=XA-Fie7nu-NpC5HO8x636g - null null
+2025-04-02 06:19:36.942 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:19:37.113 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:19:46.627 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:19:46.950 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:20:49.085 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:20:49.192 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:20:49.198 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:20:49.205 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:20:49.206 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 121.5041ms
+2025-04-02 06:20:49.209 +02:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=XA-Fie7nu-NpC5HO8x636g - 200 null null 72274.4056ms
+2025-04-02 06:20:49.212 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=IeDzawr2R97-ql-vsUiSeg - null null
+2025-04-02 06:20:49.234 +02:00 [INF] Connection id "0HNBHJM9ORHCA", Request id "0HNBHJM9ORHCA:0000000D": the application completed without reading the entire request body.
+2025-04-02 06:20:49.236 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:20:49.251 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:20:50.282 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:21:11.930 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-04-02 06:21:14.932 +02:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-04-02 06:21:42.075 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:21:42.133 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:21:42.166 +02:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-04-02 06:21:42.178 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundaryV9MdvcCOM2fBZl2H 359
+2025-04-02 06:21:42.181 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 30250.8327ms
+2025-04-02 06:21:42.182 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.183 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.189 +02:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=IeDzawr2R97-ql-vsUiSeg - 200 null null 52977.682ms
+2025-04-02 06:21:42.215 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:21:42.224 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:21:42.226 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:21:42.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:21:42.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:21:42.236 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 8.6726ms
+2025-04-02 06:21:42.228 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:21:42.256 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 41.1334ms
+2025-04-02 06:21:42.263 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.9322ms
+2025-04-02 06:21:42.263 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.283 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/disconnect - 200 0 null 104.8042ms
+2025-04-02 06:21:42.284 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:21:42.292 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.297 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.299 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 15.22ms
+2025-04-02 06:21:42.327 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:21:42.332 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.335 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.339 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 11.0294ms
+2025-04-02 06:21:42.343 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=bTGKcGwl-NqD0b99_rV4zw - null null
+2025-04-02 06:21:42.348 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:21:42.397 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:21:42.584 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:21:42.623 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:21:42.897 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:21:42.910 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-04-02 06:21:42.920 +02:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-04-02 06:21:42.990 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:21:43.006 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:21:43.023 +02:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-04-02 06:21:43.030 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 119.4531ms
+2025-04-02 06:22:45.904 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:23:17.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-04-02 06:23:17.243 +02:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-04-02 06:23:17.330 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:23:17.347 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:23:17.368 +02:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-04-02 06:23:17.376 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 149.9564ms
+2025-04-02 06:23:17.382 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundary62usP9ZEecU30BMM 359
+2025-04-02 06:23:17.385 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.403 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.408 +02:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=bTGKcGwl-NqD0b99_rV4zw - 200 null null 95064.7109ms
+2025-04-02 06:23:17.435 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.437 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/disconnect - 200 0 null 54.9478ms
+2025-04-02 06:23:17.441 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:23:17.447 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:23:17.447 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:23:17.449 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:23:17.459 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.048ms
+2025-04-02 06:23:17.459 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 12.5366ms
+2025-04-02 06:23:17.462 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:23:17.476 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:23:17.478 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 36.8695ms
+2025-04-02 06:23:17.495 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:23:17.501 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.503 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.505 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 9.8968ms
+2025-04-02 06:23:17.534 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:23:17.540 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.542 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.543 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 9.7237ms
+2025-04-02 06:23:17.546 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=atzUJycTkEZ8-Xp5G0esUA - null null
+2025-04-02 06:23:17.553 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:23:17.600 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:23:17.608 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:24:17.626 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:24:17.693 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:24:17.816 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:24:17.844 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:24:17.884 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:24:17.8787993+00:00');
+SELECT changes();
+2025-04-02 06:24:17.974 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:24:17.994 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:24:18.085 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:24:18.176 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:24:18.181 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:24:18.236 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:24:18.703 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:24:18.707 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:24:18.716 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:24:18.769 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:24:18.771 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:24:18.776 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:24:19.368 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:24:19.550 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:24:19.877 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:24:20.135 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:24:20.193 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 829.9623ms
+2025-04-02 06:24:20.194 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:24:20.194 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:24:20.238 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:24:20.305 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 111.522ms
+2025-04-02 06:24:20.366 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:24:20.431 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:24:20.438 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:24:20.443 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 249.3722ms
+2025-04-02 06:24:20.474 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 278.8897ms
+2025-04-02 06:24:20.511 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:24:20.523 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:24:20.528 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:24:20.530 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 19.2034ms
+2025-04-02 06:24:20.542 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:24:20.553 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:24:20.558 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:24:20.561 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 19.1302ms
+2025-04-02 06:24:20.567 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=HPkQhD8KrkTG1Zo_GlTF1Q - null null
+2025-04-02 06:24:20.574 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:24:20.721 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:24:22.837 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:24:23.141 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:29:19.158 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:29:19.239 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:29:19.386 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:29:19.388 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:29:19.395 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:29:19.3912775+00:00');
+SELECT changes();
+2025-04-02 06:29:19.457 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:29:19.476 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:29:19.483 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:29:19.492 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:29:19.498 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:29:19.563 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:29:20.023 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:29:20.025 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:29:20.039 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:29:20.087 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:29:20.091 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:29:20.093 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:29:20.459 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:29:20.641 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:29:20.957 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:29:21.165 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:29:21.206 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:29:21.207 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:29:21.207 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:29:21.209 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 756.5021ms
+2025-04-02 06:29:21.317 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:29:21.415 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 207.0806ms
+2025-04-02 06:29:21.441 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:29:21.449 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:29:21.455 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 248.7514ms
+2025-04-02 06:29:21.458 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 250.2665ms
+2025-04-02 06:29:21.534 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:29:21.546 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:29:21.554 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:29:21.557 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 23.3661ms
+2025-04-02 06:29:21.573 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:29:21.583 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:29:21.590 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:29:21.592 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 19.4932ms
+2025-04-02 06:29:21.601 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=k9jnGXDY-hwEuYtoZqUQJw - null null
+2025-04-02 06:29:21.606 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:29:21.748 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:29:23.255 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:29:23.594 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:52:51.239 +02:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:52:51.308 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:52:51.486 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:52:51.488 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:52:51.495 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:52:51.4917932+00:00');
+SELECT changes();
+2025-04-02 06:52:51.551 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:52:51.593 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:52:51.604 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:52:51.612 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:52:51.616 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:52:51.675 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:52:52.149 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:52:52.153 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:52:52.169 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:52:52.260 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:52:52.262 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:52:52.265 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:52:52.882 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:52:53.095 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:52:53.437 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:52:53.694 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:52:53.737 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 859.6133ms
+2025-04-02 06:52:53.739 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:52:53.739 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:52:53.856 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:52:53.776 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:52:53.877 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 138.9138ms
+2025-04-02 06:52:53.882 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:52:53.924 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:52:53.927 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 188.7493ms
+2025-04-02 06:52:53.951 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.5883ms
+2025-04-02 06:52:53.973 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:52:53.981 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:52:53.988 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:52:53.990 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 17.3009ms
+2025-04-02 06:52:54.004 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:52:54.013 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:52:54.020 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:52:54.022 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 17.5051ms
+2025-04-02 06:52:54.027 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=mZtjKgpkusOXlsggkj6HGg - null null
+2025-04-02 06:52:54.030 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:52:54.180 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:53:01.766 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:53:02.213 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:53:51.272 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:53:51.316 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:53:51.334 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-04-02 06:53:51.366 +02:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-04-02 06:53:51.445 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:53:51.506 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:53:51.525 +02:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-04-02 06:53:51.538 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 204.4092ms
+2025-04-02 06:54:08.574 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:54:08.637 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:54:08.779 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:54:08.782 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:54:08.794 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:54:08.7897562+00:00');
+SELECT changes();
+2025-04-02 06:54:08.861 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:54:08.869 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:54:08.872 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:54:08.878 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:54:08.882 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:54:08.929 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:54:09.330 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:54:09.332 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:54:09.346 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:54:09.388 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:54:09.390 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:54:09.392 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:54:09.980 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:54:10.219 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:54:10.522 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:10.756 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:54:10.800 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:54:10.801 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:54:10.801 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 827.7967ms
+2025-04-02 06:54:10.815 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:54:10.801 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:54:10.831 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 30.1164ms
+2025-04-02 06:54:10.846 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:54:10.854 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:54:10.857 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 57.1378ms
+2025-04-02 06:54:10.876 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.216ms
+2025-04-02 06:54:10.905 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:54:10.917 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:10.924 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:10.926 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 20.5153ms
+2025-04-02 06:54:10.949 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:54:10.959 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:10.964 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:10.967 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 18.1519ms
+2025-04-02 06:54:10.972 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=k4rxhTSM2nhBvybKAIuRFw - null null
+2025-04-02 06:54:10.976 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:11.136 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:12.792 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:13.114 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:54:52.083 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:54:52.097 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:52.102 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:52.107 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:52.108 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 25.3816ms
+2025-04-02 06:54:52.112 +02:00 [INF] Request finished HTTP/2 CONNECT https://localhost:7190/_blazor?id=k4rxhTSM2nhBvybKAIuRFw - 200 null null 41139.7723ms
+2025-04-02 06:54:52.115 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=paOVyQ-h8tgzrtCeFuXiIQ - null null
+2025-04-02 06:54:52.134 +02:00 [INF] Connection id "0HNBHK9JSTLNH", Request id "0HNBHK9JSTLNH:0000000D": the application completed without reading the entire request body.
+2025-04-02 06:54:52.135 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:54:52.152 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:52.755 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:52.793 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:52.823 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/opcua - null null
+2025-04-02 06:54:52.842 +02:00 [INF] Executing endpoint '/opcua (/opcua)'
+2025-04-02 06:54:52.923 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:54:52.984 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 06:54:52.998 +02:00 [INF] Executed endpoint '/opcua (/opcua)'
+2025-04-02 06:54:53.011 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/opcua - 200 null text/html; charset=utf-8 194.5593ms
+2025-04-02 06:55:08.988 +02:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:55:09.056 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:55:09.256 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 06:55:09.260 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 06:55:09.268 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 04:55:09.2646858+00:00');
+SELECT changes();
+2025-04-02 06:55:09.335 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 06:55:09.346 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 06:55:09.349 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 06:55:09.356 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 06:55:09.361 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 06:55:09.408 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 06:55:09.922 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 06:55:09.924 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 06:55:09.936 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 06:55:10.003 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 06:55:10.004 +02:00 [INF] Hosting environment: Development
+2025-04-02 06:55:10.006 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 06:55:10.229 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 06:55:10.437 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 06:55:10.793 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:55:11.020 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 06:55:11.055 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 06:55:11.055 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 06:55:11.057 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 06:55:11.153 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 06:55:11.061 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 840.9386ms
+2025-04-02 06:55:11.278 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 223.3084ms
+2025-04-02 06:55:11.332 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 06:55:11.345 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 06:55:11.348 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 292.8146ms
+2025-04-02 06:55:11.362 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 305.1207ms
+2025-04-02 06:55:11.386 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 06:55:11.393 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:55:11.397 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:55:11.399 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 12.9791ms
+2025-04-02 06:55:11.419 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 06:55:11.428 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:55:11.438 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:55:11.441 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 22.0673ms
+2025-04-02 06:55:11.445 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=FLE0dEjlA2bTR-lzYv0R5Q - null null
+2025-04-02 06:55:11.451 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 06:55:11.586 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:58:41.251 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 06:58:41.669 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 07:00:35.672 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 07:00:35.757 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 07:00:35.944 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 07:00:35.946 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 07:00:35.954 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 05:00:35.9505274+00:00');
+SELECT changes();
+2025-04-02 07:00:36.016 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 07:00:36.024 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 07:00:36.028 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 07:00:36.034 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 07:00:36.038 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 07:00:36.082 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 07:00:36.510 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 07:00:36.512 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 07:00:36.522 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 07:00:36.614 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 07:00:36.616 +02:00 [INF] Hosting environment: Development
+2025-04-02 07:00:36.617 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 07:00:36.843 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 07:00:37.020 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 07:00:37.341 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 07:00:37.597 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 07:00:37.643 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 07:00:37.643 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 07:00:37.643 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 07:00:37.657 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 07:00:37.646 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 812.0267ms
+2025-04-02 07:00:37.673 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 30.8309ms
+2025-04-02 07:00:37.688 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 07:00:37.699 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 07:00:37.703 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 60.6172ms
+2025-04-02 07:00:37.714 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.0229ms
+2025-04-02 07:00:37.770 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 07:00:37.778 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:00:37.783 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:00:37.785 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 15.4735ms
+2025-04-02 07:00:37.814 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 07:00:37.826 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:00:37.833 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:00:37.836 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 22.1374ms
+2025-04-02 07:00:37.842 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=RjI7Hgu58qTJ8jWeawr2pg - null null
+2025-04-02 07:00:37.846 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:00:38.020 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 07:00:39.645 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 07:00:39.978 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-04-02 07:01:23.894 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 07:01:23.986 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 07:01:24.147 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-02 07:01:24.164 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-02 07:01:24.188 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-02 05:01:24.1809141+00:00');
+SELECT changes();
+2025-04-02 07:01:24.263 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-02 07:01:24.278 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-02 07:01:24.283 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-02 07:01:24.292 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-02 07:01:24.298 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-02 07:01:24.348 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-02 07:01:24.791 +02:00 [INF] Now listening on: https://localhost:7190
+2025-04-02 07:01:24.794 +02:00 [INF] Now listening on: http://localhost:5273
+2025-04-02 07:01:24.801 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-04-02 07:01:24.840 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-02 07:01:24.842 +02:00 [INF] Hosting environment: Development
+2025-04-02 07:01:24.844 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-04-02 07:01:25.362 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/ - null null
+2025-04-02 07:01:25.540 +02:00 [INF] Executing endpoint '/ (/)'
+2025-04-02 07:01:25.798 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 07:01:25.980 +02:00 [INF] Executed endpoint '/ (/)'
+2025-04-02 07:01:26.026 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - null null
+2025-04-02 07:01:26.026 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-02 07:01:26.067 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/ - 200 null text/html; charset=utf-8 713.3674ms
+2025-04-02 07:01:26.122 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-04-02 07:01:26.027 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_vs/browserLink - null null
+2025-04-02 07:01:26.171 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/aspnetcore-browser-refresh.js - 200 16525 application/javascript; charset=utf-8 145.3445ms
+2025-04-02 07:01:26.204 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-04-02 07:01:26.238 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-04-02 07:01:26.240 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_framework/blazor.web.js - 304 null text/javascript 214.7272ms
+2025-04-02 07:01:26.269 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_vs/browserLink - 200 null text/javascript; charset=UTF-8 242.766ms
+2025-04-02 07:01:26.273 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7190/_blazor/initializers - null null
+2025-04-02 07:01:26.284 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:01:26.290 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:01:26.294 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7190/_blazor/initializers - 200 null application/json; charset=utf-8 20.6043ms
+2025-04-02 07:01:26.322 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-04-02 07:01:26.331 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:01:26.338 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:01:26.340 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7190/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 18.0361ms
+2025-04-02 07:01:26.345 +02:00 [INF] Request starting HTTP/2 CONNECT https://localhost:7190/_blazor?id=mE90pHdjcj_kW4e9Ga_pmg - null null
+2025-04-02 07:01:26.350 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-02 07:01:26.507 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 07:01:28.197 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-04-02 07:01:28.496 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
