@@ -4,5 +4,8 @@ namespace BlazorServerTemplate.Data.OPCUA
 {
     public class WorkOrderStatusType
     {
+        public string Actor { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
+        public DateTime Timestamp { get; set; } = DateTime.Now;
     }
 }
