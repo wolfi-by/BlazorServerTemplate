@@ -7,6 +7,6 @@ namespace BlazorServerTemplate.Data.OPCUA
         public string AssetID { get; set; } = string.Empty;
         public Guid ID { get; set; } = Guid.NewGuid();
         public DateTime StartTime { get; set; } = DateTime.Now;
-        public IList<WorkOrderStatusType> StatusComments { get; set; }=new List<WorkOrderStatusType>();
+        public WorkOrderStatusType[] StatusComments { get; set; }=Array.Empty<WorkOrderStatusType>();
     }
 }
