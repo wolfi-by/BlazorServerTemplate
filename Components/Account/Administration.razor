@@ -52,7 +52,7 @@
                     <MudSelect Label="Role" T="string" @bind-Value="@CurrentUserRole">
                         @foreach (var option in Options)
                         {
-                            <MudSelectItem value="@option">
+                            <MudSelectItem T="string" value="@option">
                                 @option
                             </MudSelectItem>
                         }

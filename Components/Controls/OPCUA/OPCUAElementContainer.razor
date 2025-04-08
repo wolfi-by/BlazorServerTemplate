@@ -2,6 +2,7 @@
 @using Microsoft.Extensions.Configuration
 @using BlazorServerTemplate.Data.OPCUA
 @using Opc.Ua.Client
+@using System.Reflection
 @inject IConfiguration config
 
 
@@ -78,8 +79,10 @@
 
     private async Task Read()
     {
+
+
         if (client._complexTypeSystem == null) return;
-            if (string.IsNullOrEmpty(element.Source)) return;
+        if (string.IsNullOrEmpty(element.Source)) return;
         if (client == null || !client.IsConnected) return;
         try
         {
@@ -87,8 +90,9 @@
         }
         catch (Exception)
         {
+            var tag =  client.Read(element.Source);
         }
-        
+
     }
 
     private async Task ToggleOpen()
