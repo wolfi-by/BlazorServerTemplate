@@ -1,8 +1,10 @@
 ﻿
-@using Microsoft.Extensions.Configuration
-@using BlazorServerTemplate.Data.OPCUA
-@using Opc.Ua.Client
 @using System.Reflection
+@using BlazorServerTemplate.Data
+@using BlazorServerTemplate.Data.OPCUA
+@using Microsoft.Extensions.Configuration
+@using OPCUaClient.old
+@using Opc.Ua.Client
 @inject IConfiguration config
 
 
@@ -81,17 +83,37 @@
     {
 
 
-        if (client._complexTypeSystem == null) return;
-        if (string.IsNullOrEmpty(element.Source)) return;
-        if (client == null || !client.IsConnected) return;
-        try
-        {
-            var tag =await client.Read<WorkOrderVariable>(element.Source);
-        }
-        catch (Exception)
-        {
-            var tag =  client.Read(element.Source);
-        }
+        // if (client._complexTypeSystem == null) return;
+        // if (string.IsNullOrEmpty(element.Source)) return;
+        // if (client == null || !client.IsConnected) return;
+
+     
+        var result = await client.ReadNodeData<Parameters>("ns=2;i=1");
+
+        Console.WriteLine($"Read result: {result}");
+        //        // Beispiel: Daten lesen
+        //        var nodeId = new NodeId("ns=2;s=MyVectorNode");
+        //        var vector = await ReadNodeData<Vector>(session, nodeId);
+        //        Console.WriteLine($"Vector: Origin.X={vector.Origin.X}, Origin.Y={vector.Origin.Y}, Z={vector.Z}");
+
+        //// Beispiel: Daten schreiben
+        //var newVector = new Vector
+        //{
+        //    Origin = new Point { X = 1.0, Y = 2.0 },
+        //    Z = 3.0
+        //};
+        //        await WriteNodeData(session, nodeId, newVector);
+        
+        
+        
+        // try
+        // {
+        //     var tag =await client.Read<WorkOrderVariable>(element.Source);
+        // }
+        // catch (Exception)
+        // {
+        //     var tag =  client.Read(element.Source);
+        // }
 
     }
 
