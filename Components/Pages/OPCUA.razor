@@ -1,16 +1,17 @@
 ﻿@page "/opcua"
 @using BlazorServerTemplate.Data
 @using BlazorServerTemplate.Data.OPCUA
-@using OPCUaClient.old
 @inject ApplicationDbContext dbContext
 
+@inject OpcUaComplexTypeSystemSessionBuilder sessionBuilder
 @inject IConfiguration config
 <h3>OPCUA</h3>
 
 
 @foreach(var item in opcuaelements)
 {
-    <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
+   // <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
+   <p>MyElement</p>
 }
 
 <MudPaper Elevation="25">
@@ -18,12 +19,6 @@
         <MudIconButton Icon="@Icons.Material.Outlined.Add" OnClick="Add" />
         <MudIconButton Icon="@Icons.Material.Outlined.Save" OnClick="Save" />
         <MudSpacer />
-        <MudToggleIconButton Toggled="client.IsConnected"
-        Icon="@Icons.Material.Filled.SignalWifiBad"
-        Color="@Color.Error"
-        ToggledIcon="@Icons.Material.Filled.SignalWifiStatusbar4Bar"
-        ToggledColor="@Color.Success" Disabled
-        />
     </MudToolBar>
 </MudPaper>
 
@@ -31,7 +26,6 @@
 
 
 @code {
-    UaClient client = default!;
     private List<OPCUAElement> opcuaelements = new List<OPCUAElement>();
     private string? server;
     protected override async Task OnInitializedAsync()
@@ -42,11 +36,14 @@
 
     private async Task InitPage()
     {
+        sessionBuilder.Build("MyTest", "opc.tcp://DesktopPC:48010");
+
+
         server = config["OPCUAServer"] ?? string.Empty;
         if (!string.IsNullOrEmpty(server))
         {
-            client = new UaClient("test", server, false, true);
-           await client.ConnectAsync((uint)30, true);
+
+          
         }
 
         opcuaelements = dbContext.OPCUAElements.ToList();
