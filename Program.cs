@@ -12,6 +12,7 @@ using Microsoft.Extensions.Options;
 using MudBlazor;
 using MudBlazor.Services;
 using MudExtensions.Services;
+using OPCUaClient;
 using Scalar.AspNetCore;
 using Serilog;
 
@@ -91,6 +92,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
 builder.Services.AddOpenApi();
 
+builder.Services.ALaMeR_OpcUa();
 
 var app = builder.Build();
 
