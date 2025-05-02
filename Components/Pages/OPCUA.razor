@@ -10,8 +10,8 @@
 
 @foreach(var item in opcuaelements)
 {
-   // <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
-   <p>MyElement</p>
+    // <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
+    <p>MyElement</p>
 }
 
 <MudPaper Elevation="25">
@@ -36,15 +36,18 @@
 
     private async Task InitPage()
     {
-        sessionBuilder.Build("MyTest", "opc.tcp://DesktopPC:48010");
+        var session= await   sessionBuilder.BuildAsync("MyTest", "opc.tcp://DesktopPC:48010", CancellationToken.None);
+
 
 
         server = config["OPCUAServer"] ?? string.Empty;
         if (!string.IsNullOrEmpty(server))
         {
 
-          
+
         }
+
+       var result= session.ReadNode(new Opc.Ua.NodeId("ns=4;s=AirConditioner_1"));
 
         opcuaelements = dbContext.OPCUAElements.ToList();
     }
