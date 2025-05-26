@@ -1,0 +1,111 @@
+2025-05-26 12:51:13.771 +02:00 [INF] Using SQLite database at C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db
+2025-05-26 12:51:15.224 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-05-26 12:51:15.253 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-05-26 12:51:16.060 +02:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-05-26 12:51:16.062 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-05-26 12:51:16.071 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-05-26 10:51:16.0630637+00:00');
+SELECT changes();
+2025-05-26 12:51:16.134 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-05-26 12:51:16.141 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-05-26 12:51:16.141 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-05-26 12:51:16.146 +02:00 [INF] No migrations were applied. The database is already up to date.
+2025-05-26 12:51:16.161 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-05-26 12:51:16.278 +02:00 [INF] User profile is available. Using 'C:\Users\Wolfgang\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-26 12:51:16.995 +02:00 [INF] Now listening on: http://localhost:5273
+2025-05-26 12:51:16.999 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-26 12:51:16.999 +02:00 [INF] Hosting environment: Development
+2025-05-26 12:51:16.999 +02:00 [INF] Content root path: C:\Users\Wolfgang\source\BlazorServerTemplate
+2025-05-26 12:51:17.410 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/ - null null
+2025-05-26 12:51:17.504 +02:00 [WRN] Failed to determine the https port for redirect.
+2025-05-26 12:51:17.509 +02:00 [INF] Executing endpoint '/ (/)'
+2025-05-26 12:51:18.103 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-26 12:51:18.432 +02:00 [INF] Executed endpoint '/ (/)'
+2025-05-26 12:51:18.494 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/ - 200 null text/html; charset=utf-8 1088.7425ms
+2025-05-26 12:51:18.498 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_content/MudBlazor/MudBlazor.min.css - null null
+2025-05-26 12:51:18.569 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-05-26 12:51:18.569 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.css - null null
+2025-05-26 12:51:18.569 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_content/Extensions.MudBlazor.StaticInput/NavigationObserver.js - null null
+2025-05-26 12:51:18.569 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_content/MudBlazor/MudBlazor.min.js - null null
+2025-05-26 12:51:18.618 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.js - null null
+2025-05-26 12:51:18.649 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-05-26 12:51:18.745 +02:00 [INF] Sending file. Request path: '/_framework/blazor.web.js'. Physical path: 'N/A'
+2025-05-26 12:51:18.746 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-05-26 12:51:18.750 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 200 187664 text/javascript 180.997ms
+2025-05-26 12:51:18.895 +02:00 [INF] Sending file. Request path: '/_content/Extensions.MudBlazor.StaticInput/NavigationObserver.js'. Physical path: 'C:\Users\Wolfgang\.nuget\packages\extensions.mudblazor.staticinput\3.2.0\staticwebassets\NavigationObserver.js'
+2025-05-26 12:51:18.895 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_content/Extensions.MudBlazor.StaticInput/NavigationObserver.js - 200 6859 text/javascript 326.3281ms
+2025-05-26 12:51:18.896 +02:00 [INF] Sending file. Request path: '/_content/MudBlazor/MudBlazor.min.js'. Physical path: 'C:\Users\Wolfgang\.nuget\packages\mudblazor\8.3.0\staticwebassets\MudBlazor.min.js'
+2025-05-26 12:51:18.896 +02:00 [INF] Sending file. Request path: '/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.css'. Physical path: 'C:\Users\Wolfgang\.nuget\packages\codebeam.mudblazor.extensions\8.0.0\staticwebassets\MudExtensions.min.css'
+2025-05-26 12:51:18.896 +02:00 [INF] Sending file. Request path: '/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.js'. Physical path: 'C:\Users\Wolfgang\.nuget\packages\codebeam.mudblazor.extensions\8.0.0\staticwebassets\MudExtensions.min.js'
+2025-05-26 12:51:18.896 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.css - 200 29662 text/css 327.2036ms
+2025-05-26 12:51:18.896 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_content/MudBlazor/MudBlazor.min.js - 200 55250 text/javascript 326.8375ms
+2025-05-26 12:51:18.896 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_content/CodeBeam.MudBlazor.Extensions/MudExtensions.min.js - 200 4816 text/javascript 317.8875ms
+2025-05-26 12:51:18.898 +02:00 [INF] Sending file. Request path: '/_content/MudBlazor/MudBlazor.min.css'. Physical path: 'C:\Users\Wolfgang\.nuget\packages\mudblazor\8.3.0\staticwebassets\MudBlazor.min.css'
+2025-05-26 12:51:18.900 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_content/MudBlazor/MudBlazor.min.css - 200 595896 text/css 401.5564ms
+2025-05-26 12:51:19.009 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-05-26 12:51:19.019 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:51:19.027 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:51:19.028 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 18.8751ms
+2025-05-26 12:51:19.142 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-05-26 12:51:19.143 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/favicon.ico - null null
+2025-05-26 12:51:19.144 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/favicon.ico - 404 0 null 1.1221ms
+2025-05-26 12:51:19.146 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5273/favicon.ico, Response status code: 404
+2025-05-26 12:51:19.157 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:51:19.167 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:51:19.167 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 25.1769ms
+2025-05-26 12:51:19.195 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=sEN2NN6-zXWBK3_hGWES-g - null null
+2025-05-26 12:51:19.195 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:51:19.431 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-26 12:51:22.276 +02:00 [INF] Spawning OPC UA client MyTest with connection string opc.tcp://DesktopPC:4841
+2025-05-26 12:51:55.078 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/units - null null
+2025-05-26 12:51:55.079 +02:00 [INF] Executing endpoint '/units (/units)'
+2025-05-26 12:51:59.621 +02:00 [INF] Using SQLite database at C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db
+2025-05-26 12:51:59.621 +02:00 [INF] Using SQLite database at C:\Users\Wolfgang\AppData\Roaming\BlazorServerTemplate\app.db
+2025-05-26 12:51:59.966 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."ID", "o"."Label", "o"."Left", "o"."Source", "o"."Target", "o"."Top", "o"."Type"
+FROM "OPCUAElements" AS "o"
+2025-05-26 12:51:59.975 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."MaxValue", "u"."MinValue", "u"."QuantityName", "u"."UnitName", "u"."Value"
+FROM "UnitMappings" AS "u"
+2025-05-26 12:52:00.046 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-26 12:52:00.068 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-26 12:52:00.072 +02:00 [INF] Spawning OPC UA client MyTest with connection string opc.tcp://DesktopPC:4841
+2025-05-26 12:52:00.402 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-26 12:52:00.545 +02:00 [INF] Executed endpoint '/units (/units)'
+2025-05-26 12:52:00.573 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/units - 200 null text/html; charset=utf-8 5495.1285ms
+2025-05-26 12:52:00.575 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/disconnect - multipart/form-data; boundary=----WebKitFormBoundarygoSzU1BAfiJUHlxF 359
+2025-05-26 12:52:00.576 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:52:00.615 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - null null
+2025-05-26 12:52:00.617 +02:00 [INF] Executing endpoint 'Blazor web static files'
+2025-05-26 12:52:00.621 +02:00 [INF] The file /_framework/blazor.web.js was not modified
+2025-05-26 12:52:00.622 +02:00 [INF] Executed endpoint 'Blazor web static files'
+2025-05-26 12:52:00.622 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_framework/blazor.web.js - 304 null text/javascript 7.6105ms
+2025-05-26 12:52:00.719 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor/initializers - null null
+2025-05-26 12:52:00.720 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:52:00.721 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:52:00.721 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5273/_blazor/initializers - 200 null application/json; charset=utf-8 1.8498ms
+2025-05-26 12:52:00.769 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - null 0
+2025-05-26 12:52:00.769 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:52:00.770 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-05-26 12:52:00.770 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5273/_blazor/negotiate?negotiateVersion=1 - 200 316 application/json 1.1686ms
+2025-05-26 12:52:00.778 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5273/_blazor?id=oMtfx0YPz94NRYM_hozJHQ - null null
+2025-05-26 12:52:00.779 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
