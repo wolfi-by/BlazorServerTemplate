@@ -6,8 +6,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlazorServerTemplate.Data;
 
-public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options)
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, ILogger<ApplicationDbContext> logger) : IdentityDbContext<ApplicationUser>(options)
 {
+    private readonly ILogger<ApplicationDbContext> _logger = logger;
+
     public DbSet<OPCUAElement> OPCUAElements { get; set; }
     public DbSet<QuantityDto> Units { get; set; }
     public DbSet<QuantityMappingDto> UnitMappings { get; set; }
@@ -16,7 +18,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-       
+
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,7 +31,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         }
         string dbPath = Path.Combine(appdata, appname, "app.db");
         optionsBuilder.UseSqlite($"Data Source={dbPath};Cache=Shared");
-
+        _logger.LogInformation("Using SQLite database at {DbPath}", dbPath);
         base.OnConfiguring(optionsBuilder);
     }
 
@@ -48,7 +50,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     }
     public async Task<Result> RemoveQuantityMappingsAsync(Guid id)
     {
-        var item=await UnitMappings.FindAsync(id);
+        var item = await UnitMappings.FindAsync(id);
         if (item is null)
         {
             return Result.NotFound("Item not found");

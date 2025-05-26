@@ -1,14 +1,15 @@
 ﻿@page "/opcua"
 @using BlazorServerTemplate.Data
 @using BlazorServerTemplate.Data.OPCUA
+@using Opc.Ua
 @inject ApplicationDbContext dbContext
 
-@inject OpcUaComplexTypeSystemSessionBuilder sessionBuilder
+@inject OpcUaClientCollection sessionBuilder
 @inject IConfiguration config
 <h3>OPCUA</h3>
 
 
-@foreach(var item in opcuaelements)
+@foreach (var item in opcuaelements)
 {
     // <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
     <p>MyElement</p>
@@ -34,11 +35,14 @@
         await base.OnInitializedAsync();
     }
 
+
     private async Task InitPage()
     {
-        var session= await   sessionBuilder.BuildAsync("MyTest", "opc.tcp://DesktopPC:48010", CancellationToken.None);
+        //var session= await   sessionBuilder.BuildAsync("MyTest", "opc.tcp://DesktopPC:48010", CancellationToken.None);
 
-
+        var client = await sessionBuilder.CreateClientAsync("MyTest", "opc.tcp://DesktopPC:4841", CancellationToken.None);
+        
+        await client.ConnectAsync("MyTest", "opc.tcp://DesktopPC:4841", CancellationToken.None);
 
         server = config["OPCUAServer"] ?? string.Empty;
         if (!string.IsNullOrEmpty(server))
@@ -47,10 +51,15 @@
 
         }
 
-       var result= session.ReadNode(new Opc.Ua.NodeId("ns=4;s=AirConditioner_1"));
+        var node = new OpcUaNode(new NodeId("ns=2;i=42"));
+
+
+
+        var result = client.WriteAsync<MyData>(node, new MyData { MyValue1 = 22.3, MyValue2 = 33.4, MyValue3 = 44.5, MyValue4 = 55.6 });
 
         opcuaelements = dbContext.OPCUAElements.ToList();
     }
+
 
     private async Task Refresh()
     {
