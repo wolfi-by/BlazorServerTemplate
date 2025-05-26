@@ -1,5 +1,11 @@
 ﻿@page "/"
+@using Append.Blazor.Printing
+@inject IPrintingService PrintingService
+<button @onclick="@(() => PrintingService.Print("docs/sample.pdf"))">
+    Print PDF
+</button>
 
+<a href="https://blazor-printing.append.be/">Examples</a>
 <PageTitle>Home</PageTitle>
 
 <MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>

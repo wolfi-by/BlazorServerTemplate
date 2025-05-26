@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using Append.Blazor.Printing;
 using BlazorServerTemplate.Components;
 using BlazorServerTemplate.Components.Account;
 using BlazorServerTemplate.Data;
@@ -16,7 +17,7 @@ using OPCUaClient;
 using Scalar.AspNetCore;
 using Serilog;
 
-var supportedCultures = new[] {new  CultureInfo("en-US"), new CultureInfo( "de-DE"), new CultureInfo("ru-RU") , new CultureInfo("ii-CN") , new CultureInfo("tig-ER") };
+var supportedCultures = new[] { new CultureInfo("en-US"), new CultureInfo("de-DE"), new CultureInfo("ru-RU"), new CultureInfo("ii-CN"), new CultureInfo("tig-ER") };
 //var localizationOptions = new RequestLocalizationOptions()
 //.SetDefaultCulture(supportedCultures[0])
 //.AddSupportedCultures(supportedCultures)
@@ -76,6 +77,7 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
+
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 
 builder.Services.AddFileSystemAccessService();
@@ -83,12 +85,14 @@ builder.Services.AddFileSystemAccessService();
 builder.Services.AddLocalization();
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
-   
+
 
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });
 
+
+builder.Services.AddScoped<IPrintingService, PrintingService>();
 
 builder.Services.AddOpenApi();
 
@@ -168,7 +172,8 @@ app.MapGet("Culture/Set", (HttpRequest request, [FromQuery] string culture, [Fro
             CookieRequestCultureProvider.MakeCookieValue(
              new RequestCulture(culture, culture)),
               new CookieOptions
-              {IsEssential=true,
+              {
+                  IsEssential = true,
                   Path = "/",
                   Expires = DateTime.Now.AddYears(1)
               });
