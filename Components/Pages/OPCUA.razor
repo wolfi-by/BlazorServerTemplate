@@ -46,20 +46,35 @@
         {
             // Verbindung herstellen
             await client.ConnectAsync();
-            
-            // Beispiel: Lesen eines Wertes
-            int value = client.ReadNode<int>(nodeId);
-            DataSet1 dataset1 = client.ReadNode<DataSet1>(structure); 
-            Console.WriteLine($"Gelesener Wert: {value}");
 
-            // Beispiel: Schreiben eines Wertes
-            client.WriteNode(nodeId, 100);
-
-            // Beispiel: Subskription
-            var subscription = client.SubscribeNode(nodeId, (nodeId, newValue) =>
+            var subscription = client.SubscribeNode(structure, (nodeId, newValue) =>
             {
                 Console.WriteLine($"Neuer Wert für {nodeId}: {newValue}");
             });
+
+            var subscription2 = client.SubscribeNode(nodeId, (nodeId, newValue) =>
+            {
+                Console.WriteLine($"Neuer Wert für {nodeId}: {newValue}");
+            });
+
+            // Beispiel: Lesen eines Wertes
+            int value = client.ReadNode<int>(nodeId);
+            client.WriteNode(nodeId, (value + 3)); // Beisp
+            subscription2.Delete(false);
+            DataSet1 dataset1 = client.ReadNode<DataSet1>(structure);
+            dataset1.Int32Fast += 9;
+            dataset1.Int32 += 33;
+            dataset1.DateTime = DateTime.Now;
+            dataset1.BoolToggle = !dataset1.BoolToggle;
+            client.WriteNode(structure, dataset1);
+
+
+            bool[] boolArray = client.ReadNode<bool[]>("ns=3;s=Demo.Static.Arrays.Boolean");
+            for (var i = 0; i < boolArray.Length; i++)
+            {
+                boolArray[i] = !boolArray[i];
+            }
+            client.WriteNode("ns=3;s=Demo.Static.Arrays.Boolean", boolArray);
 
             // 10 Sekunden warten, um Subskriptionsänderungen zu sehen
             await Task.Delay(20000);
