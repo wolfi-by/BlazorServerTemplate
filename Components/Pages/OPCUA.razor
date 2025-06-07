@@ -4,7 +4,6 @@
 @using Opc.Ua
 @inject ApplicationDbContext dbContext
 
-@inject OpcUaClientCollection sessionBuilder
 @inject IConfiguration config
 <h3>OPCUA</h3>
 
@@ -38,26 +37,45 @@
 
     private async Task InitPage()
     {
-        //var session= await   sessionBuilder.BuildAsync("MyTest", "opc.tcp://DesktopPC:48010", CancellationToken.None);
+        string endpointUrl = "opc.tcp://DesktopPC:48010"; // Beispiel-Endpoint
+        string nodeId = "ns=3;s=PSTV.P1.DS1.Int32"; // Beispiel-Node
+        string structure = "ns=3;s=PSTV.P1.DS1";
+        var client = new MyOpcUaClient(endpointUrl);
 
-        var client = await sessionBuilder.CreateClientAsync("MyTest", "opc.tcp://DesktopPC:4841", CancellationToken.None);
-        
-        await client.ConnectAsync("MyTest", "opc.tcp://DesktopPC:4841", CancellationToken.None);
-
-        server = config["OPCUAServer"] ?? string.Empty;
-        if (!string.IsNullOrEmpty(server))
+        try
         {
+            // Verbindung herstellen
+            await client.ConnectAsync();
+            
+            // Beispiel: Lesen eines Wertes
+            int value = client.ReadNode<int>(nodeId);
+            DataSet1 dataset1 = client.ReadNode<DataSet1>(structure); 
+            Console.WriteLine($"Gelesener Wert: {value}");
 
+            // Beispiel: Schreiben eines Wertes
+            client.WriteNode(nodeId, 100);
 
+            // Beispiel: Subskription
+            var subscription = client.SubscribeNode(nodeId, (nodeId, newValue) =>
+            {
+                Console.WriteLine($"Neuer Wert für {nodeId}: {newValue}");
+            });
+
+            // 10 Sekunden warten, um Subskriptionsänderungen zu sehen
+            await Task.Delay(20000);
+
+            // Subskription entfernen
+            subscription.Delete(true);
         }
-
-        var node = new OpcUaNode(new NodeId("ns=2;i=42"));
-
-
-
-        var result = client.WriteAsync<MyData>(node, new MyData { MyValue1 = 22.3, MyValue2 = 33.4, MyValue3 = 44.5, MyValue4 = 55.6 });
-
-        opcuaelements = dbContext.OPCUAElements.ToList();
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Fehler: {ex.Message}");
+        }
+        finally
+        {
+            // Verbindung trennen
+            await client.DisconnectAsync();
+        }
     }
 
 

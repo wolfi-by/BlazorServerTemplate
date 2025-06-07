@@ -96,7 +96,6 @@ builder.Services.AddScoped<IPrintingService, PrintingService>();
 
 builder.Services.AddOpenApi();
 
-builder.Services.ALaMeR_OpcUa();
 
 var app = builder.Build();
 
