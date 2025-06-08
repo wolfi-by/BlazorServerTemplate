@@ -3,7 +3,7 @@
 @using BlazorServerTemplate.Data.OPCUA
 @using Opc.Ua
 @inject ApplicationDbContext dbContext
-
+@inject MyOpcUaClient client
 @inject IConfiguration config
 <h3>OPCUA</h3>
 
@@ -37,10 +37,10 @@
 
     private async Task InitPage()
     {
-        string endpointUrl = "opc.tcp://DesktopPC:48010"; // Beispiel-Endpoint
+        
         string nodeId = "ns=3;s=PSTV.P1.DS1.Int32"; // Beispiel-Node
         string structure = "ns=3;s=PSTV.P1.DS1";
-        var client = new MyOpcUaClient(endpointUrl);
+        
 
         try
         {
@@ -58,23 +58,30 @@
             });
 
             // Beispiel: Lesen eines Wertes
-            int value = client.ReadNode<int>(nodeId);
-            client.WriteNode(nodeId, (value + 3)); // Beisp
+            int value =await client.ReadNodeAsync<int>(nodeId);
+           await  client.WriteNodeAsync(nodeId, (value + 3)); // Beisp
             subscription2.Delete(false);
-            DataSet1 dataset1 = client.ReadNode<DataSet1>(structure);
+            DataSet1 dataset1 = await client.ReadNodeAsync<DataSet1>(structure);
             dataset1.Int32Fast += 9;
             dataset1.Int32 += 33;
             dataset1.DateTime = DateTime.Now;
             dataset1.BoolToggle = !dataset1.BoolToggle;
-            client.WriteNode(structure, dataset1);
+            await client.WriteNodeAsync(structure, dataset1);
 
 
-            bool[] boolArray = client.ReadNode<bool[]>("ns=3;s=Demo.Static.Arrays.Boolean");
+            bool[] boolArray =await client.ReadNodeAsync<bool[]>("ns=3;s=Demo.Static.Arrays.Boolean");
             for (var i = 0; i < boolArray.Length; i++)
             {
                 boolArray[i] = !boolArray[i];
             }
-            client.WriteNode("ns=3;s=Demo.Static.Arrays.Boolean", boolArray);
+            await client.WriteNodeAsync("ns=3;s=Demo.Static.Arrays.Boolean", boolArray);
+
+            float[] floatArray =await client.ReadNodeAsync<float[]>("ns=3;s=Demo.Static.Arrays.Float");
+            for (var i = 0; i < floatArray.Length; i++)
+            {
+                floatArray[i] += 1.1f;
+            }
+            await client.WriteNodeAsync("ns=3;s=Demo.Static.Arrays.Float", floatArray);
 
             // 10 Sekunden warten, um Subskriptionsänderungen zu sehen
             await Task.Delay(20000);

@@ -23,7 +23,7 @@ var supportedCultures = new[] { new CultureInfo("en-US"), new CultureInfo("de-DE
 //.AddSupportedCultures(supportedCultures)
 //.AddSupportedUICultures(supportedCultures);
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Information()
@@ -90,7 +90,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });
-
+builder.ConfigureOpcuaClient();
 
 builder.Services.AddScoped<IPrintingService, PrintingService>();
 
