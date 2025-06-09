@@ -6,19 +6,19 @@
 <MudStepper NonLinear ShowResetButton Ripple="true">
     <MudStep Title="Select Quantity">
 
-        <MudComboBox @bind-Value="quantity" @bind-Text="quantity" Variant="Variant.Outlined" Label="Select quantity" Editable="true" Disabled="false" ReadOnly="false" MultiSelection="false"
-                     Clearable="true">
+        <MudComboBox @bind-Value="quantity" @bind-Text="quantity" Variant="Variant.Outlined" Label="Select quantity"
+            Editable="true" Disabled="false" ReadOnly="false" MultiSelection="false" Clearable="true">
 
             @foreach (var quantityname in Quantity.Names)
             {
-                <MudComboBoxItem Value="@quantityname">@quantityname</MudComboBoxItem>
+                <MudComboBoxItem @key="quantityname" Value="@quantityname">@quantityname</MudComboBoxItem>
             }
         </MudComboBox>
     </MudStep>
     <MudStep Title="Select Unit">
 
-        <MudComboBox @bind-Value="unit" Variant="Variant.Outlined" Label="Select unit" Editable="true" Disabled="false" ReadOnly="false" MultiSelection="false"
-                     Clearable="true">
+        <MudComboBox @bind-Value="unit" Variant="Variant.Outlined" Label="Select unit" Editable="true" Disabled="false"
+            ReadOnly="false" MultiSelection="false" Clearable="true">
 
             @foreach (var unitname in _quantity.UnitInfos)
             {
@@ -30,7 +30,7 @@
         <MudNumericField Label="Min Value" @bind-Value="minvalue" />
         <MudNumericField Label="Max Value" @bind-Value="maxvalue" />
         <MudNumericField Label="Test value" @bind-Value="test" />
-        <p>Quantity: @testvalue  </p>
+        <p>Quantity: @testvalue </p>
         <MudButton OnClick="SaveToDatabase" Variant="Variant.Filled">Save</MudButton>
     </MudStep>
 </MudStepper>
@@ -51,7 +51,8 @@
             if (Quantity.TryFrom(value, _unit.Value, out IQuantity? unitinfo))
             {
                 testvalue = unitinfo;
-            };
+            }
+            ;
             _test = value;
         }
     }
@@ -90,7 +91,8 @@
     }
     private async void SaveToDatabase()
     {
-        var result = await context.AddQuantityMappingAsync(new QuantityMappingRecord(_test, _quantity.Name, _unit.Name, minvalue, maxvalue, string.Empty));
+        var result = await context.AddQuantityMappingAsync(new QuantityMappingRecord(_test, _quantity.Name, _unit.Name,
+        minvalue, maxvalue, string.Empty));
         if (result.IsSuccess)
         {
             Nav.NavigateTo("/units", forceLoad: true);

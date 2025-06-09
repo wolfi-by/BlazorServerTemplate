@@ -3,6 +3,7 @@
 @using BlazorServerTemplate.Data.OPCUA
 @using Opc.Ua
 @inject ApplicationDbContext dbContext
+@implements IAsyncDisposable
 @inject MyOpcUaClient client
 @inject IConfiguration config
 <h3>OPCUA</h3>
@@ -10,8 +11,9 @@
 
 @foreach (var item in opcuaelements)
 {
-    // <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item" Refresh="@Refresh" DeleteMe="@RemoveElement" />
-    <p>MyElement</p>
+    <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item"
+                                                                          Refresh="@Refresh" DeleteMe="@RemoveElement" />
+            < p> MyElement </ p>
 }
 
 <MudPaper Elevation="25">
@@ -37,10 +39,10 @@
 
     private async Task InitPage()
     {
-        
+
         string nodeId = "ns=3;s=PSTV.P1.DS1.Int32"; // Beispiel-Node
         string structure = "ns=3;s=PSTV.P1.DS1";
-        
+
 
         try
         {
@@ -58,8 +60,8 @@
             });
 
             // Beispiel: Lesen eines Wertes
-            int value =await client.ReadNodeAsync<int>(nodeId);
-           await  client.WriteNodeAsync(nodeId, (value + 3)); // Beisp
+            int value = await client.ReadNodeAsync<int>(nodeId);
+            await client.WriteNodeAsync(nodeId, (value + 3)); // Beisp
             subscription2.Delete(false);
             DataSet1 dataset1 = await client.ReadNodeAsync<DataSet1>(structure);
             dataset1.Int32Fast += 9;
@@ -68,15 +70,17 @@
             dataset1.BoolToggle = !dataset1.BoolToggle;
             await client.WriteNodeAsync(structure, dataset1);
 
+            object[] variants = new object[] { 4, 5 };
+            var result = await client.CallMethod("ns=3;s=Demo.Method", "ns=3;s=Demo.Method.Multiply", variants);
 
-            bool[] boolArray =await client.ReadNodeAsync<bool[]>("ns=3;s=Demo.Static.Arrays.Boolean");
+            bool[] boolArray = await client.ReadNodeAsync<bool[]>("ns=3;s=Demo.Static.Arrays.Boolean");
             for (var i = 0; i < boolArray.Length; i++)
             {
                 boolArray[i] = !boolArray[i];
             }
             await client.WriteNodeAsync("ns=3;s=Demo.Static.Arrays.Boolean", boolArray);
 
-            float[] floatArray =await client.ReadNodeAsync<float[]>("ns=3;s=Demo.Static.Arrays.Float");
+            float[] floatArray = await client.ReadNodeAsync<float[]>("ns=3;s=Demo.Static.Arrays.Float");
             for (var i = 0; i < floatArray.Length; i++)
             {
                 floatArray[i] += 1.1f;
@@ -122,4 +126,11 @@
         dbContext.UpdateRange(opcuaelements);
         await dbContext.SaveChangesAsync();
     }
+
+    public async ValueTask DisposeAsync()
+    {
+        await client.DisconnectAsync();
+    }
+
+
 }
