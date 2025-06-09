@@ -1,6 +1,25 @@
-﻿
+﻿@using Opc.Ua
 
+@switch (datatype.ToLower())
+{
+    case "boolean":
+        <MudCheckBox @bind-Value=value Label="@Label" />
+        break;
+    case "String":
+        <MudTextField @bind-Value=value Label="@Label" />
+        break;
+    default:
+        <MudNumericField @bind-Value=value />
+        break;
+}
 
 @code {
+    [Parameter]
+    public NodeId NodeId { get; set; }
+    [Parameter]
+    public string datatype { get; set; }
+    [Parameter]
+    public string Label { get; set; }
 
+    private object value;
 }

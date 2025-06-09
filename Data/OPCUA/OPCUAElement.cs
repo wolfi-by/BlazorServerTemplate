@@ -11,5 +11,6 @@ namespace BlazorServerTemplate.Data.OPCUA
         public string Target { get; set; } = string.Empty;
         public double Top { get; set; }
         public double Left { get; set; }
+        
     }
 }

@@ -11,9 +11,7 @@
 
 @foreach (var item in opcuaelements)
 {
-    <BlazorServerTemplate.Components.Controls.OPCUA.OPCUAElementContainer client="@client" element="@item"
-                                                                          Refresh="@Refresh" DeleteMe="@RemoveElement" />
-            < p> MyElement </ p>
+    <div>@item</div>
 }
 
 <MudPaper Elevation="25">
@@ -70,6 +68,13 @@
             dataset1.BoolToggle = !dataset1.BoolToggle;
             await client.WriteNodeAsync(structure, dataset1);
 
+            string dtNode = "ns=3;s=Demo.Static.Arrays.Boolean";
+            var datatype = await client.ReadNodeTypeAsync(dtNode);
+
+
+            string conditioner = "ns=4;s=AirConditioner_1";
+            var conditioners = await client.ReadNodeAsync<AirConditioner>(conditioner);
+
             object[] variants = new object[] { 4, 5 };
             var result = await client.CallMethod("ns=3;s=Demo.Method", "ns=3;s=Demo.Method.Multiply", variants);
 
@@ -118,7 +123,16 @@
     }
     private async Task Add()
     {
-        opcuaelements.Add(new OPCUAElement { Top = 200, Left = 300 });
+        string dtNode = "ns=3;s=Demo.Static.Arrays.Boolean";
+        var datatype = await client.ReadNodeTypeAsync(dtNode);
+        OPCUAElement newElement = new OPCUAElement()
+       
+        {
+                Source = dtNode,
+                Type = OPCUAElementType.FromValue(2),
+                Label = "Initial Value"
+            };
+        opcuaelements.Add(newElement);
         await Refresh();
     }
     private async Task Save()
